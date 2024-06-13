@@ -2,6 +2,7 @@
 
   imports = [
     ./plugins/plugin-bundle.nix
+    ./options.nix
   ];
 
   programs.nixvim = {
