@@ -7,4 +7,7 @@
       credential.helper = "oauth";
     };
   };
+  programs.git-credential-oauth = {
+    enable = true;
+  };
 }
