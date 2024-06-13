@@ -20,7 +20,7 @@
     let 
       system = "x86_64-linux";
     in {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.dominaria = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs system;
         };
