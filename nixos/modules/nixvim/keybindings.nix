@@ -1,4 +1,4 @@
-{
+{config, lib, ...}: {
   programs.nixvim = {
     globals = {
       mapleader = "\\";
@@ -7,7 +7,7 @@
 
     keymaps = let
       normal =
-        lib.mapAttrToList
+        lib.mapAttrsToList
         (key: action: {
           mode = "n";
           inherit action key;
@@ -23,7 +23,7 @@
           "<C-s>" = ":w<CR>";
         };
       visual = 
-        lib.mapAttrToList
+        lib.mapAttrsToList
           (key: action: {
             mode = "v";
             inherit action key;
@@ -31,7 +31,7 @@
           {
           };
       in
-        config.nixvim.helpers.keymaps.mhKeymaps
+        config.nixvim.helpers.keymaps.mkKeymaps
         {options.silent = true;}
         (normal ++ visual);
   };
