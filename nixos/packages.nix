@@ -78,7 +78,7 @@
     swappy
 
     # Display Manager
-    plasma5Packages.sddm
+    kdePackages.sddm
     (catppuccin-sddm.override {
       flavor = "mocha";
       font = "Inconsolata";
