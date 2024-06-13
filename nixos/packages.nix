@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, system, ... }: {
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [

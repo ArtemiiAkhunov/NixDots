@@ -8,6 +8,12 @@
       url = "github:nix-community/home-manager/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = {self, nixpkgs, home-manager, ...}@inputs:
@@ -15,8 +21,14 @@
       system = "x86_64-linux";
     in {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-	modules = [ ./nixos/configuration.nix ];
-      	inherit system;
+        specialArgs = {
+          inherit inputs system;
+        };
+	modules = [ 
+	   inputs.nixvim.nixosModules.nixvim 
+          ./nixos/configuration.nix
+        ];
+        inherit system;
       };
 
       homeConfigurations.voidwalker = home-manager.lib.homeManagerConfiguration {

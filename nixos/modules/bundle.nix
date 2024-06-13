@@ -9,6 +9,7 @@
     ./hyprland.nix
     ./bluetooth.nix
     ./cups.nix
+    ./nixvim/base.nix
     ./xdg.nix
   ];
 }
