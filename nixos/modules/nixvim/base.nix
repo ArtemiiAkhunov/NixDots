@@ -3,6 +3,7 @@
   imports = [
     ./plugins/plugin-bundle.nix
     ./options.nix
+    ./keybindings.nix
   ];
 
   programs.nixvim = {
