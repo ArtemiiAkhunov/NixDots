@@ -4,5 +4,6 @@
     ./barbar.nix
     ./neo-tree.nix
     ./cmp.nix
+    ./nix.nix
   ];
 }
