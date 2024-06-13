@@ -78,12 +78,10 @@
     swappy
 
     # Display Manager
-    kdePackages.sddm
+    plasma5Packages.sddm
     (catppuccin-sddm.override {
-      flavor = "mocha";
       font = "Inconsolata";
       fontSize = "16";
-      loginBackground = true;
     })
     
     #Other
