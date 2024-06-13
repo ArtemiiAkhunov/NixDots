@@ -78,12 +78,9 @@
     swappy
 
     # Display Manager
-    plasma5Packages.sddm
-    (catppuccin-sddm.override {
-      font = "Inconsolata";
-      fontSize = "16";
-    })
-    
+    greetd.greetd
+    greetd.tuigreet
+
     #Other
     home-manager
   ];
