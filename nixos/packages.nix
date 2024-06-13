@@ -77,8 +77,16 @@
     slurp
     swappy
 
-    #other
+    # Display Manager
     plasma5Packages.sddm
+    (catppuccin-sddm.override {
+      flavor = "mocha";
+      font = "Inconsolata";
+      fontSize = "16";
+      loginBackground = true;
+    })
+    
+    #Other
     home-manager
   ];
 
