@@ -33,7 +33,6 @@
     # CLI stuff
 
     fastfetch
-    vim
     file
     tree
     wget
