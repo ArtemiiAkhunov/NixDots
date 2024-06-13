@@ -65,7 +65,7 @@
 
       "wireplumber" = {
         format = "  {volume}%";
-        format-muted = "󰍭 ";
+        format-muted = "󰝟";
         on-click = "helvum";
       };
 
