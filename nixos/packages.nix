@@ -54,7 +54,6 @@
     
     imv
     copyq
-    papirus-icon-theme
 
     # Wayland stuff
 
@@ -82,6 +81,7 @@
 
     #Other
     home-manager
+    papirus-nord
   ];
 
    fonts.packages = with pkgs; [
