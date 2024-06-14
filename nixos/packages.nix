@@ -101,6 +101,7 @@
     
     home-manager
     papirus-nord
+    cacert
   ];
 
    fonts.packages = with pkgs; [
