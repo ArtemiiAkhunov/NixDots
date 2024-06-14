@@ -7,7 +7,7 @@
       position = "top";
       height = 50;
       spacing = 4;
-      modules-left = [ "clock" "tray"];
+      modules-left = [ "clock" "tray" "custom/weather"];
       modules-center = ["hyprland/workspaces"];
       modules-right = ["wireplumber" "network" "backlight" "hyprland/language" "battery"];
       "hyprland/workspaces" = {
