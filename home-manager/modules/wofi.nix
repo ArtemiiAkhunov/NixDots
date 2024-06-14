@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       mode = "drun";
-      allow_imager = true;
+      allow_images = true;
       prompt = "";
       image_size = 16;
       location = "center";
