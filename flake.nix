@@ -1,5 +1,5 @@
 {
-  description = "My system configuration";
+  description = "Void Walker's System Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
