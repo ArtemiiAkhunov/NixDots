@@ -70,7 +70,15 @@
       };
 
       "hyprland/language" = {
-        format= "{shortDescription}";
+        format = "{shortDescription}";
+      };
+
+      "custom/weather" = {
+        format = "{}°";
+        tooltip = true;
+        interval = 3600;
+        exec = "wttrbar --location 'West Lafayette'";
+        return-type = "json";
       };
     };
     };
@@ -90,7 +98,7 @@ window#waybar {
     background: transparent;
 }
 
-#clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language {
+#clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather {
     color: #1e1e2e;
     background-color: #f5e0dc;
     border-radius: 10px;

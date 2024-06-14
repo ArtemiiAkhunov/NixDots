@@ -71,6 +71,7 @@
 
     xwayland
     waybar
+    wttrbar
     dunst
     wl-clipboard
     xwaylandvideobridge
