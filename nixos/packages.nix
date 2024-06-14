@@ -9,6 +9,8 @@
   environment.systemPackages = with pkgs; [
     # Desktop Apps
     
+    # General Apps
+    
     cinnamon.nemo
     audacity
     firefox
@@ -16,12 +18,23 @@
     kitty
     kitty-themes
     obs-studio
-    wofi
     mpv
     discord
+    zathura
+    spotify
+    bottles
+
+    # School Apps
+    
     obsidian
     zoom-us
-    zathura
+    libreoffice-still
+
+    # Gaming
+
+    steam
+    retroarch
+    cockatrice
 
     # Coding utilities
     
@@ -40,7 +53,6 @@
     htop
     unzip
     cava
-    swww
     zip
     brightnessctl
     bluez
@@ -63,6 +75,9 @@
     wl-clipboard
     xwaylandvideobridge
     swaylock
+    swww 
+    wofi
+    xdg-desktop-portal-hyprland
 
     # Sound
 
@@ -70,16 +85,19 @@
     helvum
 
     # Screenshotting
+    
     grim
     grimblast
     slurp
     swappy
 
     # Display Manager
+    
     greetd.greetd
     greetd.tuigreet
 
     #Other
+    
     home-manager
     papirus-nord
   ];
