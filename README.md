@@ -6,7 +6,7 @@ Some previews:
 
 ![nixvim.png](./screenshots/nixvim.png)
 
-![browser.png](./screenshots/browser.ong)
+![browser.png](./screenshots/browser.png)
 
 ![tree.png](./screenshots/tree.png)
 
