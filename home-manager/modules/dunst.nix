@@ -5,7 +5,7 @@
       global = {
         monitor = 0;
         follow = "none";
-        width = 300;
+        width = 500;
         height = "(10, 300)";
         origin = "top-right";
         offset = "20x20";
