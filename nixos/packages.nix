@@ -38,6 +38,7 @@
 
     # Gaming
 
+    steam
     steamPackages.steam
     steam-run
     retroarch
