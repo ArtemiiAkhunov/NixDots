@@ -5,6 +5,7 @@
     ./kitty.nix
     ./fastfetch.nix
     ./wofi.nix
+    ./steam.nix
     ./theme.nix
     ./dunst.nix
     ./dunst.nix
