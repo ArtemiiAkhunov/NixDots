@@ -6,6 +6,7 @@
     ./user.nix
     ./displaymanager.nix
     ./networkmanager.nix
+    ./steam.nix
     ./hyprland.nix
     ./bluetooth.nix
     ./gpu.nix
