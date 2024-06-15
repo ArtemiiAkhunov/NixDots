@@ -1,10 +1,16 @@
-{ pkgs, inputs, system, ... }: {
+{ pkgs, inputs, system, lib, ... }: {
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
       "python-2.7.18.8"
     ];
   };
+
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "steam"
+    "steam-original"
+    "steam-run"
+  ];
 
   environment.systemPackages = with pkgs; [
     # Desktop Apps
@@ -32,7 +38,8 @@
 
     # Gaming
 
-    steam
+    steamPackages.steam
+    steam-run
     retroarch
     cockatrice
 
