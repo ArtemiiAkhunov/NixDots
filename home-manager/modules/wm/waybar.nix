@@ -103,9 +103,9 @@ window#waybar {
     background-color: #f5e0dc;
     border-radius: 10px;
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 20px;
     margin-top:5px;
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 #tray {
