@@ -9,7 +9,7 @@
       bold_italic_font = "auto";
       scrollback_lines = 10000;
       enable_audio_bell = false;
-      font_size = 14;
+      font_size = 20;
       background_opacity = 1;
       remember_window_size = false;
     };
