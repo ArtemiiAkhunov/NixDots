@@ -8,6 +8,7 @@
     ./networkmanager.nix
     ./hyprland.nix
     ./bluetooth.nix
+    ./gpu.nix
     ./cups.nix
     ./nixvim/base.nix
     ./xdg.nix
