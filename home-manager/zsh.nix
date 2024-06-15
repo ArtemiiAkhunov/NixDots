@@ -18,8 +18,7 @@
         ll = "ls -al";
         ls = "ls --color=auto";
         grep = "grep --color=auto";
-        screenfull = "export XDG_CURRENT_DESKTOP=sway;flameshot full;export XDG_CURRENT_DESKTOP=Hyprland";
-        screenarea = "export XDG_CURRENT_DESKTOP=sway;flameshot gui;export XDG_CURRENT_DESKTOP=Hyprland";
+        offload = "~/.dotfiles/nvidia-offload";
       };
    
     envExtra = "fastfetch";

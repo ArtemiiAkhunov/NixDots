@@ -1,5 +1,4 @@
 {config, lib, pckgs, ...}: {
-  
 
   # Enable OpenGL
   hardware.opengl = {
@@ -24,5 +23,14 @@
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+
+      intelBusId = "PCI:00:02.0";
+      nvidiaBusId = "PCI:01:00.0";
+    };
   };
 }
