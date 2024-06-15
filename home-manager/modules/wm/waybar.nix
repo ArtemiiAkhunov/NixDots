@@ -6,7 +6,7 @@
       layer = "top";
       position = "top";
       height = 70;
-      spacing = 4;
+      spacing = 10;
       modules-left = [ "clock" "tray" "custom/weather"];
       modules-center = ["hyprland/workspaces"];
       modules-right = ["wireplumber" "network" "backlight" "hyprland/language" "battery"];
