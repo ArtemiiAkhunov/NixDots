@@ -85,6 +85,10 @@
     pipewire
     helvum
 
+    # GPU utilities
+
+    lshw
+
     # Screenshotting
     
     grim
