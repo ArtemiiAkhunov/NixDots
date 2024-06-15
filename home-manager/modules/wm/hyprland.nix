@@ -175,7 +175,7 @@
      ];
 
      exec-once = [
-       "swww init"
+       "swww-daemon"
        "swww img ~/.wallpaper/ryo2.jpg"
        "waybar"
        "xwaylandwideobringe"
