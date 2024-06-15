@@ -20,7 +20,7 @@
     let 
       system = "x86_64-linux";
     in {
-      nixosConfigurations.dominaria = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.kamigawa = nixpkgs.lib.nixosSystem {
         specialArgs = {
           inherit inputs system;
         };

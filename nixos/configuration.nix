@@ -10,7 +10,7 @@
 
   i18n.defaultLocale = "en_US.UTF-8"; #locale
 
-  networking.hostName = "dominaria";
+  networking.hostName = "kamigawa";
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ]; # Flakes
 
