@@ -5,7 +5,7 @@
       mainBar = {
       layer = "top";
       position = "top";
-      height = 50;
+      height = 70;
       spacing = 4;
       modules-left = [ "clock" "tray" "custom/weather"];
       modules-center = ["hyprland/workspaces"];
@@ -27,7 +27,7 @@
       };
 
       "tray" = {
-        icon-size = 16;
+        icon-size = 24;
         spacing = 10;
       };
 
@@ -88,7 +88,7 @@
 * {
     border: none;
     font-family:'Inconsolata', 'FontAwesome';
-    font-size: 14px;
+    font-size: 20px;
     font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
     min-height: 30px;
 }
@@ -109,7 +109,7 @@ window#waybar {
 }
 
 #tray {
-    font-size:10px;
+    font-size:16px;
 }
 
 #workspaces button {
