@@ -43,6 +43,7 @@
       };
 
       "battery" = {
+        battery="BAT0";
         states = {
             warning = 30;
             critical = 15;
@@ -108,9 +109,11 @@ window#waybar {
     margin-right: 5px;
 }
 
-#wireplumber, #network, #backlight, #battery {
-    padding-right: 20px;
-    margin-right: 10px
+#wireplumber, #network, #backlight, #battery, #workspaces {
+  padding-right: 20px;
+}
+#battery {
+  margin-right: 10px;  
 }
 
 

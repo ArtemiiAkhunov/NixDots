@@ -176,7 +176,7 @@
 
      exec-once = [
        "swww-daemon"
-       "swww img ~/.wallpaper/ryo2.jpg"
+       "swww img ~/.wallpaper/ryo2.jpg --transition-type none"
        "waybar"
        "xwaylandwideobringe"
        "dunst"

@@ -51,7 +51,7 @@
           key = "  "; #Just get your distro's logo off nerdfonts.com
         }
         {
-          type = "de";
+          type = "wm";
           key = "  ";
         }
         {

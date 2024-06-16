@@ -29,6 +29,7 @@
     zathura
     spotify
     bottles
+    qbittorrent
 
     # School Apps
     
@@ -69,6 +70,7 @@
     libnotify
     lxde.lxsession
     xdg-user-dirs
+    mlocate
 
     # GUI utils
     

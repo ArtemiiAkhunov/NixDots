@@ -13,5 +13,6 @@
     ./cups.nix
     ./nixvim/base.nix
     ./xdg.nix
+    ./locate.nix
   ];
 }

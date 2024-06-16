@@ -18,7 +18,6 @@
         ll = "ls -al";
         ls = "ls --color=auto";
         grep = "grep --color=auto";
-        offload = "~/.dotfiles/nvidia-offload";
       };
    
     envExtra = "fastfetch";
