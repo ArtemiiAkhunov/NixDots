@@ -23,6 +23,7 @@
         {name = "path";}
         {name = "nvim_lsp";}
         {name = "cmp_tabby";}
+        {name = "luasnip";}
         {
           name = "buffer";
           # Words from other open buffers can also be suggested.
