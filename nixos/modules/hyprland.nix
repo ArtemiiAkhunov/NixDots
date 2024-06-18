@@ -10,7 +10,5 @@
   };
 
   # Hyprlock stuff
-  security.pam.services.hyprlock = {
-    enable = true;
-  };
+  security.pam.services.hyprlock.text = "auth include login";
 }
