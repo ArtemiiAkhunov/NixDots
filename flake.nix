@@ -16,7 +16,7 @@
 
   };
 
-  outputs = {self, nixpkgs, home-manager, ...}@inputs:
+  outputs = {nixpkgs, home-manager, ...}@inputs:
     let 
       system = "x86_64-linux";
     in {
@@ -24,8 +24,8 @@
         specialArgs = {
           inherit inputs system;
         };
-	modules = [ 
-	   inputs.nixvim.nixosModules.nixvim 
+	      modules = [ 
+	        inputs.nixvim.nixosModules.nixvim 
           ./nixos/configuration.nix
         ];
         inherit system;

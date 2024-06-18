@@ -1,6 +1,10 @@
 {
+  programs.nixvim.plugins.cmp-emoji.enable = true;
+
   programs.nixvim.plugins.cmp = {
     enable = true;
+    
+    autoEnableSources = true;
 
     settings = {
       snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
@@ -19,7 +23,6 @@
         {name = "path";}
         {name = "nvim_lsp";}
         {name = "cmp_tabby";}
-        {name = "luasnip";}
         {
           name = "buffer";
           # Words from other open buffers can also be suggested.
@@ -27,6 +30,18 @@
         }
         {name = "neorg";}
       ];
+    };
+  };
+
+  programs.nixvim.plugins.lsp = {
+    enable = true;
+    servers = {
+      nixd = {
+        enable = true;
+      };
+      pylsp = {
+        enable = true;
+      };
     };
   };
 }

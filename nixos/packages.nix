@@ -70,7 +70,7 @@
     libnotify
     lxde.lxsession
     xdg-user-dirs
-    mlocate
+    findutils
 
     # GUI utils
     
