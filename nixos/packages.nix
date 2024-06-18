@@ -86,6 +86,7 @@
     wl-clipboard
     xwaylandvideobridge
     swaylock
+    hyprlock
     swww 
     wofi
     xdg-desktop-portal-hyprland
