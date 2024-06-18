@@ -45,7 +45,7 @@
           valign = "top";
         }
         {
-          text = "Hi there, $USER";
+          text = "Hi there $USER!";
           color = "rgb(243, 139, 168)";
           font_size = 25;
           font_family = "Inconsolata";

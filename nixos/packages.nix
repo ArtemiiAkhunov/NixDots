@@ -85,7 +85,6 @@
     dunst
     wl-clipboard
     xwaylandvideobridge
-    swaylock
     hyprlock
     swww 
     wofi

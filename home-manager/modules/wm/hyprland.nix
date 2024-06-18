@@ -126,7 +126,7 @@
        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
        ''$mainMod SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f - ''
        ''$mainMod, Print, exec, grim - | swappy -f -''
-       "$mainMod SHIFT, L, exec, swaylock --color 000000"
+       "$mainMod SHIFT, L, exec, hyprlock"
        "$mainMod SHIFT, M, exec, dunstctl set-paused toggle"
        # Moving Around
        "$mainMod, left, movefocus, l"
