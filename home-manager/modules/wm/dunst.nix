@@ -23,7 +23,7 @@
         horizontal_padding = 8;
         text_icon_padding = 0;
         frame_width = 3;
-        frame_color = "#cba6f7";
+        #frame_color = "#cba6f7";
         gap_size = 0;
         separator_color = "frame";
         sort=true;
@@ -61,19 +61,19 @@
         per_monitor_dpi = false;
       };
       urgency_low = {
-        background = "#1e1e2e";
-        foreground = "#cdd6f4";
+        #background = "#1e1e2e";
+        #foreground = "#cdd6f4";
         timeout = 10;
       };
       urgency_normal = {
-        background = "#1e1e2e";
-        foreground = "#cdd6f4";
+        #background = "#1e1e2e";
+        #foreground = "#cdd6f4";
         timeout = 10;
       };
       urgency_critical = {
-        background = "#1e1e2e";
-        foreground = "#cdd6f4";
-        frame_color = "#f38ba8";
+        #background = "#1e1e2e";
+        #foreground = "#cdd6f4";
+        #frame_color = "#f38ba8";
         timeout = 20;
       };
     };
