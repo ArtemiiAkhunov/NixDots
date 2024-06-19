@@ -103,11 +103,6 @@
     slurp
     swappy
 
-    # Display Manager
-    
-    greetd.greetd
-    greetd.tuigreet
-
     #Other
     
     home-manager
