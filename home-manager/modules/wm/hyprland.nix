@@ -182,7 +182,6 @@
         "dunst"
         "lxpolkit"
         "copyq --start-server"
-        "hyprlock"
       ];
 
       workspace = [
