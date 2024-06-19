@@ -14,33 +14,25 @@
           {name = "luasnip";}
         ];
 
-        keymaps = [
-          {
-            key = "<CR>";
-            mode = [ "i" "v" ];
-            action = "cmp.mapping.confirm({ select = true })";
-          }
-          {
-            key = "<Tab>"; 
-            mode = [ "i" "v" ];
-            action = 
+        mapping = {
+          "<CR>" =  "cmp.mapping.confirm({ select = true })";
+          "<Tab>" = 
             ''
-              function(fallback)
-                if cmp.visible() then
-                  cmp.select_next_item()
-                elseif luasnip.expandable() then
-                  luasnip.expand()
-                elseif luasnip.expand_or_jumpable() then
-                  luasnip.expand_or_jump()
-                elseif check_backspace() then
-                  fallback()
-                else
-                  fallback()
-                end
+            function(fallback)
+              if cmp.visible() then
+                cmp.select_next_item()
+              elseif luasnip.expandable() then
+                luasnip.expand()
+              elseif luasnip.expand_or_jumpable() then
+                luasnip.expand_or_jump()
+              elseif check_backspace() then
+                fallback()
+              else
+                fallback()
               end
+            end
             '';
-          }
-        ];
+        };
       };
     };
 
