@@ -34,6 +34,16 @@
         valign = "center";
       };
 
+      image = {
+        path = "$HOME/.local/share/fastfetch/logos/ryo.png";
+        position = "0, 175";
+        size = "100, 100";
+        rounding = -2;
+        border_color = "rgb(243, 139, 168)";
+        halign = "center";
+        valign = "center";
+      };
+
       label = [
         {
           text = ''cmd[update:1000] echo "$(date +"%-I:%M%p")"'';
