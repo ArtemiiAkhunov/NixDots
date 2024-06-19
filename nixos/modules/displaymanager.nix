@@ -1,4 +1,4 @@
-{pkgs, ...}: let
+/*{pkgs, ...}: let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
   hyprland-session = "${pkgs.hyprland}/share/wayland-sessions";
 in {
@@ -26,4 +26,15 @@ in {
     TTYVHangup = true;
     TTYVTDisallocate = true;
   };
-}
+  }*/
+
+  {
+    services.displayManager = {
+      sddm = {
+        enable = true;
+        wayland.enable = true;
+      };  
+      autoLogin.enable = true;
+      autoLogin.user = "voidwalker";
+    };
+  }
