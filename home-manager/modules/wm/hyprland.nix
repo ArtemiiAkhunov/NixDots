@@ -175,6 +175,7 @@
       ];
 
       exec-once = [
+        "hyprlock"
         "swww-daemon"
         "swww img ~/.wallpaper/ryo2.jpg --transition-type none"
         "waybar"
@@ -182,7 +183,6 @@
         "dunst"
         "lxpolkit"
         "copyq --start-server"
-        "hyprlock"
       ];
 
       workspace = [
