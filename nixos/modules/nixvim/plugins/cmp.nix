@@ -1,7 +1,10 @@
 {
   programs.nixvim.plugins = {
+
     cmp-emoji.enable = true;
-    
+
+    cmp_luasnip.enable = true;
+
     cmp = {
       enable = true;
       autoEnableSources = true;
@@ -16,22 +19,8 @@
 
         mapping = {
           "<CR>" =  "cmp.mapping.confirm({ select = true })";
-          "<Tab>" = 
-            ''
-            function(fallback)
-              if cmp.visible() then
-                cmp.select_next_item()
-              elseif luasnip.expandable() then
-                luasnip.expand()
-              elseif luasnip.expand_or_jumpable() then
-                luasnip.expand_or_jump()
-              elseif check_backspace() then
-                fallback()
-              else
-                fallback()
-              end
-            end
-            '';
+          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
         };
       };
     };
