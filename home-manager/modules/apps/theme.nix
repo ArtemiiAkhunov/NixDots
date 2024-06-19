@@ -4,23 +4,22 @@
       color-scheme = "prefer-dark";
     };
   };
+
   gtk = {
     enable = true;
-    cursorTheme = {
-      name = "Vanilla-DMZ";
-      package = pkgs.vanilla-dmz;
-      size = 36;
-    };
-    theme = {
-      name = "Vanilla-DMZ";
-      package = pkgs.vanilla-dmz;
+    catppuccin = {
+      enable = true;
+      flavor = "mocha";
+      accent = "lavender";
+      size="standard";
+      tweaks = [ "normal" ];
     };
     #systemd.user.sessionVariables = config.home-manager.users.voidwalker.home.sessionVariables;
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "adwaita";
+    platformTheme.name = "catppuccin";
     style = {
       name = "Vanilla-DMZ";
       package = pkgs.vanilla-dmz;

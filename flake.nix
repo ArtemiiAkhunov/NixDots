@@ -14,6 +14,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs = {nixpkgs, home-manager, ...}@inputs:
@@ -33,7 +34,10 @@
 
       homeConfigurations.voidwalker = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
-        modules = [ ./home-manager/home.nix ];
+        modules = [ 
+          ./home-manager/home.nix 
+          inputs.catppuccin.homeManagerModules.catppuccin
+        ];
       };
   };
 }
