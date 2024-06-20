@@ -3,9 +3,13 @@
     enable = true;
     matchBlocks = {
       theros = {
-        hostname = "192.186.5.58";
+        hostname = "192.168.5.58";
         user = "voidwalker";
-        identityFile = "$HOME/.ssh/theros.pub";
+      };
+      data = {
+        hostname = "data.cs.purdue.edu";
+        user = "aakhunov";
+        identityFile = "/home/voidwalker/.ssh/id_rsa";
       };
     };
   };
