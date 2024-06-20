@@ -6,5 +6,6 @@
     ./zoxide.nix
     ./fastfetch.nix
     ./zsh.nix
+    ./ssh.nix
   ];
 }
