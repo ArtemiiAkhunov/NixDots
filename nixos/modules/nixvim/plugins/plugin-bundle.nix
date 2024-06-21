@@ -5,5 +5,6 @@
     ./neo-tree.nix
     ./cmp.nix
     ./nix.nix
+    ./lsp.nix
   ];
 }
