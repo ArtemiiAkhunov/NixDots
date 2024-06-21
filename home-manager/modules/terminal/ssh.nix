@@ -6,6 +6,7 @@
         hostname = "192.168.5.58";
         user = "voidwalker";
         identityFile = "/home/voidwalker/.ssh/id_rsa";
+        port = 2222;
       };
       data = {
         hostname = "data.cs.purdue.edu";
