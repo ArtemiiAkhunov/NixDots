@@ -14,5 +14,6 @@
     ./nixvim/base.nix
     ./xdg.nix
     ./locate.nix
+    ./hosts.nix
   ];
 }
