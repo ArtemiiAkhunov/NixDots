@@ -2,7 +2,7 @@
   programs.nixvim.plugins = {
 
     cmp-emoji.enable = true;
-    
+
     cmp_luasnip.enable = true;
 
     cmp = {
