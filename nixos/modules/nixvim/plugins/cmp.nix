@@ -2,8 +2,10 @@
   programs.nixvim.plugins = {
 
     cmp-emoji.enable = true;
+    
+    nvim-autopairs.enable = true;
 
-    cmp_luasnip.enable = true;
+    luasnip.enable = true;
 
     cmp = {
       enable = true;

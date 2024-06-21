@@ -12,6 +12,11 @@
         enable = true;
         settings.telemetry.enable = false;
       };
+      rust-analyzer = {
+        enable = true;
+        installCargo = true;
+        installRustc = true;
+      };
     };
   };
 }
