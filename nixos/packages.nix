@@ -30,7 +30,6 @@
     spotify
     bottles
     qbittorrent
-    jellyfin
 
     # School Apps
     
