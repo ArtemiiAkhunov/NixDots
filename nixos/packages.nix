@@ -70,6 +70,7 @@
     lxde.lxsession
     xdg-user-dirs
     findutils
+    bind
 
     # GUI utils
     

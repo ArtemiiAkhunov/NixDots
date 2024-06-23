@@ -4,6 +4,8 @@
     package = pkgs.zathura;
     options = {
       font="Inconsolata 16";
+      default-bg = "#000000";
+      default-fg = "#FFFFFF";
     };
   };
 }
