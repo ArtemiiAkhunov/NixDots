@@ -48,8 +48,8 @@
     gcc
     python
     (python3.withPackages (ps: with ps; [ requests ]))
-    lua
-    lua51Packages.luasnip
+    rustc
+    cargo
 
     # CLI stuff
 
