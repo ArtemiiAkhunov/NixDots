@@ -17,7 +17,6 @@
     
     # General Apps
     
-    cinnamon.nemo
     audacity
     firefox
     telegram-desktop
