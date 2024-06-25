@@ -70,7 +70,4 @@
       set previewer ${previewer}/bin/pv.sh
     '';
   };
-
-
-  };
 }
