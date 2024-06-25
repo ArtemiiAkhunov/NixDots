@@ -1,4 +1,4 @@
-{
+{pkgs, ...}: {
   programs.waybar = {
     enable = true;
     settings = {
@@ -67,7 +67,7 @@
       "wireplumber" = {
         format = "  {volume}%";
         format-muted = "󰝟";
-        on-click = "helvum";
+        on-click = "${pkgs.helvum}/bin/helvum";
       };
 
       "hyprland/language" = {
@@ -78,7 +78,7 @@
         format = "{}°";
         tooltip = true;
         interval = 3600;
-        exec = "wttrbar --location 'West Lafayette'";
+        exec = "{pkgs.wttrbar}/bin/wttrbar --location 'West Lafayette'";
         return-type = "json";
       };
     };

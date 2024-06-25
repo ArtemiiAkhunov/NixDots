@@ -1,16 +1,15 @@
-{
+{pkgs, ...}: {
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
     
     settings = {
       "$mainMod" = "$SUPER";
-      "$terminal" = "kitty";
-      "$browser" = "firefox";
-      "$privateBrowser" = "firefox --private-window lordofthelags.github.io/startpage/";
-      "$openSchedule" = "imv ~/Pictures/Schedule.png";
-      "$fileManager" = "nemo";
-      "$menu" = "wofi --show drun";
+      "$terminal" = "${pkgs.kitty}/bin/kitty";
+      "$browser" = "${pkgs.firefox}/bin/firefox";
+      "$privateBrowser" = "${pkgs.firefox}/bin/firefox --private-window lordofthelags.github.io/startpage/";
+      "$openSchedule" = "${pkgs.imv}/bin/imv ~/Pictures/Schedule.png";
+      "$menu" = "${pkgs.wofi}/bin/wofi --show drun";
 
       monitor = ",preffered,auto,1.0";
 
@@ -123,11 +122,11 @@
         "$mainMod, B, exec, $browser"
         "$mainMod SHIFT, B, exec, $privateBrowser"
         # Utilities
-        ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-        ''$mainMod SHIFT, Print, exec, grim -g "$(slurp)" - | swappy -f - ''
-        ''$mainMod, Print, exec, grim - | swappy -f -''
-        "$mainMod SHIFT, C, exec, hyprlock"
-        "$mainMod SHIFT, M, exec, dunstctl set-paused toggle"
+        ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+        ''$mainMod SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f - ''
+        ''$mainMod, Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -''
+        "$mainMod SHIFT, C, exec, ${pkgs.hyprlock}/bin/hyprlock"
+        "$mainMod SHIFT, M, exec, ${pkgs.dunst}/bin/dunstctl set-paused toggle"
         # Moving Around
         "$mainMod, H, movefocus, l"
         "$mainMod, L, movefocus, r"
@@ -166,11 +165,11 @@
       ];
 
       binde = [
-        ",XF86MonBrightnessUp, exec, brightnessctl set 5%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl set 5%-"
-        ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
-        ",XF86AudioLowerVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
-        "$mainMod SHIFT, H, exec, dunstctl history-pop"
+        ",XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%+"
+        ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
+        ",XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
+        ",XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
+        "$mainMod SHIFT, H, exec, ${pkgs.dunst}/bin/dunstctl history-pop"
       ];
     
       bindm = [
@@ -179,18 +178,18 @@
       ];
 
       bindl = [
-        ",switch:on:Lid Switch,exec,hyprlock"
+        ",switch:on:Lid Switch,exec,${pkgs.hyprlock}/bin/hyprlock"
       ];
 
       exec-once = [
-        "hyprlock"
-        "swww-daemon"
-        "swww img ~/.wallpaper/ryo2.jpg --transition-type none"
-        "waybar"
-        "xwaylandwideobringe"
-        "dunst"
-        "lxpolkit"
-        "copyq --start-server"
+        "${pkgs.hyprlock}/bin/hyprlock"
+        "${pkgs.swww}/bin/swww-daemon"
+        "${pkgs.swww}/bin/swww img ~/.wallpaper/ryo2.jpg --transition-type none"
+        "${pkgs.waybar}/bin/waybar"
+        "${pkgs.xwaylandvideobridge}/bin/xwaylandwideobringe"
+        "${pkgs.dunst}/bin/dunst"
+        "${pkgs.lxde.lxsession}/bin/lxpolkit"
+        "${pkgs.copyq}/bin/copyq --start-server"
       ];
 
       workspace = [
