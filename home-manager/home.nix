@@ -8,4 +8,6 @@
   imports = [
     ./modules/bundle.nix
   ];
+
+  home-manager.useGlobalPkgs = true;
 }
