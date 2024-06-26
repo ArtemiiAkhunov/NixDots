@@ -4,5 +4,6 @@
     ./zathura.nix
     ./mpris.nix
     ./lf.nix
+    ./desktop-entries.nix
   ];
 }
