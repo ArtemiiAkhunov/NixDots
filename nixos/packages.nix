@@ -29,6 +29,8 @@
     spotify
     bottles
     qbittorrent
+    davinci-resolve
+
 
     # School Apps
     
