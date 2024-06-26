@@ -25,6 +25,7 @@
     obs-studio
     mpv
     discord
+    betterdiscordctl
     zathura
     spotify
     bottles
