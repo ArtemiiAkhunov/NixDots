@@ -9,5 +9,5 @@
     ./modules/bundle.nix
   ];
 
-  home-manager.useGlobalPkgs = true;
+  nixpkgs.config.allowUnfree = true;
 }
