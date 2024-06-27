@@ -7,5 +7,6 @@
     ./fastfetch.nix
     ./zsh.nix
     ./ssh.nix
+    ./tmux.nix
   ];
 }

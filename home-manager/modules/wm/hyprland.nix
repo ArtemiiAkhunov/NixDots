@@ -184,7 +184,7 @@
       exec-once = [
         "${pkgs.hyprlock}/bin/hyprlock"
         "${pkgs.swww}/bin/swww-daemon"
-        "${pkgs.swww}/bin/swww img ~/.wallpaper/ryo2.jpg --transition-type none"
+        "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.xwaylandvideobridge}/bin/xwaylandwideobringe"
         "${pkgs.dunst}/bin/dunst"
