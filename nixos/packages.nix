@@ -75,8 +75,7 @@
     bind
 
     # TMUX AINT SHIT
-    byobu
-    screen
+    zellij
 
     # GUI utils
     
