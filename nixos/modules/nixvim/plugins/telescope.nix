@@ -10,9 +10,6 @@
       "<leader>of" = "oldfiles";
     };
 
-
-    keymapsSilent = true;
-
     settings.defaults = {
       file_ignore_patterns = [
         "^.git/"
