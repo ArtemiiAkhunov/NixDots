@@ -18,6 +18,7 @@
         ll = "ls -al";
         ls = "ls --color=auto";
         grep = "grep --color=auto";
+        z = "zellij";
         ssh = "kitten ssh";
       };
    
