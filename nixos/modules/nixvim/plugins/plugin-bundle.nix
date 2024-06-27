@@ -6,5 +6,6 @@
     ./cmp.nix
     ./nix.nix
     ./lsp.nix
+    ./telescope.nix
   ];
 }
