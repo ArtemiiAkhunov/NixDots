@@ -74,6 +74,10 @@
     findutils
     bind
 
+    # TMUX AINT SHIT
+    byobu
+    screen
+
     # GUI utils
     
     imv
