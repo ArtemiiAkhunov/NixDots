@@ -18,7 +18,8 @@
         ll = "ls -al";
         ls = "ls --color=auto";
         grep = "grep --color=auto";
-        #ssh = "kitten ssh";
+        ssh = "kitten ssh";
+        byobu = "byobu-screen";
       };
    
     envExtra = "fastfetch";
