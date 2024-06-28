@@ -50,7 +50,7 @@
     gcc
     python
     (python3.withPackages (ps: with ps; [ requests ]))
-    pyhton311Packages.debugpy
+    python311Packages.debugpy
     rustc
     cargo
 

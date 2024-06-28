@@ -21,6 +21,6 @@
       ];
       set_env.COLORTERM = "truecolor";
     };
-
+    extensions.ui-select.enable = true;
   };
 }
