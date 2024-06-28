@@ -25,6 +25,5 @@
       dap-python.enable = true;
       dap-virtual-text.enable = true;
     };
-    };
   };
 }

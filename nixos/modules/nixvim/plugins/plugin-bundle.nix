@@ -8,7 +8,6 @@
     ./lualine.nix
     ./neo-tree.nix
     ./telescope.nix
-    ./extra.nix
     ./alpha.nix
   ];
 }
