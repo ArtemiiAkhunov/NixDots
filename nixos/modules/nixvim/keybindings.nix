@@ -22,15 +22,9 @@
           # Save by ctrl + s
           "<C-s>" = ":w<CR>";
 
-          "<leader>dt" = 
-          "function()
-            require('dap').toggle_breakpoint
-          end";
+          "<leader>dt" = ":lua require('dap').toggle_breakpoint()<CR>";
 
-          "<leader>dc" = 
-          "function()
-            require('dap').continue
-          end";
+          "<leader>dc" = ":lua require('dap').continue()<CR>";
 
         };
       visual = 
