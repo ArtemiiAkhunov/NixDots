@@ -10,5 +10,6 @@
     ./telescope.nix
     ./alpha.nix
     ./treesitter.nix
+    ./none-ls.nix
   ];
 }
