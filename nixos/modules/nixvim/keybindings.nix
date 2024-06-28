@@ -22,6 +22,8 @@
           # Save by ctrl + s
           "<C-s>" = ":w<CR>";
 
+          # Debugger, maybe working?
+
           "<leader>dt" = ":lua require('dap').toggle_breakpoint()<CR>";
 
           "<leader>dc" = ":lua require('dap').continue()<CR>";

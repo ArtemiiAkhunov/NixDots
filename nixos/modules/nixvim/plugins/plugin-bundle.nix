@@ -1,13 +1,12 @@
 {
   imports = [
-    ./lualine.nix
-    ./barbar.nix
-    ./neo-tree.nix
     ./cmp.nix
-    ./nix.nix
-    ./lsp.nix
-    ./telescope.nix
     ./dap.nix
-    ./none-ls.nix
+    ./lsp.nix
+    ./nix.nix
+    ./barbar.nix
+    ./lualine.nix
+    ./neo-tree.nix
+    ./telescope.nix
   ];
 }
