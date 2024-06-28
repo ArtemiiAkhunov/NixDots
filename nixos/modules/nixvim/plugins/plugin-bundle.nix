@@ -9,5 +9,6 @@
     ./neo-tree.nix
     ./telescope.nix
     ./alpha.nix
+    ./treesitter.nix
   ];
 }
