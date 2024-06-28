@@ -22,9 +22,15 @@
           # Save by ctrl + s
           "<C-s>" = ":w<CR>";
 
-          "<leader>dt" = "require('dap').toggle_breakpoint";
+          "<leader>dt" = 
+          "function()
+            require('dap').toggle_breakpoint
+          end";
 
-          "<leader>dc" = "require('dap').continue";
+          "<leader>dc" = 
+          "function()
+            require('dap').continue
+          end";
 
         };
       visual = 
