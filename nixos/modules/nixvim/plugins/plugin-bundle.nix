@@ -7,5 +7,6 @@
     ./nix.nix
     ./lsp.nix
     ./telescope.nix
+    ./dap.nix
   ];
 }
