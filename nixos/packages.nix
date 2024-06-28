@@ -51,8 +51,8 @@
     python
     (python3.withPackages (ps: with ps; [ requests ]))
     python311Packages.debugpy
+    vscode-extensions.ms-vscode.cpptools
     gdb
-    lldb_18
     rustc
     cargo
 
