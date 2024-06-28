@@ -51,6 +51,7 @@
     python
     (python3.withPackages (ps: with ps; [ requests ]))
     python311Packages.debugpy
+    lldb_16
     rustc
     cargo
 
