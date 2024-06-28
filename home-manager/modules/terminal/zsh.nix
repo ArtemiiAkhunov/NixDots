@@ -20,6 +20,7 @@
         grep = "grep --color=auto";
         z = "zellij";
         ssh = "kitten ssh";
+        yolo = ''git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'';
       };
    
     history = {

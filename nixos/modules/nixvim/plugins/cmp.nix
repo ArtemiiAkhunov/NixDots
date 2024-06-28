@@ -6,6 +6,8 @@
     nvim-autopairs.enable = true;
 
     luasnip.enable = true;
+    cmp_luasnip.enable = true;
+    friendly-snippets.enable = true;
 
     cmp = {
       enable = true;
