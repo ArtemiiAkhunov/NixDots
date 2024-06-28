@@ -21,6 +21,11 @@
 
           # Save by ctrl + s
           "<C-s>" = ":w<CR>";
+
+          "<leader>dt" = "require('dap').toggle_breakpoint";
+
+          "<leader>dc" = "require('dap').continue";
+
         };
       visual = 
         lib.mapAttrsToList
