@@ -22,8 +22,6 @@
         ssh = "kitten ssh";
       };
    
-    envExtra = "fastfetch";
-    
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
