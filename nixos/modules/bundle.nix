@@ -15,5 +15,6 @@
     ./xdg.nix
     ./locate.nix
     ./hosts.nix
+    ./nh.nix
   ];
 }
