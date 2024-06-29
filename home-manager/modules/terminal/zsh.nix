@@ -1,14 +1,14 @@
-{config, ...}: {
+{config, ...}:
+let 
+  flakeDir = "~/Dotfiles";
+in {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = 
-      let
-        flakeDir = "~/Dotfiles";
-      in {
+    shellAliases = {
         rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
         update = "nix flake update ${flakeDir}";
         upgrade = "sudo nixos-rebuild switch --upgrade --flake ${flakeDir}";
@@ -27,6 +27,10 @@
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
     };
+
+    envExtra = ''
+      FLAKE=${flakeDir}
+    '';
 
     oh-my-zsh = {
       enable = true;
