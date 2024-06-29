@@ -30,7 +30,7 @@
 
     oh-my-zsh = {
       enable = true;
-      plugins = [ "git" "sudo" ];
+      plugins = [ "git" "sudo" "fzf" ];
       theme = "agnoster";
     };
   };

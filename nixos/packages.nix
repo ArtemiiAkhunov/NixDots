@@ -1,4 +1,4 @@
-{ pkgs, inputs, system, lib, ... }: {
+{ pkgs, lib, ... }: {
   nixpkgs.config = {
     allowUnfree = true;
     permittedInsecurePackages = [
@@ -76,8 +76,10 @@
     xdg-user-dirs
     findutils
     bind
+    fzf
 
     # TMUX AINT SHIT
+    
     zellij
 
     # GUI utils
