@@ -5,7 +5,7 @@
       schema = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
       logo = {
          type = "kitty-direct";
-         source = "ryo.png";
+         source = "nixos.png";
          width =  40;
          height = 16;
       };
