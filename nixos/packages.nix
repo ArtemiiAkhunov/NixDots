@@ -89,7 +89,6 @@
     wttrbar
     dunst
     wl-clipboard
-    xwaylandvideobridge
     hyprlock
     swww 
     wofi

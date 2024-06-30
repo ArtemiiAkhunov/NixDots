@@ -100,12 +100,6 @@
         "float, class:^(floating)$"
         "float, floating:1"
         "opacity 0.8,workspace:special:magic"
-        "opacity 0.0 override 0.0 override,class:^(xwaylandvideobridge)$"
-        # XWayland Stuff
-        "noanim,class:^(xwaylandvideobridge)$"
-        "noinitialfocus,class:^(xwaylandvideobridge)$"
-        "maxsize 1 1,class:^(xwaylandvideobridge)$"
-        "noblur,class:^(xwaylandvideobridge)$"
         # Wofi Visual
         "noanim,class:^(wofi)$" 
       ];
@@ -185,7 +179,6 @@
         "${pkgs.swww}/bin/swww-daemon"
         "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
         "${pkgs.waybar}/bin/waybar"
-        "${pkgs.xwaylandvideobridge}/bin/xwaylandwideobringe"
         "${pkgs.dunst}/bin/dunst"
         "${pkgs.lxde.lxsession}/bin/lxpolkit"
         "${pkgs.copyq}/bin/copyq --start-server"
