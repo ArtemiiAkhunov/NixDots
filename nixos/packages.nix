@@ -104,7 +104,7 @@
     # GPU utilities
 
     lshw
-    (import ./modules/nvidia-offload.nix { inherit pkgs; })
+    (import ./scripts/nvidia-offload.nix { inherit pkgs; })
 
     # Screenshotting
     
