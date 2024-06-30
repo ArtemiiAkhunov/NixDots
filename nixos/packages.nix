@@ -24,8 +24,7 @@
     kitty-themes
     obs-studio
     mpv
-    discord
-    betterdiscordctl
+    vesktop
     zathura
     spotify
     bottles
