@@ -11,5 +11,6 @@
     ./alpha.nix
     ./treesitter.nix
     ./lsp-format.nix
+    ./floaterm.nix
   ];
 }

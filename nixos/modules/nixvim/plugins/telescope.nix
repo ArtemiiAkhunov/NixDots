@@ -4,10 +4,10 @@
 
     keymaps = {
       "<leader>ff" = "find_files";
-      "<leader>b" = "buffers";
+      "<leader>fb" = "buffers";
       "<leader>fh" = "help_tags";
-      "<leader>gf" = "git_files";
-      "<leader>of" = "oldfiles";
+      "<leader>fg" = "git_files";
+      "<leader>fo" = "oldfiles";
     };
 
     settings.defaults = {
