@@ -14,7 +14,7 @@
         })
         {
           # Toggle neo tree ctrl + t
-          "<leader>tr" = ":Neotree<CR>";
+          "<leader>tr" = ":Neotree toggle<CR>";
 
           # Esc to clear search
           "<esc>" = ":noh<CR>";
