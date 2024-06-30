@@ -5,9 +5,9 @@
     keymaps = {
       "<leader>ff" = "find_files";
       "<leader>fb" = "buffers";
-      "<leader>fh" = "help_tags";
+      "<leader>hf" = "help_tags";
       "<leader>fg" = "git_files";
-      "<leader>fo" = "oldfiles";
+      "<leader>fh" = "oldfiles";
     };
 
     settings.defaults = {
