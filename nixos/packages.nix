@@ -78,10 +78,6 @@
     bind
     fzf
 
-    # TMUX AINT SHIT
-    
-    zellij
-
     # GUI utils
     
     imv
@@ -108,6 +104,7 @@
     # GPU utilities
 
     lshw
+    (import ./modules/nvidia-offload.nix { inherit pkgs; })
 
     # Screenshotting
     

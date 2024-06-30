@@ -17,15 +17,19 @@
         ll = "ls -al";
         ls = "ls --color=auto";
         grep = "grep --color=auto";
-        z = "zellij";
         ssh = "kitten ssh";
         yolo = ''git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'';
-      };
+        ff = "fastfetch";  
+    };
    
     history = {
       size = 10000;
       path = "${config.xdg.dataHome}/zsh/history";
     };
+
+    initExtra = ''
+      fastfetch
+    '';
 
     oh-my-zsh = {
       enable = true;
