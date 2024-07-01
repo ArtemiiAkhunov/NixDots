@@ -14,10 +14,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    spicetify-nix.url = "github:the-argus/spicetify-nix";
+
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = {nixpkgs, home-manager, ...}@inputs:
+  outputs = {nixpkgs, home-manager, spicetify-nix, ...}@inputs:
     let 
       system = "x86_64-linux";
     in {
@@ -34,9 +36,13 @@
 
       homeConfigurations.voidwalker = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
+        extraSpecialArgs = {
+          inherit spicetify-nix;
+        };
         modules = [ 
           ./home-manager/home.nix 
           inputs.catppuccin.homeManagerModules.catppuccin
+          spicetify-nix.homeManagerModule
         ];
       };
   };
