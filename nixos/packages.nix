@@ -25,7 +25,7 @@
     obs-studio
     mpv
     vesktop
-    zathura
+    evince
     spotify
     bottles
     qbittorrent
