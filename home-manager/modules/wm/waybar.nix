@@ -9,7 +9,7 @@
       spacing = 10;
       modules-left = [ "clock" "tray" "custom/weather"];
       modules-center = ["hyprland/workspaces"];
-      modules-right = ["wireplumber" "network" "backlight" "hyprland/language" "battery"];
+      modules-right = [ "custom/microphone" "wireplumber" "network" "backlight" "hyprland/language" "battery"];
       "hyprland/workspaces" = {
         format = "{icon}";
         format-icons = {
@@ -84,6 +84,10 @@
 
       "custom/microphone" = {
         format = "{}";
+        exec = "microphone-status";
+        tooltip = false;
+        interval = 1;
+        return-type = "json";
       };
     };
     };
@@ -101,7 +105,7 @@
     background: transparent;
   }
 
-  #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather {
+  #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone {
     color: #1e1e2e;
     background-color: #f5e0dc;
     border-radius: 10px;
@@ -109,6 +113,10 @@
     padding-right: 10px;
     margin-top:5px;
     margin-right: 5px;
+  }
+
+  #custom-microphone {
+    min-width: 15px;
   }
 
   #wireplumber, #network, #backlight, #battery {
