@@ -81,6 +81,10 @@
         exec = "${pkgs.wttrbar}/bin/wttrbar --location 'West Lafayette'";
         return-type = "json";
       };
+
+      "custom/microphone" = {
+        format = "{}";
+      };
     };
     };
     style =

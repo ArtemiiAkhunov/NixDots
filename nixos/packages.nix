@@ -87,6 +87,7 @@
     xwayland
     waybar
     wttrbar
+    (import ./scripts/microphone-status.nix { inherit pkgs; })
     dunst
     wl-clipboard
     hyprlock
