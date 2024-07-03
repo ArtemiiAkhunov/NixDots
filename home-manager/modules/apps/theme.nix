@@ -7,7 +7,6 @@
 
   #YES, NO ACCENTS HERE, PLEZ
   programs.zsh.syntaxHighlighting.catppuccin.enable = false;
-  programs.zathura.catppuccin.enable = false;
   catppuccin.pointerCursor.enable = false;
 
   dconf.settings = {
