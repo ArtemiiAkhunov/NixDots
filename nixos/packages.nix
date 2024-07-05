@@ -76,6 +76,7 @@
     findutils
     bind
     fzf
+    sl
 
     # GUI utils
     
