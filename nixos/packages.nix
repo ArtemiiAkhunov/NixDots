@@ -31,6 +31,8 @@
     qbittorrent
     davinci-resolve
     makemkv
+    cinnamon.nemo-with-extensions
+    gvfs
 
 
     # School Apps
@@ -101,7 +103,6 @@
 
     pipewire
     helvum
-    pavucontrol
 
     # GPU utilities
 
