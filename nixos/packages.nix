@@ -30,6 +30,7 @@
     bottles
     qbittorrent
     davinci-resolve
+    makemkv
 
 
     # School Apps
