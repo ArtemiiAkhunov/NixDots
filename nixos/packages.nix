@@ -101,6 +101,7 @@
 
     pipewire
     helvum
+    pavucontrol
 
     # GPU utilities
 
