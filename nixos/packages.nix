@@ -80,6 +80,7 @@
     bind
     fzf
     sl
+    openvpn
 
     # GUI utils
     
