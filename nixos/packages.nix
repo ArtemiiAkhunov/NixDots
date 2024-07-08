@@ -80,12 +80,15 @@
     bind
     fzf
     sl
-    openvpn
 
     # GUI utils
     
     imv
     copyq
+
+    # VPN
+
+    openvpn
 
     # Wayland stuff
 
