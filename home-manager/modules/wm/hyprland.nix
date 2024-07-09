@@ -183,6 +183,7 @@
         "${pkgs.dunst}/bin/dunst"
         "${pkgs.lxde.lxsession}/bin/lxpolkit"
         "${pkgs.copyq}/bin/copyq --start-server"
+        "${pkgs.networkmanagerapplet}/bin/nm-applet"
       ];
 
       workspace = [

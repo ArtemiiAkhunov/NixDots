@@ -88,7 +88,8 @@
 
     # VPN
 
-    openvpn
+    networkmanager-l2tp
+    networkmanagerapplet
 
     # Wayland stuff
 

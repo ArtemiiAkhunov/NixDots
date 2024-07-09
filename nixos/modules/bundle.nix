@@ -16,6 +16,5 @@
     ./locate.nix
     ./hosts.nix
     ./nh.nix
-    ./vpn.nix
   ];
 }
