@@ -11,7 +11,7 @@
         ignore_empty_input = true;
       };
       background = {
-        path = "$HOME/.wallpaper/nixos.jpg";
+        path = "$HOME/.wallpaper/ryo2.jpg";
         blur_passes = 3;
         blur_size = 8;
       };
