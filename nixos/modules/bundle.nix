@@ -14,7 +14,7 @@
     ./nixvim/base.nix
     ./xdg.nix
     ./locate.nix
-    ./hosts.nix
     ./nh.nix
+    ./firewall.nix
   ];
 }
