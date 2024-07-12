@@ -16,5 +16,6 @@
     ./locate.nix
     ./nh.nix
     ./firewall.nix
+    ./suspend-and-hibernate.nix
   ];
 }
