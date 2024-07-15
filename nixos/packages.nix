@@ -85,6 +85,7 @@
     
     imv
     copyq
+    ventoy-full
 
     # VPN
 
