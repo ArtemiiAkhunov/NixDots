@@ -189,6 +189,7 @@
       workspace = [
         "special:magic, gapsin:40, gapsout:60"
         "special:schedule, on-created-empty:$openSchedule"
+        "special:magic, on-created-empty:${pkgs.spotify}/bin/spotify"
       ];
     };
   };
