@@ -57,6 +57,7 @@
     gdb
     rustc
     cargo
+    android-tools
 
     # CLI stuff
 
