@@ -7,7 +7,7 @@
     users.voidwalker = {
       isNormalUser = true;
       description = "Void Walker";
-      extraGroups = [ "wheel" "networkmanager" "input" ];
+      extraGroups = [ "wheel" "networkmanager" "input" "audio" ];
       packages = with pkgs; [];
     };
   };
