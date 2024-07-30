@@ -5,4 +5,6 @@
     clean.extraArgs = "--keep-since 4d --keep 3";
     flake = "/home/voidwalker/Dotfiles";
   };
+  
+  nix.settings.auto-optimise-store = true;
 }
