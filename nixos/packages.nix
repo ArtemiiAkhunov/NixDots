@@ -81,6 +81,7 @@
     bind
     fzf
     sl
+    sherlock
 
     # GUI utils
     
