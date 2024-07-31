@@ -66,7 +66,7 @@
     tree
     wget
     git
-    htop
+    btop
     unzip
     cava
     zip
