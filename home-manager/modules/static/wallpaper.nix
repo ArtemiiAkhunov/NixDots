@@ -1,6 +1,6 @@
 {
   home.file.".wallpaper" = {
-    source = "./wallpaper";
+    source = ./wallpaper;
     recursive = true;
   };
 }
