@@ -35,7 +35,7 @@
       };
 
       image = {
-        path = "$HOME/.local/share/fastfetch/logos/ryo.png";
+        path = "$HOME/.local/share/fastfetch/logos/nixos.png";
         position = "0, 175";
         size = "100, 100";
         rounding = -2;
