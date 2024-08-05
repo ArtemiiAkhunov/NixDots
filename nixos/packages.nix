@@ -110,7 +110,7 @@
     # Sound
 
     pipewire
-    helvum
+    pavucontrol
 
     # GPU utilities
 

@@ -67,7 +67,7 @@
       "wireplumber" = {
         format = "  {volume}%";
         format-muted = "󰝟";
-        on-click = "${pkgs.helvum}/bin/helvum";
+        on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
       };
 
       "hyprland/language" = {
