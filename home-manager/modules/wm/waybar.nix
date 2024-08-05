@@ -78,7 +78,7 @@
         format = "{}°";
         tooltip = true;
         interval = 3600;
-        exec = "${pkgs.wttrbar}/bin/wttrbar --location 'West Lafayette'";
+        exec = "${pkgs.wttrbar}/bin/wttrbar";
         return-type = "json";
       };
 
