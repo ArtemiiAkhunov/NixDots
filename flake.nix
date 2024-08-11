@@ -14,7 +14,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spicetify-nix.url = "github:the-argus/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     catppuccin.url = "github:catppuccin/nix";
   };
@@ -42,7 +45,7 @@
         modules = [ 
           ./home-manager/home.nix 
           inputs.catppuccin.homeManagerModules.catppuccin
-          spicetify-nix.homeManagerModule
+          spicetify-nix.homeManagerModules.default
         ];
       };
   };
