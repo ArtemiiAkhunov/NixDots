@@ -9,10 +9,10 @@
       let
         flakeDir = "~/Dotfiles";
       in {
-        rebuild = "sudo nixos-rebuild switch --flake ${flakeDir}";
+        rebuild = "nh os switch ${flakeDir}";
         update = "nix flake update ${flakeDir}";
         
-        home-update = "home-manager switch --flake ${flakeDir}";
+        home-update = "nh home switch ${flakeDir}";
 
         ll = "ls -al";
         ls = "ls --color=auto";
