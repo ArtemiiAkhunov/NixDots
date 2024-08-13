@@ -11,7 +11,7 @@
       data = {
         hostname = "data.cs.purdue.edu";
         user = "aakhunov";
-        identityFile = "/home/voidwalker/.ssh/id_rsa";
+        identityFile = "/home/voidwalker/.ssh/id_ed25519";
       };
     };
   };
