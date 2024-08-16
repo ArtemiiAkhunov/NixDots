@@ -11,7 +11,7 @@
         ignore_empty_input = true;
       };
       background = {
-        path = "$HOME/.wallpaper/mononoke.jpg";
+        path = "$HOME/.wallpaper/nixchan.png";
         blur_passes = 3;
         blur_size = 8;
       };
