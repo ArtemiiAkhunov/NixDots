@@ -39,7 +39,7 @@
         position = "0, 175";
         size = "100, 100";
         rounding = -2;
-        border_color = "rgb(243, 139, 168)";
+        border_color = "rgb(180, 190, 254)";
         halign = "center";
         valign = "center";
       };
@@ -47,7 +47,7 @@
       label = [
         {
           text = ''cmd[update:1000] echo "$(date +"%-I:%M%p")"'';
-          color = "rgb(243, 139, 168)";
+          color = "rgb(180, 190, 254)";
           font_size = 120;
           font_family = "Inconsolata";
           position = "0, -300";
@@ -56,7 +56,7 @@
         }
         {
           text = "Hi there $USER!";
-          color = "rgb(243, 139, 168)";
+          color = "rgb(180, 190, 254)";
           font_size = 25;
           font_family = "Inconsolata";
           position = "0, -40";
