@@ -1,5 +1,6 @@
 {
   imports = [
+    ./automount.nix
     ./bootloader.nix
     ./sound.nix
     ./env.nix
