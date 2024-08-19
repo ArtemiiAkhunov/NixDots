@@ -25,6 +25,7 @@
     obs-studio
     mpv
     vesktop
+    element-desktop
     evince
     spotify
     bottles
