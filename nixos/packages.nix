@@ -46,6 +46,10 @@
 
     retroarch
     cockatrice
+    lutris
+    heroic
+    mangohud
+    protonup
 
     # Coding utilities
     
