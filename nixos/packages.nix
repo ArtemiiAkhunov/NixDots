@@ -103,6 +103,7 @@
     (import ./scripts/microphone-status.nix { inherit pkgs; })
     dunst
     wl-clipboard
+    hyprland
     hyprlock
     swww 
     wofi
