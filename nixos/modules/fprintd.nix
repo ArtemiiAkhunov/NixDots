@@ -7,7 +7,7 @@
         patches = (previousAttrs.patches or []) ++ [
           (pkgs.fetchpatch {
             url = "https://gitlab.freedesktop.org/libfprint/libfprint/-/merge_requests/469.patch";
-            hash = "";
+            hash = "sha256-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
           })
         ];
       });
