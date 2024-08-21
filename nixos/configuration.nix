@@ -1,10 +1,10 @@
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./modules/bundle.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./overlays/overlay-bundle.nix
+    ./modules/modules-bundle.nix
+  ]; 
 
   time.timeZone = "America/Indianapolis"; #timezone
 
