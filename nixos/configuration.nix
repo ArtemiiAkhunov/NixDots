@@ -1,10 +1,13 @@
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./modules/bundle.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./packages.nix
+    ./modules/modules-bundle.nix
+  ]; 
+
+  nixpkgs.overlays = [
+    ( import ./overlays/fprintd_overlay.nix {} )
+  ];
 
   time.timeZone = "America/Indianapolis"; #timezone
 
