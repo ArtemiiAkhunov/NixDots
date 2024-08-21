@@ -2,12 +2,11 @@
   imports = [
     ./hardware-configuration.nix
     ./packages.nix
-    ./overlays/overlay-bundle.nix
     ./modules/modules-bundle.nix
   ]; 
 
   nixpkgs.overlays = [
-    ./overlays/fprintd_overlay.nix
+    ( import ./overlays/fprintd_overlay.nix {} )
   ];
 
   time.timeZone = "America/Indianapolis"; #timezone
