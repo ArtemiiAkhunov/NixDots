@@ -62,6 +62,7 @@
     gdb
     rustc
     cargo
+    conda
     android-tools
 
     # CLI stuff
