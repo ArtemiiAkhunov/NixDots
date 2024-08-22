@@ -88,6 +88,7 @@
     fzf
     sl
     sherlock
+    sbctl
 
     # GUI utils
     
