@@ -99,6 +99,7 @@
 
     networkmanager-l2tp
     networkmanagerapplet
+    openvpn3
 
     # Wayland stuff
 
