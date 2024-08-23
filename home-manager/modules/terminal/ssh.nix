@@ -13,6 +13,11 @@
         user = "aakhunov";
         identityFile = "/home/voidwalker/.ssh/id_ed25519";
       };
+      xinu = {
+        hostname = "xinu13.cs.purdue.edu";
+        user = "aakhunov";
+        identityFile = "/home/voidwalker/.ssh/id_ed25519";
+      };
     };
   };
 }
