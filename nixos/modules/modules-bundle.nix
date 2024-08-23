@@ -19,6 +19,5 @@
     ./firewall.nix
     ./suspend-and-hibernate.nix
     ./fprintd.nix
-    ./wireguard.nix
   ];
 }
