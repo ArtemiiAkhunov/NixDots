@@ -17,6 +17,9 @@
         installCargo = true;
         installRustc = true;
       };
+      marksman = {
+        enable = true;
+      };
     };
   };
 }
