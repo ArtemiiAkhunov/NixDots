@@ -6,7 +6,7 @@
       "<leader>ff" = "find_files";
       "<leader>fb" = "buffers";
       "<leader>hf" = "help_tags";
-      "<leader>fg" = "git_files";
+      "<leader>fg" = "live_grep";
       "<leader>fh" = "oldfiles";
     };
 

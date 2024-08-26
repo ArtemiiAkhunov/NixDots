@@ -21,5 +21,13 @@
         enable = true;
       };
     };
+    keymaps = {
+      lspBuf = {
+        "<leader>hv" = "hover";
+        "<leader>df" = "definition";
+        "<leader>ca" = "code_action";
+      };
+      silent = true;
+    };
   };
 }

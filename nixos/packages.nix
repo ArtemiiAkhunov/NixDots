@@ -90,6 +90,7 @@
     fzf
     sl
     sherlock
+    ripgrep
 
     # GUI utils
     
