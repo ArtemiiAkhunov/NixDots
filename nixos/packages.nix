@@ -64,6 +64,8 @@
     cargo
     conda
     android-tools
+    hugo
+    nodejs
 
     # CLI stuff
 
