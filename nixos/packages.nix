@@ -111,7 +111,7 @@
     waybar
     wttrbar
     (import ./scripts/microphone-status.nix { inherit pkgs; })
-    dunst
+    swaynotificationcenter
     wl-clipboard
     hyprland
     hyprlock

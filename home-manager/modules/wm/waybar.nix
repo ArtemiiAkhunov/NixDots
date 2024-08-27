@@ -9,7 +9,7 @@
       spacing = 10;
       modules-left = [ "clock" "tray" "custom/weather"];
       modules-center = ["hyprland/workspaces"];
-      modules-right = [ "custom/microphone" "wireplumber" "network" "backlight" "hyprland/language" "battery"];
+      modules-right = [ "custom/microphone" "wireplumber" "network" "backlight" "hyprland/language" "battery" "custom/nc"];
       "hyprland/workspaces" = {
         format = "{icon}";
         format-icons = {
@@ -88,6 +88,10 @@
         tooltip = false;
         interval = 1;
         return-type = "json";
+      };
+      "custtom/nc" = {
+        format = "";
+        on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
       };
     };
     };
