@@ -32,7 +32,9 @@
     qbittorrent
     davinci-resolve
     makemkv
-    cinnamon.nemo-with-extensions
+    gnome.nautilus
+    gnome.adwaita-icon-theme
+    gnome.sushi
     gvfs
 
 

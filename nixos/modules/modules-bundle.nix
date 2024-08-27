@@ -19,5 +19,6 @@
     ./firewall.nix
     ./suspend-and-hibernate.nix
     ./fprintd.nix
+    ./nautilus.nix
   ];
 }
