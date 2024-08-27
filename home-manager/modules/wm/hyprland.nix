@@ -120,7 +120,7 @@
         ''$mainMod SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f - ''
         ''$mainMod, Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -''
         "$mainMod SHIFT, C, exec, ${pkgs.hyprlock}/bin/hyprlock"
-        "$mainMod SHIFT, M, exec, ${pkgs.dunst}/bin/dunstctl set-paused toggle"
+        "$mainMod, N, exec, ${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         # Moving Around
         "$mainMod, H, movefocus, l"
         "$mainMod, L, movefocus, r"
@@ -163,7 +163,6 @@
         ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl set 5%-"
         ",XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
         ",XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
-        "$mainMod SHIFT, O, exec, ${pkgs.dunst}/bin/dunstctl history-pop"
       ];
     
       bindm = [
@@ -180,7 +179,7 @@
         "${pkgs.swww}/bin/swww-daemon"
         "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
         "${pkgs.waybar}/bin/waybar"
-        "${pkgs.dunst}/bin/dunst"
+        "${pkgs.swaynotificationcenter}/bin/swaync"
         "${pkgs.lxde.lxsession}/bin/lxpolkit"
         "${pkgs.copyq}/bin/copyq --start-server"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"

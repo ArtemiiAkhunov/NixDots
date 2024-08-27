@@ -9,7 +9,7 @@
       spacing = 10;
       modules-left = [ "clock" "tray" "custom/weather"];
       modules-center = ["hyprland/workspaces"];
-      modules-right = [ "custom/microphone" "wireplumber" "network" "backlight" "hyprland/language" "battery"];
+      modules-right = [ "custom/microphone" "wireplumber" "network" "backlight" "hyprland/language" "battery" "custom/nc"];
       "hyprland/workspaces" = {
         format = "{icon}";
         format-icons = {
@@ -89,6 +89,10 @@
         interval = 1;
         return-type = "json";
       };
+      "custom/nc" = {
+        format = "";
+        on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
+      };
     };
     };
     style =
@@ -105,7 +109,7 @@
     background: transparent;
   }
 
-  #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone {
+  #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc {
     color: #1e1e2e;
     background-color: #f5e0dc;
     border-radius: 10px;
@@ -127,7 +131,7 @@
     padding-right: 20px;
   }
 
-  #battery {
+  #custom-nc {
     margin-right: 10px;  
   }
 
