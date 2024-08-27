@@ -90,7 +90,7 @@
         return-type = "json";
       };
       "custom/nc" = {
-        format = "";
+        format = "";
         on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
       };
     };

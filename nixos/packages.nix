@@ -64,7 +64,7 @@
     gdb
     rustc
     cargo
-    conda
+    python311Packages.conda
     android-tools
     hugo
     nodejs
