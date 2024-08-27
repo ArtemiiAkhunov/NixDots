@@ -120,6 +120,7 @@
         ''$mainMod SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f - ''
         ''$mainMod, Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -''
         "$mainMod SHIFT, C, exec, ${pkgs.hyprlock}/bin/hyprlock"
+        "$mainMod, N, exec, ${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         # Moving Around
         "$mainMod, H, movefocus, l"
         "$mainMod, L, movefocus, r"
