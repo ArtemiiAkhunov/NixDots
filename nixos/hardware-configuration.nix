@@ -12,7 +12,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
   boot.kernelParams = [ "i915.force_probe=a7a0" ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-intel" "xhci_hcd" ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
