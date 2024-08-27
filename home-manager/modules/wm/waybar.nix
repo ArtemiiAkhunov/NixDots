@@ -131,7 +131,7 @@
     padding-right: 20px;
   }
 
-  #battery {
+  #custom-nc {
     margin-right: 10px;  
   }
 
