@@ -89,7 +89,7 @@
         interval = 1;
         return-type = "json";
       };
-      "custtom/nc" = {
+      "custom/nc" = {
         format = "";
         on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
       };
@@ -109,7 +109,7 @@
     background: transparent;
   }
 
-  #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone {
+  #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc {
     color: #1e1e2e;
     background-color: #f5e0dc;
     border-radius: 10px;
