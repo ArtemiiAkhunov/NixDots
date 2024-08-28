@@ -31,7 +31,8 @@
           inherit inputs system;
         };
 	      modules = [ 
-	        inputs.nixvim.nixosModules.nixvim 
+          inputs.nixvim.nixosModules.nixvim
+          inputs.catppuccin.nixosModules.catppuccin
           ./nixos/configuration.nix
         ];
         inherit system;

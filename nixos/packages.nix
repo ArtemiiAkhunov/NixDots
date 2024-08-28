@@ -30,7 +30,8 @@
     spotify
     bottles
     qbittorrent
-    davinci-resolve
+    kdePackages.kdenlive
+    glaxnimate
     makemkv
     gnome.nautilus
     gnome.adwaita-icon-theme
