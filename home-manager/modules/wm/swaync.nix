@@ -37,6 +37,7 @@
         "volume"
         "backlight"
         "mpris"
+        "dnd"
         "notifications"
       ];
       widget-config = {
@@ -46,7 +47,7 @@
           button-text = "Clear";
         };
         dnd = {
-          text = " ";
+          text = "Shush";
         };
         label = {
           max-lines = 2;
@@ -106,7 +107,7 @@
       }
 
       .floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
-        font-size: 24px;
+        font-size: 18px;
         color: #cdd6f4;
       }
 
@@ -115,7 +116,7 @@
       }
 
       .floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
-        font-size: 18px;
+        font-size: 14px;
         color: #cdd6f4;
       }
 
@@ -327,6 +328,10 @@
 
       .widget-dnd > switch:checked {
         background: #313244;
+      }
+
+      .widget-dnd > label {
+        font-size:24px;
       }
 
       .widget-dnd > switch slider {
