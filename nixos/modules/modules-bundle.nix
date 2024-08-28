@@ -20,6 +20,5 @@
     ./suspend-and-hibernate.nix
     ./fprintd.nix
     ./nautilus.nix
-    ./catpuccin.nix
   ];
 }
