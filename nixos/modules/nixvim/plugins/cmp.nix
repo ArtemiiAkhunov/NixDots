@@ -5,6 +5,7 @@
     
     nvim-autopairs.enable = true;
 
+    cmp-nvim-lsp.enable = true;
     luasnip.enable = true;
     cmp_luasnip.enable = true;
     friendly-snippets.enable = true;
@@ -25,10 +26,7 @@
             option.get_bufnrs.__raw = "vim.api.nvim_list_bufs";
             keywordLength = 3;
           }
-          {
-            name = "luasnip";
-            keywordLength = 3;
-          }
+          {name = "luasnip";}
         ];
 
         mapping = {
