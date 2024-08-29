@@ -12,5 +12,6 @@
     ./treesitter.nix
     ./lsp-format.nix
     ./floaterm.nix
+    ./hardtime.nix
   ];
 }
