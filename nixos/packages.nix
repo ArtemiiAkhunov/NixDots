@@ -93,6 +93,7 @@
     sl
     sherlock
     ripgrep
+    qemu
 
     # GUI utils
     
