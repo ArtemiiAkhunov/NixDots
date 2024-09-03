@@ -16,7 +16,6 @@
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     catppuccin.url = "github:catppuccin/nix";
@@ -32,7 +31,7 @@
         };
 	      modules = [ 
           inputs.nixvim.nixosModules.nixvim
-          inputs.catppuccin.nixosModules.catppuccin
+          
           ./nixos/configuration.nix
         ];
         inherit system;
