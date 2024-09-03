@@ -188,7 +188,7 @@
       workspace = [
         "special:magic, gapsin:40, gapsout:60"
         "special:schedule, on-created-empty:$openSchedule"
-        "special:magic, on-created-empty:$spotify"
+        "special:magic, on-created-empty:spotify"
       ];
     };
   };
