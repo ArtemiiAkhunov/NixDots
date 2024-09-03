@@ -27,7 +27,6 @@
     vesktop
     element-desktop
     evince
-    spotify
     bottles
     qbittorrent
     kdePackages.kdenlive
