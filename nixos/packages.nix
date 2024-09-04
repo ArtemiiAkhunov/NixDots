@@ -35,7 +35,8 @@
     gnome.nautilus
     gnome.adwaita-icon-theme
     gnome.sushi
-    gvfs
+    imv
+    ventoy-full
 
 
     # School Apps
@@ -68,45 +69,12 @@
     hugo
     nodejs
 
-    # CLI stuff
+    # Window Manager Requirements
 
-    fastfetch
-    file
-    tree
-    wget
-    git
-    btop
-    unzip
-    cava
-    zip
     brightnessctl
-    bluez
-    bluez-tools    
-    killall
     libnotify
     lxde.lxsession
     xdg-user-dirs
-    findutils
-    bind
-    fzf
-    sl
-    sherlock
-    ripgrep
-    qemu
-
-    # GUI utils
-    
-    imv
-    copyq
-    ventoy-full
-
-    # VPN
-
-    networkmanager-l2tp
-    networkmanagerapplet
-
-    # Wayland stuff
-
     xwayland
     waybar
     wttrbar
@@ -118,29 +86,50 @@
     swww 
     wofi
     xdg-desktop-portal-hyprland
-
-    # Sound
-
     pipewire
     pavucontrol
+    copyq
+    grim
+    grimblast
+    slurp
+    swappy
+    home-manager
+    papirus-nord
+
+    # CLI stuff
+
+    fastfetch
+    file
+    tree
+    wget
+    git
+    btop
+    unzip
+    cava
+    zip
+    bluez
+    bluez-tools
+    killall
+    findutils
+    bind
+    fzf
+    sl
+    sherlock
+    ripgrep
+    gvfs
+    qemu
+
+    # Networking
+
+    networkmanager-l2tp
+    networkmanagerapplet
+    cacert
 
     # GPU utilities
 
     lshw
     (import ./scripts/nvidia-offload.nix { inherit pkgs; })
 
-    # Screenshotting
-    
-    grim
-    grimblast
-    slurp
-    swappy
-
-    #Other
-    
-    home-manager
-    papirus-nord
-    cacert
   ];
 
    fonts.packages = with pkgs; [
