@@ -66,8 +66,6 @@
     rustc
     cargo
     android-tools
-    hugo
-    nodejs
 
     # Window Manager Requirements
 
