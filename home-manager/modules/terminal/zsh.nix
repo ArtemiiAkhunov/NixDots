@@ -10,7 +10,7 @@
         flakeDir = "~/Dotfiles";
       in {
         rebuild = "nh os switch ${flakeDir}";
-        update = "nix flake update --flake ${flakeDir}";
+        update = "nix flake update ${flakeDir}";
         
         home-update = "nh home switch ${flakeDir}";
 
