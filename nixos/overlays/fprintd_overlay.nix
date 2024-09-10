@@ -3,9 +3,9 @@
 {
   libfprint= prev.libfprint.overrideAttrs (old: {
     src = builtins.fetchGit {
-      url = "https://gitlab.freedesktop.org/thameruddin/libfprint.git";
-      ref = "refs/heads/egismoc-0587";
-      rev = "4c50d9b6a0cb45681e1cd08411df477772f6821c";
+      url = "https://gitlab.freedesktop.org/libfprint/libfprint";
+      ref = "refs/heads/master";
+      rev = "e57bab2f1ef3583158d2e6e2b5bb4182629ebe35";
     };
   }); 
 
