@@ -15,7 +15,7 @@
         identityFile = rsa_key_path;
       };
       xinu = {
-        hostname = "xinu13.cs.purdue.edu";
+        hostname = "xinu20.cs.purdue.edu";
         user = "aakhunov";
         identityFile = rsa_key_path;
       };
