@@ -77,6 +77,7 @@
     waybar
     wttrbar
     (import ./scripts/microphone-status.nix { inherit pkgs; })
+    (import ./scripts/handle_monitor_connect.nix { inherit pkgs; })
     swaynotificationcenter
     wl-clipboard
     hyprland
