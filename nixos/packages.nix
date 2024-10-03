@@ -36,6 +36,7 @@
     gnome.adwaita-icon-theme
     gnome.sushi
     imv
+    thunderbird
     ventoy-full
 
 
