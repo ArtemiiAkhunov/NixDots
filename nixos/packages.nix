@@ -37,7 +37,7 @@
     gnome.sushi
     imv
     thunderbird
-    yubikey-personalization-gui
+    yubikey-manager-qt
     ventoy-full
 
 
