@@ -46,7 +46,6 @@
     obsidian
     zoom-us
     libreoffice-still
-    hplip
 
     # Gaming
 
