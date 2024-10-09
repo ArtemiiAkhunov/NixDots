@@ -76,6 +76,7 @@
           ];
         };
         "theros" = lib.nixosSystem {
+          system = "x86_64-linux";
           modules = [
             ./nixos/machines/theros 
             inputs.nixvim.nixosModules.nixvim
