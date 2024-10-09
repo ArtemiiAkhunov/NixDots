@@ -8,7 +8,6 @@
   imports = [
     ../common
     ../common/wm/
-    ../common/shell/
     ../common/terminal/
     ../common/static/
   ];

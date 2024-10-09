@@ -24,7 +24,7 @@
   outputs = { self, ... }:
     let 
       inherit (self) inputs outputs;
-      lib = inputs.nixpkgs.lib // inputs.home-manager.lib
+      lib = inputs.nixpkgs.lib // inputs.home-manager.lib;
       overlays = import ./overlays { inherit inputs outputs; };
 
       systems = [ "x86_64-linux" ];
@@ -48,7 +48,7 @@
             inputs.spicetify-nix.homeManagerModules.default
           ];
           extraSpecialArgs = {
-            inherit inputs outputs
+            inherit inputs outputs;
           };
         };
         "voidwalker@theros" = lib.homeManagerConfiguration {

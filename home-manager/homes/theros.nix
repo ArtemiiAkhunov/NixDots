@@ -7,7 +7,6 @@
 
   imports = [
     ../common
-    ../common/shell/
   ];
 
   programs.zsh.shellAliases."rebuild" = "nh os switch ~/Dotfiles/.#theros";
