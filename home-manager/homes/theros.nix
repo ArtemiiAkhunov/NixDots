@@ -1,4 +1,4 @@
-{
+{config, pkgs, lib, inputs, ...}: {
   home = {
     username = "voidwalker";
     homeDirectory = "/home/voidwalker";
@@ -6,8 +6,10 @@
   };
 
   imports = [
-    ./modules/bundle.nix
+    ../common
+    ../common/shell/
   ];
 
-  nixpkgs.config.allowUnfree = true;
+  
+
 }
