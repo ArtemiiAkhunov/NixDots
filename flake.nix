@@ -21,7 +21,7 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, ... }:
+  outputs = { self, ... }@inputs:
     let 
       inherit (self) inputs outputs;
       lib = inputs.nixpkgs.lib // inputs.home-manager.lib;
