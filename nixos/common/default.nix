@@ -1,6 +1,6 @@
 {
   imports = [
-    ./nixvim/
+    ./nixvim
     ./bootloader.nix
     ./nh.nix
     ./packages.nix

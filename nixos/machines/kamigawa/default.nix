@@ -6,6 +6,6 @@
     ../../common
     ../../common/intel-gpu.nix
     ../../common/nvidia.nix
-    ../../common/workstation/
+    ../../common/workstation
   ];
 }

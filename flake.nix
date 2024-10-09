@@ -71,40 +71,16 @@
                 nixpkgs.overlays = builtins.attrValues overlays;
               }
             )
-            ./nixos/machines/kamigawa/
+            ./nixos/machines/kamigawa
             inputs.nixvim.nixosModules.nixvim
           ];
         };
         "theros" = lib.nixosSystem {
           modules = [
-            ./nixos/machines/theros/ 
+            ./nixos/machines/theros 
             inputs.nixvim.nixosModules.nixvim
           ];
         };
       };
-
-      /*
-      nixosConfigurations.kamigawa = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs system;
-        };
-	      modules = [ 
-          inputs.nixvim.nixosModules.nixvim
-          ./nixos/configuration.nix
-        ];
-        inherit system;
-      };
-
-      homeConfigurations.voidwalker = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {
-          inherit spicetify-nix;
-        };
-        modules = [ 
-          ./home-manager/home.nix 
-          inputs.catppuccin.homeManagerModules.catppuccin
-          spicetify-nix.homeManagerModules.default
-        ];*/
-      };
-  };
+    };
 }
