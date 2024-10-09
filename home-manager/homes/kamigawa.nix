@@ -7,9 +7,9 @@
 
   imports = [
     ../common
-    ../common/wm/
-    ../common/terminal/
-    ../common/static/
+    ../common/wm
+    ../common/terminal
+    ../common/static
   ];
 
   programs.zsh.shellAliases."rebuild" = "nh os switch ~/Dotfiles/.#kamigawa";
