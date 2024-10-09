@@ -12,10 +12,12 @@
     ../common/static
   ];
 
-  programs.zsh.shellAliases."rebuild" = "nh os switch ~/Dotfiles/.#kamigawa";
-  programs.zsh.shellaliases."home-update" = "nh home switch ~/Dotfiles/.#voidwalker@kamigawa";
-  programs.zsh.shellaliases."ff" = "fastfetch";
-  programs.zsh.shellAliases."ssh" = "kitten ssh";
+  programs.zsh.shellAliases = {
+    "rebuild" = "nh os switch ~/Dotfiles/.#kamigawa";
+    "home-update" = "nh home switch ~/Dotfiles/.#voidwalker@kamigawa";
+    "ff" = "fastfetch";
+    "ssh" = "kitten ssh";
+  };
   programs.zsh.initExtra = ''
     fastfetch
     '';

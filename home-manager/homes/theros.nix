@@ -9,6 +9,8 @@
     ../common
   ];
 
-  programs.zsh.shellAliases."rebuild" = "nh os switch ~/Dotfiles/.#theros";
-  programs.zsh.shellAliases."home-update" = "nh home switch ~/Dotfiles/.#voidwalker@theros";
+  programs.zsh.shellAliases = {
+    "rebuild" = "nh os switch ~/Dotfiles/.#theros";
+    "home-update" = "nh home switch ~/Dotfiles/.#voidwalker@theros";
+  };
 }
