@@ -71,17 +71,14 @@
                 nixpkgs.overlays = builtins.attrValues overlays;
               }
             )
-            ./nixos/common/
-            ./nixos/common/nvidia.nix
-            ./nixos/common/intel-gpu.nix
             ./nixos/machines/kamigawa/
+            inputs.nixvim.nixosModules.nixvim
           ];
         };
         "theros" = lib.nixosSystem {
           modules = [
-            ./nixos/common/
-            ./nixos/common/intel-gpu.nix
-            ./nixos/machines/theros/
+            ./nixos/machines/theros/ 
+            inputs.nixvim.nixosModules.nixvim
           ];
         };
       };

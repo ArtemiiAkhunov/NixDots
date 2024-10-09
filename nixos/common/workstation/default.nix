@@ -1,0 +1,19 @@
+{
+  imports = [
+    ./automount.nix
+    ./bluetooth.nix
+    ./cups.nix
+    ./displaymanager.nix
+    ./env.nix
+    ./firewall.nix
+    ./fprintd.nix
+    ./hyprland.nix
+    ./nautilus.nix
+    ./networkmanager.nix
+    ./sound.nix
+    ./steam.nix
+    ./suspend-and-hibernate.nix
+    ./xdg.nix
+    ./yubikey.nix
+  ];
+}

@@ -1,11 +1,4 @@
-{ pkgs, lib, ... }: {
-  nixpkgs.config = {
-    allowUnfree = true;
-    permittedInsecurePackages = [
-      "python-2.7.18.8"
-    ];
-  };
-
+{pkgs, lib, ...}: {
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"
     "steam-original"
@@ -40,6 +33,9 @@
     yubikey-manager-qt
     ventoy-full
 
+    # Coding utilities
+    
+    android-tools
 
     # School Apps
     
@@ -56,18 +52,14 @@
     mangohud
     protonup
 
-    # Coding utilities
-    
-    gnumake
-    gcc
-    python
-    (python3.withPackages (ps: with ps; [ requests ]))
-    python311Packages.debugpy
-    vscode-extensions.ms-vscode.cpptools
-    gdb
-    rustc
-    cargo
-    android-tools
+    # CLI stuff
+
+    cava
+    bluez
+    bluez-tools
+    sherlock
+    gvfs
+    qemu
 
     # Window Manager Requirements
 
@@ -93,51 +85,17 @@
     grim
     grimblast
     slurp
-    swappy
-    home-manager
+    swappy 
     papirus-nord
-
-    # CLI stuff
-
-    fastfetch
-    file
-    tree
-    wget
-    git
-    btop
-    unzip
-    cava
-    zip
-    bluez
-    bluez-tools
-    killall
-    findutils
-    bind
-    fzf
-    sl
-    sherlock
-    ripgrep
-    gvfs
-    qemu
 
     # Networking
 
     networkmanager-l2tp
     networkmanagerapplet
-    cacert
 
     # GPU utilities
 
     lshw
     (import ./scripts/nvidia-offload.nix { inherit pkgs; })
-
   ];
-
-   fonts.packages = with pkgs; [
-     font-awesome
-     fira-code
-     inconsolata
-     nerdfonts
-   ];
-
 }

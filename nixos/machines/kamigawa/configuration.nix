@@ -1,14 +1,4 @@
 {
-  imports = [
-    ./hardware-configuration.nix
-    ./packages.nix
-    ./modules/modules-bundle.nix
-  ]; 
-
-  nixpkgs.overlays = [
-    ( import ./overlays/fprintd_overlay.nix {} )
-  ];
-
   time.timeZone = "America/Indianapolis"; #timezone
 
   i18n.defaultLocale = "en_US.UTF-8"; #locale
