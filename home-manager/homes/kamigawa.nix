@@ -7,12 +7,19 @@
 
   imports = [
     ../common
-    ../common/wayland/
-    ../common/shell
-    ../common/git.nix
-    ../common/static
+    ../common/wm/
+    ../common/shell/
+    ../common/terminal/
+    ../common/static/
   ];
 
-  
+  programs.zsh.shellAliases."rebuild" = "nh os switch ~/Dotfiles/.#kamigawa";
+  programs.zsh.shellaliases."home-update" = "nh home switch ~/Dotfiles/.#voidwalker@kamigawa";
+  programs.zsh.shellaliases."ff" = "fastfetch";
+  programs.zsh.shellAliases."ssh" = "kitten ssh";
+  programs.zsh.initExtra = ''
+    fastfetch
+    '';
+
 
 }

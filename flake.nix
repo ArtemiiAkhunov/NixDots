@@ -38,6 +38,7 @@
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
     in {
+      flakeDir = "~/Dotfiles/";
       homeConfigurations = {
         "voidwalker@kamigawa" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
