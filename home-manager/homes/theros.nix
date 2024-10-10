@@ -10,7 +10,7 @@
   ];
 
   programs.zsh.shellAliases = {
-    "rebuild" = "nh os switch ~/Dotfiles/.#theros";
-    "home-update" = "nh home switch ~/Dotfiles/.#voidwalker@theros";
+    "rebuild" = "nh os switch ~/Dotfiles --hostname theros";
+    "home-update" = "nh home switch ~/Dotfiles --configuration voidwalker@theros";
   };
 }
