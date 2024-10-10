@@ -21,31 +21,67 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = {nixpkgs, home-manager, spicetify-nix, ...}@inputs:
+  outputs = { self, ... }@inputs:
     let 
-      system = "x86_64-linux";
+      inherit (self) inputs outputs;
+      lib = inputs.nixpkgs.lib // inputs.home-manager.lib;
+      overlays = import ./overlays { inherit inputs outputs; };
+
+      systems = [ "x86_64-linux" ];
+      pkgsFor = lib.genAttrs systems (
+        system:
+        import inputs.nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+          overlays = builtins.attrValues overlays;
+        }
+      );
+      forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
     in {
-      nixosConfigurations.kamigawa = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs system;
+
+      homeConfigurations = {
+        "voidwalker@kamigawa" = lib.homeManagerConfiguration {
+          pkgs = pkgsFor.x86_64-linux;
+          modules = [
+            ./home-manager/homes/kamigawa.nix
+            inputs.catppuccin.homeManagerModules.catppuccin
+            inputs.spicetify-nix.homeManagerModules.default
+          ];
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
         };
-	      modules = [ 
-          inputs.nixvim.nixosModules.nixvim
-          ./nixos/configuration.nix
-        ];
-        inherit system;
+        "voidwalker@theros" = lib.homeManagerConfiguration {
+          pkgs = pkgsFor.x86_64-linux;
+          modules = [
+            ./home-manager/homes/theros.nix
+          ];
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
+        };
       };
 
-      homeConfigurations.voidwalker = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.${system};
-        extraSpecialArgs = {
-          inherit spicetify-nix;
+
+      nixosConfigurations = {
+        "kamigawa" = lib.nixosSystem {
+          modules = [
+            (
+              { config, pkgs, ...}: {
+                nixpkgs.overlays = builtins.attrValues overlays;
+              }
+            )
+            ./nixos/machines/kamigawa
+            inputs.nixvim.nixosModules.nixvim
+          ];
         };
-        modules = [ 
-          ./home-manager/home.nix 
-          inputs.catppuccin.homeManagerModules.catppuccin
-          spicetify-nix.homeManagerModules.default
-        ];
+        "theros" = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            ./nixos/machines/theros 
+            inputs.nixvim.nixosModules.nixvim
+          ];
+        };
       };
-  };
+    };
 }

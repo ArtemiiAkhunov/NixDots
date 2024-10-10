@@ -1,11 +1,8 @@
 {
   imports = [
     ./git.nix
-    ./htop.nix
-    ./kitty.nix
+    ./gpg.nix
     ./zoxide.nix
-    ./fastfetch.nix
     ./zsh.nix
-    ./ssh.nix
   ];
 }
