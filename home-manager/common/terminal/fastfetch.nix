@@ -4,18 +4,18 @@
     settings = {
       schema = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
       logo = {
-         type = "kitty-direct";
-         source = "nixos.png";
-         width =  40;
-         height = 16;
+        type = "kitty-direct";
+        source = "nixos.png";
+        width = 40;
+        height = 16;
       };
       display = {
-        separator =  " ";
+        separator = " ";
       };
       modules = [
         {
-          type = "custom"; #HardwareStart
-          format = "┌─────────── Hardware Information ───────────┐"; #`\u001b` is `\033`, or `\e`
+          type = "custom"; # HardwareStart
+          format = "┌─────────── Hardware Information ───────────┐"; # `\u001b` is `\033`, or `\e`
         }
         {
           type = "cpu";
@@ -48,7 +48,7 @@
         }
         {
           type = "os";
-          key = "  "; #Just get your distro's logo off nerdfonts.com
+          key = "  "; # Just get your distro's logo off nerdfonts.com
         }
         {
           type = "wm";
@@ -71,7 +71,7 @@
           key = "  󰅐";
         }
         {
-          type = "custom"; #InformationEnd
+          type = "custom"; # InformationEnd
           format = "└────────────────────────────────────────────┘";
         }
         {

@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    
+
     clipboard = {
       register = "unnamedplus";
       providers.wl-copy.enable = true;
@@ -11,7 +11,7 @@
 
       mouse = "a"; # Use mouse
       mousemodel = "extend"; # Right Click Extends Current Line Selection
-      
+
       relativenumber = true; # Display relative line numbers
       number = true; # Display absolute line numbers
 
@@ -22,9 +22,9 @@
       expandtab = true; # Expand tabs into spaces
       autoindent = true; # Auto tab
       smartindent = true; # Smarter tab
-      shiftwidth = 2; # 
+      shiftwidth = 2;
       tabstop = 2;
-      
+
       encoding = "utf8"; # Encoding of the file
 
       incsearch = true;
@@ -65,6 +65,6 @@
         Operator = "",
         TypeParameter = "",
       }
-  '';
+    '';
   };
 }

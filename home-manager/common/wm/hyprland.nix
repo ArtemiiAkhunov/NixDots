@@ -1,8 +1,9 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
-    
+
     settings = {
       "$mainMod" = "$SUPER";
       "$terminal" = "${pkgs.kitty}/bin/kitty";
@@ -25,7 +26,7 @@
       input = {
         kb_layout = "us,ru";
         kb_options = "grp:win_space_toggle";
-        
+
         follow_mouse = 1;
 
         touchpad = {
@@ -51,14 +52,14 @@
 
       decoration = {
         rounding = 10;
-        
+
         blur = {
           enabled = true;
           size = 3;
           passes = 1;
           new_optimizations = true;
         };
-        
+
         drop_shadow = true;
         shadow_range = 4;
         shadow_render_power = 3;
@@ -101,7 +102,7 @@
         "float, floating:1"
         "opacity 0.8,workspace:special:magic"
         # Wofi Visual
-        "noanim,class:^(wofi)$" 
+        "noanim,class:^(wofi)$"
       ];
 
       bind = [
@@ -164,15 +165,13 @@
         ",XF86AudioRaiseVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
         ",XF86AudioLowerVolume, exec, ${pkgs.wireplumber}/bin/wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-"
       ];
-    
+
       bindm = [
         "$mainMod, mouse:272, movewindow"
         "$mainMod, mouse:273, resizewindow"
       ];
 
-      bindl = [
-        ",switch:on:Lid Switch,exec,${pkgs.hyprlock}/bin/hyprlock"
-      ];
+      bindl = [ ",switch:on:Lid Switch,exec,${pkgs.hyprlock}/bin/hyprlock" ];
 
       exec-once = [
         "${pkgs.hyprlock}/bin/hyprlock"

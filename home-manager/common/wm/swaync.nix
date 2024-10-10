@@ -9,20 +9,20 @@
       control-center-layer = "top";
       layer-shell = true;
       cssPriority = "application";
-     
+
       control-center-width = 500;
       control-center-margin-top = 10;
       control-center-margin-bottom = 20;
       control-center-margin-right = 10;
       control-center-margin-left = 0;
-      
+
       notification-2fa-action = true;
       notification-inline-replies = true;
       notification-window-width = 600;
       notification-icon-size = 50;
-      notification-body-image-height =  140;
+      notification-body-image-height = 140;
       notification-body-image-width = 180;
-      
+
       timeout = 6;
       timeout-low = 3;
       timeout-critical = 0;

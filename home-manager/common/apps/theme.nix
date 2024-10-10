@@ -1,8 +1,9 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   catppuccin = {
     flavor = "mocha";
     enable = true;
-    accent="lavender";
+    accent = "lavender";
   };
 
   #YES, NO ACCENTS HERE, PLEZ
@@ -22,7 +23,7 @@
       package = pkgs.palenight-theme;
     };
   };
-  
+
   qt = {
     enable = true;
     platformTheme.name = "kvantum";

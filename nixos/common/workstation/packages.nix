@@ -1,15 +1,18 @@
-{pkgs, lib, ...}: {
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "steam"
-    "steam-original"
-    "steam-run"
-  ];
+{ pkgs, lib, ... }:
+{
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-original"
+      "steam-run"
+    ];
 
   environment.systemPackages = with pkgs; [
     # Desktop Apps
-    
+
     # General Apps
-    
+
     audacity
     firefox
     telegram-desktop
@@ -34,11 +37,11 @@
     ventoy-full
 
     # Coding utilities
-    
+
     android-tools
 
     # School Apps
-    
+
     obsidian
     zoom-us
     libreoffice-still
@@ -76,7 +79,7 @@
     wl-clipboard
     hyprland
     hyprlock
-    swww 
+    swww
     wofi
     xdg-desktop-portal-hyprland
     pipewire
@@ -85,7 +88,7 @@
     grim
     grimblast
     slurp
-    swappy 
+    swappy
     papirus-nord
 
     # Networking

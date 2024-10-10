@@ -1,5 +1,6 @@
 {
-  hardware.nvidia = { # Nvidia config
+  hardware.nvidia = {
+    # Nvidia config
     prime = {
       offload = {
         enable = true;

@@ -21,8 +21,9 @@
     catppuccin.url = "github:catppuccin/nix";
   };
 
-  outputs = { self, ... }@inputs:
-    let 
+  outputs =
+    { self, ... }@inputs:
+    let
       inherit (self) inputs outputs;
       lib = inputs.nixpkgs.lib // inputs.home-manager.lib;
       overlays = import ./overlays { inherit inputs outputs; };
@@ -37,8 +38,9 @@
         }
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
-    in {
-
+    in
+    {
+      formatter = forEachSystem (pkgs: pkgs.nixfmt-rfc-style);
       homeConfigurations = {
         "voidwalker@kamigawa" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
@@ -53,21 +55,19 @@
         };
         "voidwalker@theros" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
-          modules = [
-            ./home-manager/homes/theros.nix
-          ];
+          modules = [ ./home-manager/homes/theros.nix ];
           extraSpecialArgs = {
             inherit inputs outputs;
           };
         };
       };
 
-
       nixosConfigurations = {
         "kamigawa" = lib.nixosSystem {
           modules = [
             (
-              { config, pkgs, ...}: {
+              { config, pkgs, ... }:
+              {
                 nixpkgs.overlays = builtins.attrValues overlays;
               }
             )
@@ -78,7 +78,7 @@
         "theros" = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
-            ./nixos/machines/theros 
+            ./nixos/machines/theros
             inputs.nixvim.nixosModules.nixvim
           ];
         };

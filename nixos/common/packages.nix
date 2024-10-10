@@ -1,10 +1,11 @@
-{pkgs, lib, ...}: {
+{ pkgs, lib, ... }:
+{
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [ "python-2.7.18.8" ];
 
   environment.systemPackages = with pkgs; [
     # Coding utilities
-    
+
     gnumake
     gcc
     python
@@ -39,10 +40,10 @@
   ];
 
   fonts.packages = with pkgs; [
-     font-awesome
-     fira-code
-     inconsolata
-     nerdfonts
-   ];
+    font-awesome
+    fira-code
+    inconsolata
+    nerdfonts
+  ];
 
 }

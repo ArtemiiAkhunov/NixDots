@@ -1,8 +1,9 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.nixvim = {
     plugins.dap = {
       enable = true;
-    
+
       signs = {
         dapBreakpoint = {
           text = "●";
@@ -22,14 +23,17 @@
         dap-ui = {
           enable = true;
           floating.mappings = {
-            close = ["<ESC>" "q"];
+            close = [
+              "<ESC>"
+              "q"
+            ];
           };
         };
         dap-python.enable = true;
         dap-virtual-text.enable = true;
       };
     };
-    extraConfigLua = '' 
+    extraConfigLua = ''
       local dap, dapui = require("dap"), require("dapui")
       dap.listeners.before.attach.dapui_config = function()
         dapui.open()
@@ -43,7 +47,7 @@
       dap.listeners.before.event_exited.dapui_config = function()
         dapui.close()
       end
-      
+
       dapui.setup()
 
       dap.adapters.cppdbg = {

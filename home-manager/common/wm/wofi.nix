@@ -13,36 +13,36 @@
       width = "20%";
       hide_scroll = true;
     };
-   style = ''
-     * {
-       font-size: 24px;
-       font-family: 'Inconsolata';
-     }
+    style = ''
+      * {
+        font-size: 24px;
+        font-family: 'Inconsolata';
+      }
 
-     #window {
-       margin: auto;
-       padding: 10px;
-       border-radius: 20px;
-     }
+      #window {
+        margin: auto;
+        padding: 10px;
+        border-radius: 20px;
+      }
 
-     #input {
-       padding: 10px;
-       margin-bottom: 10px;
-       border-radius: 15px;
-     }
+      #input {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+      }
 
-     #img {
-       margin-right: 6px;
-     }
+      #img {
+        margin-right: 6px;
+      }
 
-     #entry {
-       padding: 10px;
-       border-radius: 15px;
-     }
+      #entry {
+        padding: 10px;
+        border-radius: 15px;
+      }
 
-     #text {
-       margin: 2px;
-     }
-   '';
+      #text {
+        margin: 2px;
+      }
+    '';
   };
 }

@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
 
   # Enable OpenGL
   hardware.opengl = {
@@ -11,9 +12,7 @@
       vaapiVdpau
       libvdpau-va-gl
     ];
-    extraPackages32 = with pkgs.pkgsi686Linux; [
-      intel-vaapi-driver
-    ];
+    extraPackages32 = with pkgs.pkgsi686Linux; [ intel-vaapi-driver ];
   };
 
   environment.sessionVariables.LIBVA_DRIVER_NAME = "iHD";
