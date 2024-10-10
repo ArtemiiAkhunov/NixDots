@@ -10,6 +10,7 @@
     ./hyprland.nix
     ./nautilus.nix
     ./networkmanager.nix
+    ./packages.nix
     ./sound.nix
     ./steam.nix
     ./suspend-and-hibernate.nix
