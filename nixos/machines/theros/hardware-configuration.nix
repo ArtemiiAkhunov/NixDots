@@ -30,6 +30,11 @@
     fsType = "btrfs";
   };
 
+  fileSystems."/data" = {
+    device = "/dev/disk/by-uuid/671b39af-1253-4b90-8512-d10d4d8e3fef";
+    fsType = "btrfs";
+  };
+
   fileSystems."/boot" = {
     device = "/dev/disk/by-uuid/12CE-A600";
     fsType = "vfat";
