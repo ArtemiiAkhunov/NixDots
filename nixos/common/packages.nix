@@ -19,6 +19,7 @@
     # CLI stuff
 
     fastfetch
+    busybox
     file
     tree
     wget
