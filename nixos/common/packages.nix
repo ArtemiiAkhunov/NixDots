@@ -19,7 +19,8 @@
     # CLI stuff
 
     fastfetch
-    busybox
+    pciutils
+    usbutils
     file
     tree
     wget
