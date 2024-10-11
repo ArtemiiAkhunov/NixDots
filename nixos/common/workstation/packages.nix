@@ -45,6 +45,7 @@
     obsidian
     zoom-us
     libreoffice-still
+    slack
 
     # Gaming
 
