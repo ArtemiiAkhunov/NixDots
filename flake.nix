@@ -71,7 +71,7 @@
         "kamigawa" = lib.nixosSystem {
           modules = [
             (
-              { config, pkgs, ... }:
+              { ... }:
               {
                 nixpkgs.overlays = builtins.attrValues overlays;
               }
