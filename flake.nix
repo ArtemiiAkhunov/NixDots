@@ -20,8 +20,8 @@
 
     catppuccin.url = "github:catppuccin/nix";
 
-    sops-nix = {
-      url = "github:Mic92/sops-nix";
+    agenix = {
+      url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -78,7 +78,7 @@
             )
             ./nixos/machines/kamigawa
             inputs.nixvim.nixosModules.nixvim
-            inputs.sops-nix.nixosModules.sops
+            inputs.agenix.nixosModules.default
           ];
         };
         "theros" = lib.nixosSystem {
@@ -86,7 +86,7 @@
           modules = [
             ./nixos/machines/theros
             inputs.nixvim.nixosModules.nixvim
-            inputs.sops-nix.nixosModules.sops
+            inputs.agenix.nixosModules.default
           ];
         };
       };
