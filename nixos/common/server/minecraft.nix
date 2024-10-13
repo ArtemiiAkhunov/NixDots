@@ -21,7 +21,7 @@
         };
 
         whitelist = {
-          MadamOfTheLags = "f9f91bbf-5755-4de6-8828-0c54ab2bbb53";
+          MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
           # Add some more of my friends
         };
         # TODO: jvmOpts = "";
