@@ -11,4 +11,6 @@ let
 in
 {
   "something.age".publicKeys = users;
+  "wireguard-server.age".publicKeys = systems;
+  "wireguard-laptop.age".publicKeys = [ voidwalker_laptop ];
 }
