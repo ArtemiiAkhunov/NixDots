@@ -24,7 +24,7 @@
           MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
           # Add some more of my friends
         };
-        # TODO: jvmOpts = "";
+        jvmOpts = "-Xms5120M -Xmx5120M -XX:+UseZGC";
       };
     };
   };
