@@ -7,14 +7,17 @@
     dataDir = "/data/minecraft/";
 
     servers = {
-      dumDumServer = {
+      Dum-DumServer = {
         enable = true;
         package = pkgs.vanillaServers.vanilla-1_18_2;
 
         serverProperties = {
           gamemode = "survival";
+          motd = "Yes, it's a minecraft server!";
           # dificulty = "something";
           simulation-distance = 15;
+          white-list = true;
+          online-mode = false;
         };
 
         whitelist = {
