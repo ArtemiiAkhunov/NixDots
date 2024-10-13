@@ -24,6 +24,8 @@
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
   outputs =
@@ -84,9 +86,16 @@
         "theros" = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            (
+              { ... }:
+              {
+                nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
+              }
+            )
             ./nixos/machines/theros
             inputs.nixvim.nixosModules.nixvim
             inputs.agenix.nixosModules.default
+            inputs.nix-minecraft.nixosModules.minecraft-servers
           ];
         };
       };
