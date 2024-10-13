@@ -32,6 +32,7 @@
         touchpad = {
           natural_scroll = true;
           scroll_factor = 0.6;
+          disable_while_typing = false;
         };
 
         accel_profile = "flat";
