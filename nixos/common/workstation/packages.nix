@@ -55,6 +55,7 @@
     heroic
     mangohud
     protonup
+    prismlauncher
 
     # CLI stuff
 
