@@ -20,7 +20,7 @@
         postSetup = ''
           ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
         '';
-
+      
         postShutdown = ''
           ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
         '';
@@ -35,5 +35,10 @@
           }
         ];
       };
-  };
+    };
+  
+    services.dnsmasq = {
+      enable = true;
+      extraConfig = "interface=wg0";
+    };
 }
