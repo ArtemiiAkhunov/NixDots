@@ -17,12 +17,12 @@
 
         listenPort = 51820;
 
-        postUp = ''
+        postSetup = ''
           ${pkgs.iptables}/bin/iptables -A FORWARD -i wg0 -j ACCEPT
           ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
         '';
       
-        preDown = ''
+        postShutdown = ''
           ${pkgs.iptables}/bin/iptables -D FORWARD -i wg0 -j ACCEPT
           ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
 
