@@ -7,7 +7,7 @@
   networking.wireguard.interfaces = {
     wg0 =
       let
-        ip = "192.168.5.58"
+        ip = "192.168.5.58";
         subnet = "22";
       in
       {

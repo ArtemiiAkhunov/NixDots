@@ -6,5 +6,6 @@
     ./packages.nix
     ./ssh.nix
     ./synapse.nix
+    ./vpn.nix
   ];
 }
