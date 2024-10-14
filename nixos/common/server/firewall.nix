@@ -1,5 +1,5 @@
 {
-  networking.firewall ={
+  networking.firewall = {
     allowedTCPPorts = [
       22
       53

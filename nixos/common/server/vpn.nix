@@ -1,4 +1,9 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 {
   networking.nat = {
     enable = true;
@@ -6,25 +11,29 @@
     internalInterfaces = [ "wg0" ];
   };
 
+  boot.kernel.sysctl = {
+    "net.ipv4.conf.all.forwarding" = lib.mkOverride 98 true;
+    "net.ipv4.conf.default.forwarding" = lib.mkOverride 98 true;
+  };
+
   networking.wireguard.interfaces = {
     wg0 =
       let
-        ip = "192.168.0.2";
-        subnet = "31";
+        genericIp = number: subnet: "192.168.0.${toString number}/${toString subnet}";
       in
       {
-        ips = [ "${ip}/${subnet}" ];
+        ips = [ (genericIp 2 24) ];
 
         listenPort = 51820;
 
         postSetup = ''
           ${pkgs.iptables}/bin/iptables -A FORWARD -i wg0 -j ACCEPT
-          ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
+          ${pkgs.iptables}/bin/iptables -t nat -A POSTROUTING -s ${(genericIp 2 24)} -o eth0 -j MASQUERADE
         '';
-      
+
         postShutdown = ''
           ${pkgs.iptables}/bin/iptables -D FORWARD -i wg0 -j ACCEPT
-          ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
+          ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${(genericIp 2 24)} -o eth0 -j MASQUERADE
 
         '';
 
@@ -34,14 +43,14 @@
           {
             # Laptop
             publicKey = "DCXN3v23bP/heSsl6q+5uSY58Cl8B0iBlkZETDX+KnM=";
-            allowedIPs = [ "192.168.0.3/32" ];
+            allowedIPs = [ (genericIp 3 32) ];
           }
         ];
       };
-    };
-  
-    services.dnsmasq = {
-      enable = true;
-      extraConfig = "interface=wg0";
-    };
+  };
+
+  services.dnsmasq = {
+    enable = true;
+    extraConfig = "interface=wg0";
+  };
 }
