@@ -1,8 +1,10 @@
 { pkgs, config, ... }:
 {
-  networking.nat.enable = true;
-  networking.nat.externalInterface = "eth0";
-  networking.nat.internalInterfaces = [ "wg0" ];
+  networking.nat = {
+    enable = true;
+    externalInterface = "eth0";
+    internalInterfaces = [ "wg0" ];
+  };
 
   networking.wireguard.interfaces = {
     wg0 =
