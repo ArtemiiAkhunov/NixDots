@@ -7,8 +7,8 @@
   networking.wireguard.interfaces = {
     wg0 =
       let
-        ip = "192.168.5.58";
-        subnet = "22";
+        ip = "192.168.0.3";
+        subnet = "24";
       in
       {
         ips = [ "${ip}/${subnet}" ];
@@ -29,7 +29,7 @@
           {
             # Laptop
             publicKey = "DCXN3v23bP/heSsl6q+5uSY58Cl8B0iBlkZETDX+KnM=";
-            allowedIPs = [ "${ip}/32" ];
+            allowedIPs = [ "192.168.0.4/32" ];
           }
         ];
       };
