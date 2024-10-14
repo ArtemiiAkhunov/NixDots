@@ -7,7 +7,7 @@
   networking.wireguard.interfaces = {
     wg0 =
       let
-        ip = "192.168.5.201";
+        ip = "192.168.5.58"
         subnet = "22";
       in
       {
@@ -23,12 +23,12 @@
           ${pkgs.iptables}/bin/iptables -t nat -D POSTROUTING -s ${ip}/${subnet} -o eth0 -j MASQUERADE
         '';
 
-        privateKeyFile = config.age.secrets.wireguard-server.path;
+        privateKeyFile = config.age.secrets.wireguard.path;
 
         peers = [
           {
             # Laptop
-            publicKey = "H71T90I6YQdQH7Z3yFFztn9os3md9WfcGz7YTceQ1nI=";
+            publicKey = "DCXN3v23bP/heSsl6q+5uSY58Cl8B0iBlkZETDX+KnM=";
             allowedIPs = [ "${ip}/32" ];
           }
         ];

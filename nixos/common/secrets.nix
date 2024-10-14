@@ -5,8 +5,7 @@
       "/etc/ssh/ssh_host_ed25519_key"
     ];
     secrets = {
-      wireguard-server.file = ../../secrets/wireguard-server.age;
-      wireguard-laptop.file = ../../secrets/wireguard-laptop.age;
+      wireguard.file = ../../secrets/wireguard.age;
     };
   };
 }
