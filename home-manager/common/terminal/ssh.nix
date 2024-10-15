@@ -7,7 +7,7 @@
       enable = true;
       matchBlocks = {
         theros = {
-          hostname = "192.168.0.2";
+          hostname = "192.168.193.15";
           user = "voidwalker";
           identityFile = rsa_key_path;
         };
