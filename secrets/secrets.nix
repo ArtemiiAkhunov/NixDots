@@ -6,6 +6,4 @@ let
     voidwalker_laptop
   ];
 in
-{
-  "wireguard.age".publicKeys = users;
-}
+{ }

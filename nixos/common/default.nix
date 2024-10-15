@@ -6,5 +6,6 @@
     ./packages.nix
     ./secrets.nix
     ./user.nix
+    ./zerotier.nix
   ];
 }
