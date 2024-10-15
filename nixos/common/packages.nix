@@ -33,6 +33,7 @@
     fzf
     sl
     ripgrep
+    speedtest-cli
 
     # Networking 
     cacert
