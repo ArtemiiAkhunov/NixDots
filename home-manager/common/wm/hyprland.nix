@@ -8,7 +8,7 @@
       "$mainMod" = "$SUPER";
       "$terminal" = "${pkgs.kitty}/bin/kitty";
       "$browser" = "${pkgs.firefox}/bin/firefox";
-      "$privateBrowser" = "${pkgs.firefox}/bin/firefox --private-window lordofthelags.github.io/startpage/";
+      "$privateBrowser" = "${pkgs.firefox}/bin/firefox --private-window startpage.lordofthelags.net";
       "$openSchedule" = "${pkgs.imv}/bin/imv ~/Pictures/Schedule.png";
       "$menu" = "${pkgs.wofi}/bin/wofi --show drun";
 
