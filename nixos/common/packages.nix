@@ -34,6 +34,7 @@
     sl
     ripgrep
     speedtest-cli
+    typst
 
     # Networking 
     cacert
