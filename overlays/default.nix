@@ -21,6 +21,16 @@
       };
     });
 
+    neovim-unwrapped = prev.neovim-unwrapped.overrideAttrs (old: {
+      version = "10.0.1";
+      src = final.fetchFromGitHub {
+        owner = "neovim";
+        repo = "neovim";
+        rev = "refs/tags/v0.10.1";
+        hash = "sha256-OsHIacgorYnB/dPbzl1b6rYUzQdhTtsJYLsFLJxregk=";
+      };
+    });
+
     fprintd = prev.fprintd.overrideAttrs (old: {
       mesonCheckFlags = [
         # PAM related checks are timing out
