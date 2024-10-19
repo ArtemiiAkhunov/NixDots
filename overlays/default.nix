@@ -14,6 +14,7 @@
 
   modifications = final: prev: {
     libfprint = prev.libfprint.overrideAttrs (old: {
+      version = "1.94.8";
       src = builtins.fetchGit {
         url = "https://gitlab.freedesktop.org/libfprint/libfprint";
         ref = "refs/heads/master";
