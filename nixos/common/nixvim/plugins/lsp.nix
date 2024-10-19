@@ -20,6 +20,10 @@
       marksman = {
         enable = true;
       };
+      tinymist = {
+        enable = true;
+        settings.exportPdf = "onSave";
+      };
     };
     keymaps = {
       lspBuf = {
