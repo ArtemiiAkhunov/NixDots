@@ -1,7 +1,9 @@
 {
   programs.nixvim.plugins.treesitter = {
     enable = true;
-    ensure_installed = "all";
-    indent.enable = true;
+    settings = {
+      auto_install = true;
+      indent.enable = true;
+    };
   };
 }
