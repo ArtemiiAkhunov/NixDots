@@ -39,6 +39,6 @@
           inherit action key;
         }) { };
       in
-      config.nixvim.helpers.keymaps.mkKeymaps { options.silent = true; } (normal ++ visual);
+      config.lib.nixvim.keymaps.mkKeymaps { options.silent = true; } (normal ++ visual);
   };
 }
