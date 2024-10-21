@@ -1,7 +1,6 @@
 {
   programs.kitty = {
     enable = true;
-    theme = "Catppuccin-Mocha";
     settings = {
       font_family = "Inconsolata";
       bold_font = "auto";
