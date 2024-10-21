@@ -8,11 +8,11 @@
       pylsp = {
         enable = true;
       };
-      lua-ls = {
+      lua_ls = {
         enable = true;
         settings.telemetry.enable = false;
       };
-      rust-analyzer = {
+      rust_analyzer = {
         enable = true;
         installCargo = true;
         installRustc = true;

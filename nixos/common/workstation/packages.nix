@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ inputs, pkgs, lib, ... }:
 {
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -28,9 +28,9 @@
     kdePackages.kdenlive
     glaxnimate
     makemkv
-    gnome.nautilus
-    gnome.adwaita-icon-theme
-    gnome.sushi
+    nautilus
+    adwaita-icon-theme
+    sushi
     imv
     thunderbird
     yubikey-manager-qt

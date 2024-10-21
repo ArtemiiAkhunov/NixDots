@@ -3,7 +3,6 @@
     plugins.alpha = {
       enable = true;
       theme = "startify";
-      iconsEnabled = true;
     };
     extraConfigLua = ''
       local dashboard = require("alpha.themes.startify")
