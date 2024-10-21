@@ -57,7 +57,7 @@
             ./home-manager/homes/kamigawa.nix
             inputs.catppuccin.homeManagerModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
-            inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
+            
           ];
           extraSpecialArgs = {
             inherit inputs outputs;
@@ -79,6 +79,7 @@
               { ... }:
               {
                 nixpkgs.overlays = builtins.attrValues overlays;
+                environment.systemPackages = [ inputs.rose-pine-hyprcursor.packages.x86_64-linux.default ];
               }
             )
             ./nixos/machines/kamigawa
