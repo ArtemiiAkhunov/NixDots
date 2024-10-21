@@ -2,15 +2,15 @@
   description = "Void Walker's System Configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
-      url = "github:nix-community/home-manager/release-24.05";
+      url = "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim/nixos-24.05";
+      url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -26,6 +26,8 @@
     };
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
+    rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
   };
 
   outputs =
@@ -55,6 +57,7 @@
             ./home-manager/homes/kamigawa.nix
             inputs.catppuccin.homeManagerModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
+            inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
           ];
           extraSpecialArgs = {
             inherit inputs outputs;

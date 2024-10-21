@@ -5,7 +5,6 @@
     ./waybar.nix
     ./hyprland.nix
     ./hyprlock.nix
-    ./cursor.nix
     ./swaync.nix
   ];
 }

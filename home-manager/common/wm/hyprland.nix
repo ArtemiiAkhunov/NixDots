@@ -15,7 +15,7 @@
       monitor = ",preffered,auto,1.0";
 
       env = [
-        "XCURSOR_SIZE, 30"
+        "HYPRCURSOR_THEME,rose-pine-hyprcursor"
         "QR_QPA_PLATFORMTHEME,qt5ct"
       ];
 
