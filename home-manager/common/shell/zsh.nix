@@ -7,7 +7,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
-      update = "nix flake update ~/Dotfiles";
+      update = "nix flake update --flake ~/Dotfiles";
 
       ll = "ls -al";
       ls = "ls --color=auto";
