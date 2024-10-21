@@ -13,6 +13,6 @@
     polkit = {
       enable = true;
     };
-    pam.services.hyprlock = {};
+    pam.services.hyprlock.text = "auth include system-auth";
   };
 }
