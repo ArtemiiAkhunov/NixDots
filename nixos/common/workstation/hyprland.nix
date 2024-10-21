@@ -9,5 +9,10 @@
   };
 
   # Hyprlock stuff
-  security.pam.services.hyprlock.text = "auth include login";
+  security = {
+    polkit = {
+      enable = true;
+    };
+    pam.services.hyprlock = {};
+  };
 }

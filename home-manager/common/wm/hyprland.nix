@@ -180,7 +180,7 @@
         "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
         "${pkgs.waybar}/bin/waybar"
         "${pkgs.swaynotificationcenter}/bin/swaync"
-        "${pkgs.lxde.lxsession}/bin/lxpolkit"
+        #"${pkgs.lxde.lxsession}/bin/lxpolkit"
         "${pkgs.copyq}/bin/copyq --start-server"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"
         "handle_monitor_connect"
