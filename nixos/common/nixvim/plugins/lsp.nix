@@ -21,11 +21,8 @@
       marksman = {
         enable = true;
       };
-      tinymist = {
+      typst_lsp = {
         enable = true;
-        package = pkgs.tinymist;
-        cmd = ["${pkgs.tinymist}/bin/tinymist"];
-        settings.exportPdf = "onSave";
       };
     };
     keymaps = {
