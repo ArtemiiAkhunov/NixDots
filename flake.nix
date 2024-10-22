@@ -93,7 +93,7 @@
             (
               { ... }:
               {
-                nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
+                nixpkgs.overlays = builtins.attrValues overlays ++ [ inputs.nix-minecraft.overlay ];
               }
             )
             ./nixos/machines/theros
