@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
   programs.nixvim.plugins.lsp = {
     enable = true;
@@ -22,6 +23,8 @@
       };
       tinymist = {
         enable = true;
+        package = pkgs.tinymist;
+        cmd = ["${pkgs.tinymist}/bin/tinymist"];
         settings.exportPdf = "onSave";
       };
     };
