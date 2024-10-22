@@ -14,8 +14,9 @@
       enable = true;
     };
     pam.services.hyprlock.text = ''
-      auth		sufficient  	pam_unix.so try_first_pass likeauth nullok
-      auth		sufficient  	pam_fprintd.so
+      # PAM configuration file for the swaylock screen locker. By default, it includes
+      # the 'login' configuration file (see /etc/pam.d/login)
+      auth include login
     '';
   };
 }
