@@ -13,6 +13,9 @@
     polkit = {
       enable = true;
     };
-    pam.services.hyprlock.text = "auth include login";
+    pam.services.hyprlock.text = ''
+      auth		sufficient  	pam_unix.so try_first_pass likeauth nullok
+      auth		sufficient  	pam_fprintd.so
+    '';
   };
 }
