@@ -1,4 +1,7 @@
-{
+{ lib, ... }:
+{ 
+  time.timeZone = lib.mkForce null;
+
   i18n.defaultLocale = "en_US.UTF-8"; # locale
 
   networking.hostName = "kamigawa";

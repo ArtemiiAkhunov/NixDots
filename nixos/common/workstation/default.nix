@@ -14,7 +14,6 @@
     ./sound.nix
     ./steam.nix
     ./suspend-and-hibernate.nix
-    ./time-zone.nix
     ./xdg.nix
     ./yubikey.nix
   ];
