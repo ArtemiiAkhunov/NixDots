@@ -22,7 +22,7 @@
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
-  boot.kernelParams = [ 
+  boot.kernelParams = [
     "i915.force_probe=a7a0"
   ];
   boot.kernelModules = [

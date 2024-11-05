@@ -6,7 +6,7 @@ let
     voidwalker_laptop
   ];
 in
-{ 
+{
   "tls_cert.age".publicKeys = users;
   "tls_private.age".publicKeys = users;
 }

@@ -57,7 +57,7 @@
             ./home-manager/homes/kamigawa.nix
             inputs.catppuccin.homeManagerModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
-            
+
           ];
           extraSpecialArgs = {
             inherit inputs outputs;
