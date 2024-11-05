@@ -9,4 +9,5 @@ in
 {
   "tls_cert.age".publicKeys = users;
   "tls_private.age".publicKeys = users;
+  "wireguard_private.age".publicKeys = users;
 }
