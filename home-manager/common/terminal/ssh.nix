@@ -15,7 +15,7 @@
         oracle = {
           hostname = "172.17.57.17";
           user = "ubuntu";
-          itentityFile = "/home/voidwalker/.ssh/oracle";
+          identityFile = "/home/voidwalker/.ssh/oracle";
         };
 
         data = {
