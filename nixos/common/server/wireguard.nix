@@ -1,8 +1,13 @@
 { pkgs, config, ... }:
 {
+  
+  networking.firewall = {
+    allowedUDPPorts = [ 51820 ]; # Clients and peers can use the same port, see listenport
+  };
+
   networking.wg-quick.interfaces = {
     wg0 = {
-      ips = [ "192.168.77.2/32" ];
+      address = [ "192.168.77.2/32" ];
       listenPort = 51820;
       table = "123";
 
