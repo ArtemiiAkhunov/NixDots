@@ -12,6 +12,7 @@
         "wheel"
         "networkmanager"
         "input"
+        "uinput"
         "audio"
       ];
       packages = with pkgs; [ ];
