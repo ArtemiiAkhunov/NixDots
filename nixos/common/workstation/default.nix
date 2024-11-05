@@ -8,6 +8,7 @@
     ./firewall.nix
     ./fprintd.nix
     ./hyprland.nix
+    ./kanata.nix
     ./nautilus.nix
     ./networkmanager.nix
     ./packages.nix
