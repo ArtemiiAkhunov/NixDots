@@ -1,10 +1,12 @@
-{ config, ... }:
+{ config, lib, ... }:
 {
   security.acme = {
     acceptTerms = true;
     defaults.email = "artemii13052003@gmail.com";
     certs."lordofthelags.net" = {
+      domain="*.lordofthelags.net";
       dnsProvider = "porkbun";
+      webroot = lib.mkForce null;
       environmentFile = config.age.secrets.porkbun_api.path;
     };
   };
@@ -14,12 +16,9 @@
     recommendedProxySettings = true;
     recommendedTlsSettings = true;
     virtualHosts = {
-      "matrix.lordofthelags.net" = {
+      "lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
-        locations."/" = {
-          proxyPass = "http://localhost:8448";
-        };
       };
     };
   };
