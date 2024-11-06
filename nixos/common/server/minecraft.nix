@@ -22,6 +22,7 @@
 
         whitelist = {
           MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
+          Ailani = "810273d9-1fe0-3149-bd8f-3e9fbae58fb1";
           # Add some more of my friends
         };
         jvmOpts = "-Xms5120M -Xmx5120M -XX:+UseZGC";
