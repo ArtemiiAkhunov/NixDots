@@ -32,6 +32,8 @@
       };
     });
 
+    nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
+
     fprintd = prev.fprintd.overrideAttrs (old: {
       mesonCheckFlags = [
         # PAM related checks are timing out
