@@ -4,11 +4,13 @@
     acceptTerms = true;
     defaults.email = "artemii13052003@gmail.com";
     certs."lordofthelags.net" = {
+      dnsProvider = "porkbun";
       domain="*.lordofthelags.net";
       environmentFile = config.age.secrets.porkbun_api.path;
     };
   };
 
+  /*
   services.nginx = {
     enable = true;
     recommendedProxySettings = true;
@@ -43,4 +45,5 @@
       };
     };
   };
+  */
 }
