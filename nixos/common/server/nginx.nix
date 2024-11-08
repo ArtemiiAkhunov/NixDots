@@ -7,10 +7,6 @@
       dnsProvider = "porkbun";
       environmentFile = config.age.secrets.porkbun_api.path;
     };
-    certs."matrix.lordofthelags.net" = {
-      group = "matrix-synapse";
-      allowKeysForGroup = true;
-    };
   };
 
   services.nginx = {
