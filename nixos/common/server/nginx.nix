@@ -7,6 +7,10 @@
       dnsProvider = "porkbun";
       environmentFile = config.age.secrets.porkbun_api.path;
     };
+    certs."matrix.lordofthelags.net" = {
+      group = "matrix-synapse";
+      allowKeysForGroup = true;
+    };
   };
 
   services.nginx = {
@@ -39,18 +43,7 @@
         forceSSL = true;
         enableACME = true;
         acmeRoot = null;
-        locations."/".extraConfig = ''
-          return 404;
-        '';
-        locations."~ ^(/_matrix|/_synapse/client)" = {
-          proxyPass = "http://localhost:8008";
-          extraConfig = ''
-            proxy_set_header X-Forwarded-For $remote_addr;
-            proxy_set_header X-Forwarded-Proto $scheme;
-            proxy_set_header Host $host;
-            client_max_body_size 50M;
-          '';
-        };
+        locations."/".proxyPass = "http://127.0.0.1:8008";
       };
     };
   };

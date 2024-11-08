@@ -9,4 +9,5 @@ in
 {
   "wireguard_private.age".publicKeys = users;
   "porkbun_api.age".publicKeys = users;
+  "synapse_secrets.age".publicKeys = users;
 }
