@@ -1,25 +1,21 @@
-{ config, lib, ... }:
+{ config, ... }:
 {
   security.acme = {
     acceptTerms = true;
-    defaults.email = "artemii13052003@gmail.com";
-    certs."lordofthelags.net" = {
+    defaults = {
+      email = "artemii13052003@gmail.com";
       dnsProvider = "porkbun";
-      domain="*.lordofthelags.net";
       environmentFile = config.age.secrets.porkbun_api.path;
     };
   };
 
-  /*
   services.nginx = {
     enable = true;
-    recommendedProxySettings = true;
-    recommendedTlsSettings = true;
     virtualHosts = {
       "lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
-        root = "/var/www/lordofthelags.net";
+        acmeRoot = null;
         locations."/.well-known/matrix/client" = {
           return = ''
             200 '{"m.homeserver": {"base_url": "https://matrix.lordofthelags.net"}}'
@@ -29,10 +25,12 @@
             add_header Access-Control-Allow-Origin *;
           '';
         };
+
       };
       "matrix.lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
+        acmeRoot = null;
         locations."~ ^(/_matrix|/_synapse/client)" = {
           proxyPass = "http://localhost:8008";
           extraConfig = ''
@@ -45,5 +43,4 @@
       };
     };
   };
-  */
 }
