@@ -27,10 +27,21 @@
         };
 
       };
+      "minecraft.lordofthelags.net" = {
+        forceSSL = true;
+        enableACME = true;
+        acmeRoot = null;
+        locations."/".extraConfig = ''
+          return 404;
+        '';
+      };
       "matrix.lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
         acmeRoot = null;
+        locations."/".extraConfig = ''
+          return 404;
+        '';
         locations."~ ^(/_matrix|/_synapse/client)" = {
           proxyPass = "http://localhost:8008";
           extraConfig = ''
