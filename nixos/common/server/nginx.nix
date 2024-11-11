@@ -19,6 +19,7 @@
         forceSSL = true;
         enableACME = true;
         acmeRoot = null;
+<<<<<<< HEAD
         locations = {
           "/.well-known/matrix/client" = {
             return = '' 200 '{"m.homeserver": {"base_url": "https://matrix.lordofthelags.net"}}' '';
@@ -34,6 +35,14 @@
               add_header Access-Control-Allow-Origin *;
             '';
           };
+=======
+        locations."/.well-known/matrix/client" = {
+          return = ''200 '{"m.homeserver": {"base_url": "https://matrix.lordofthelags.net"}}' '';
+          extraConfig = ''
+            default_type application/json;
+            add_header Access-Control-Allow-Origin *;
+          '';
+>>>>>>> f66614f (Formatted the files)
         };
 
       };

@@ -1,24 +1,27 @@
-{config, ...}:
+{ config, ... }:
 {
-  networking.firewall = { # Firewall
+  networking.firewall = {
+    # Firewall
     allowedTCPPorts = [
       8448
     ];
   };
 
-  services.postgresql = { # Database
+  services.postgresql = {
+    # Database
     enable = true;
     dataDir = "/data/postgresql/";
   };
 
-  services.matrix-synapse = { # Synapse
+  services.matrix-synapse = {
+    # Synapse
     enable = true;
     dataDir = "/data/matrix-synapse/";
 
     settings = {
       server_name = "lordofthelags.net";
       public_baseurl = "matrix.lordofthelags.net";
-      
+
       database = {
         type = "psycopg2";
         args = {
@@ -27,34 +30,45 @@
       };
 
       max_upload_size = "100M";
-      
+
       enable_registration = true;
       enable_registration_captcha = true;
-      
+
       tls_certificate_path = "/var/lib/acme/matrix.lordofthelags.net/fullchain.pem";
       tls_private_key_path = "/var/lib/acme/matrix.lordofthelags.net/key.pem";
-      
+
       listeners = [
-        { # federation
+        {
+          # federation
           bind_addresses = [
             ""
           ];
           port = 8448;
           resources = [
-            { compress = true; names = [ "client" ]; }
-            { compress = false; names = [ "federation" ]; }
+            {
+              compress = true;
+              names = [ "client" ];
+            }
+            {
+              compress = false;
+              names = [ "federation" ];
+            }
           ];
           tls = true;
           type = "http";
           x_forwarded = false;
         }
-        { # client
+        {
+          # client
           bind_addresses = [
             "127.0.0.1"
           ];
           port = 8008;
           resources = [
-            { compress = true; names = [ "client" ]; }
+            {
+              compress = true;
+              names = [ "client" ];
+            }
           ];
           tls = false;
           type = "http";
