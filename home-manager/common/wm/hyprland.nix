@@ -62,7 +62,7 @@
         };
 
         shadow = {
-          drop = true;
+          enabled = true;
           range = 4;
           render_power = 3;
           color = "rgba(f2cdcdee)";
