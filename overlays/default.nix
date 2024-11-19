@@ -22,16 +22,6 @@
       };
     });
 
-    neovim-unwrapped = prev.neovim-unwrapped.overrideAttrs (old: {
-      version = "10.0.1";
-      src = final.fetchFromGitHub {
-        owner = "neovim";
-        repo = "neovim";
-        rev = "refs/tags/v0.10.1";
-        hash = "sha256-OsHIacgorYnB/dPbzl1b6rYUzQdhTtsJYLsFLJxregk=";
-      };
-    });
-
     nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
 
     fprintd = prev.fprintd.overrideAttrs (old: {
