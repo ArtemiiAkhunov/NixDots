@@ -6,7 +6,7 @@
     ./nginx.nix
     ./packages.nix
     ./ssh.nix
-    ./synapse.nix
+    #./synapse.nix
     ./wireguard.nix
   ];
 }
