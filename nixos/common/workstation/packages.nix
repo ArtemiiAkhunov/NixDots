@@ -19,6 +19,7 @@
     # General Apps
 
     audacity
+    blender
     firefox
     telegram-desktop
     kitty
