@@ -108,5 +108,6 @@
 
     lshw
     (import ./scripts/nvidia-offload.nix { inherit pkgs; })
+    cudaPackages.cudatoolkit
   ];
 }
