@@ -12,6 +12,8 @@
     ) inputs;
   };
 
+  additions = final: prev: import ../packages { pkgs = final; } // { };
+
   modifications = final: prev: {
 
     nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
