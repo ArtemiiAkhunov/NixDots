@@ -50,6 +50,7 @@
     in
     {
       formatter = forEachSystem (pkgs: pkgs.nixfmt-rfc-style);
+      packages = forEachSystem (pkgs: import ./pkgs { inherit pkgs; });
       homeConfigurations = {
         "voidwalker@kamigawa" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
