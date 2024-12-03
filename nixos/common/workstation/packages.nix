@@ -52,6 +52,7 @@
     zoom-us
     libreoffice-still
     slack
+    creality-print
 
     # Gaming
 
