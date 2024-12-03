@@ -38,13 +38,20 @@
       tls_private_key_path = "/var/lib/acme/matrix.lordofthelags.net/key.pem";
 
       listeners = [
-        { # client
+        {
+          # client
           bind_addresses = [
             "127.0.0.1"
           ];
           port = 8008;
           resources = [
-            { compress = false; names = [ "client" "federation" ]; }
+            {
+              compress = false;
+              names = [
+                "client"
+                "federation"
+              ];
+            }
           ];
           tls = false;
           type = "http";

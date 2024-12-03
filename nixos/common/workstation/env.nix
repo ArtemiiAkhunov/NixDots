@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   environment.variables = {
     OCL_ICD_VENDORS = "/run/opengl-driver/etc/OpenCL/vendors";
     CUDA_PATH = "${pkgs.cudaPackages.cudatoolkit}";
