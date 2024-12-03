@@ -52,7 +52,7 @@
     zoom-us
     libreoffice-still
     slack
-    cura
+    cura-appimage
 
     # Gaming
 
