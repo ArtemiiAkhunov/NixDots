@@ -47,7 +47,6 @@
     font-awesome
     fira-code
     inconsolata
-    nerdfonts
-  ];
+  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
 }
