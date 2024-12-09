@@ -9,9 +9,5 @@
       enable = true;
       setSocketVariable = true;
     };
-
-    settings = {
-      data-root = "/data/docker/";
-    };
   };
 }
