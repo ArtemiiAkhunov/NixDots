@@ -1,6 +1,7 @@
 {
   imports = [
     ./age.nix
+    ./docker.nix
     ./firewall.nix
     ./minecraft.nix
     ./nginx.nix
