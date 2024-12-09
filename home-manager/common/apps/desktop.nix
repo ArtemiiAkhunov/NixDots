@@ -4,7 +4,7 @@ let
     url = "https://raw.githubusercontent.com/Ultimaker/Cura/main/packaging/icons/cura-icon.svg";
     sha256 = "sha256-ypqrZ/Wv/a+oyYHYtP8Aa/BeOBelTBoLcDEauiViJ7I=";
   };
-in 
+in
 {
   xdg.desktopEntries = {
     cura = {

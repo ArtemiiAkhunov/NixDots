@@ -36,17 +36,20 @@
     speedtest-cli
     typst
 
-    # Networking 
+    # Networking
     cacert
 
-    #Other 
+    #Other
     home-manager
   ];
 
-  fonts.packages = with pkgs; [
-    font-awesome
-    fira-code
-    inconsolata
-  ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  fonts.packages =
+    with pkgs;
+    [
+      font-awesome
+      fira-code
+      inconsolata
+    ]
+    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
 }

@@ -1,7 +1,7 @@
 {
   makeDesktopItem,
   fetchurl,
-  appimageTools
+  appimageTools,
 }:
 let
   pname = "cura-appimage";
@@ -22,5 +22,5 @@ let
       })
     ];
   };
-in 
+in
 outputDerivation

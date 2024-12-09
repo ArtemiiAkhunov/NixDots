@@ -44,18 +44,6 @@
           return 404;
         '';
       };
-      "matrix.lordofthelags.net" = {
-        forceSSL = true;
-        enableACME = true;
-        acmeRoot = null;
-        locations = {
-          "/".extraConfig = ''
-            return 404;
-          '';
-          "/_matrix".proxyPass = "http://127.0.0.1:8008";
-        };
-
-      };
     };
   };
 }
