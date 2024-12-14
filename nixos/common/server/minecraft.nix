@@ -38,6 +38,7 @@
           motd = "Yes, it's a minecraft server!";
           # dificulty = "something";
           simulation-distance = 15;
+          max-players = 3;
           white-list = true;
           online-mode = false;
         };
@@ -90,7 +91,6 @@
               url = "https://cdn.modrinth.com/data/PRHeWeBs/versions/SOnDqlpU/createutilities-0.3.0%2B1.18.2.jar";
               sha512 = "3a1c538c712164f5ecd7a06d448bb7e3d67809b648ff5d64f291db5d5e2b90c205d290feb389a82515c0f74ab25c484c65e3766da2e72787d73df4aadebae325";
             };
-
           });
         };
         jvmOpts = "-Xms5120M -Xmx5120M -XX:+UseZGC";
