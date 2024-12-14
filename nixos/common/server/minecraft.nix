@@ -70,9 +70,13 @@
               url = "https://cdn.modrinth.com/data/u6dRKJwZ/versions/NVuQhfP5/jei-1.18.2-fabric-10.2.1.1002.jar";
               sha512 = "e5aa700e96709d6035c948421f59c4a26c373d1a2b6f706a2ec21377e4fae1dfa149cd7403dbcb5d41e583e133c6f9400973bb43e991f9daa62159a93bedee26";
             };
+            ArchitectryAPI = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/lhGA9TYQ/versions/ql0OowZw/architectury-4.12.94-fabric.jar";
+              sha512 = "ae824f839f8d7fe1ec2942bc66b2c22b1aeb837cce98e0c412235082dc930653bd076f2dc898d0c9c6d2c30fa5acca5145047418d07b550b942bdc67fb41886d";
+            };
             Create = pkgs.fetchurl {
-              url = "https://cdn.modrinth.com/data/Xbc0uyRg/versions/AUnWONBr/create-fabric-1.18.2-0.5.0e-733.jar";
-              sha512 = "bb917e6ee769802f6a4a0104db3b7956d726092be8ec4d89e3541769444cd92dcc541fbb047d6a3abad6e6e8d9f2b36f8180f623bad16f9092f9971a0c06e021";
+              url = "https://cdn.modrinth.com/data/Xbc0uyRg/versions/ACfVIQMB/create-fabric-0.5.1-f-build.1415%2Bmc1.18.2.jar";
+              sha512 = "86dff0663110c674438c8159362cb918202547ba97006697fdeac16f1b7c2b7be36dbca6afac7626faf5eb033a4af050014d6871d8564fecb95b746c926435cf";
             };
             CreateCrafts = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/kU1G12Nn/versions/BwU7P7Cf/createaddition-fabric-1.18.2-20230704a.jar";
