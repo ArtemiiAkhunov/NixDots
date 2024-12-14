@@ -31,7 +31,7 @@
 
       moddedServer = {
         enable = true;
-        package = pkgs.fabricServers.fabric-1_18_2.override { loaderVersion = "0.14.9"; };
+        package = pkgs.fabricServers.fabric-1_18_2.override { loaderVersion = "0.16.9"; };
 
         serverProperties = {
           gamemode = "survival";
