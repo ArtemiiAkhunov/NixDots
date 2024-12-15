@@ -55,6 +55,10 @@
               url = "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.2-0.4.1/sodium-fabric-mc1.18.2-0.4.1%2Bbuild.15.jar";
               sha512 = "86eb4db8fdb9f0bb06274c4f150b55273b5b770ffc89e0ba68011152a231b79ebe0b1adda0dd194f92cdcb386f7a60863d9fee5d15c1c3547ffa22a19083a1ee";
             };
+            Indium = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/Orvt0mRa/versions/1.0.7%2Bmc1.18.2/indium-1.0.7%2Bmc1.18.2.jar";
+              sha512 = "cdd32ac79e7cb423af95dbd618c383a9e240e84f53eeb02029f679142e4b980e39c7db8190a2cdb542c23067d56c6b7d29bc21204709028ee5538a659f7cf95f";
+            };
             Lithium = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/gvQqBUqZ/versions/mc1.18.2-0.7.9/lithium-fabric-mc1.18.2-0.7.9.jar";
               sha512 = "6c2128734a7e49301e49f394b62c4995aaed3cdd88fd20f7dd265db3dbafb6c5bb193e9705d5533585ee397ed713aaedfb843b05be2c4c7dd90a86321c2e8cfc";
