@@ -45,6 +45,7 @@
 
         whitelist = {
           MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
+          gfisun = "add21dad-1356-3f61-8136-750afd58b034";
 
           # Add some more of my friends
         };
