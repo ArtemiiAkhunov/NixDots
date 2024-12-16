@@ -52,6 +52,10 @@
 
         symlinks = {
           mods = pkgs.linkFarmFromDrvs "mods" (builtins.attrValues {
+            WTHIT = pkgs.fetchurl {
+              url = "https://cdn.modrinth.com/data/6AQIaxuO/versions/nILqdVZG/wthit-fabric-4.13.6.jar";
+              sha512 = "1527d4f05d3001f373754ca8048b7674a701cf6db46772d01b9137516767b50d39e2ee0aa063b828ad6b0cd2796773bb62f25f83ebc2b11d32f4e5348dfe6242";
+            };
             Sodium = pkgs.fetchurl {
               url = "https://cdn.modrinth.com/data/AANobbMI/versions/mc1.18.2-0.4.1/sodium-fabric-mc1.18.2-0.4.1%2Bbuild.15.jar";
               sha512 = "86eb4db8fdb9f0bb06274c4f150b55273b5b770ffc89e0ba68011152a231b79ebe0b1adda0dd194f92cdcb386f7a60863d9fee5d15c1c3547ffa22a19083a1ee";
