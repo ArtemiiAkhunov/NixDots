@@ -1,10 +1,12 @@
 {
   programs.nixvim.plugins.floaterm = {
     enable = true;
-    autoinsert = true;
-    height = 0.4;
-    wintype = "split";
-    shell = "zsh";
-    keymaps.toggle = "<leader>te";
+    settings = {
+      wintype = "split";
+      autoinsert = true;
+      height = 0.4;
+      shell = "zsh";
+      keymaps.toggle = "<leader>te";
+    };
   };
 }
