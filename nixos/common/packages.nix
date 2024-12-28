@@ -8,9 +8,10 @@
 
     gnumake
     gcc
-    python
-    (python3.withPackages (ps: with ps; [ requests ]))
-    python311Packages.debugpy
+    python312
+    (python312.withPackages (ps: with ps; [ requests ]))
+    python312Packages.debugpy
+    python312Packages.evdev
     vscode-extensions.ms-vscode.cpptools
     gdb
     rustc
