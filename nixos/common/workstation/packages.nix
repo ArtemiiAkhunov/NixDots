@@ -49,7 +49,6 @@
     # School Apps
 
     obsidian
-    citrix_workspace
     zoom-us
     libreoffice-still
     slack
@@ -105,7 +104,6 @@
 
     networkmanager-l2tp
     networkmanagerapplet
-    glib-networking
 
     # GPU utilities
 
