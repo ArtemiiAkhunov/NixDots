@@ -105,6 +105,7 @@
 
     networkmanager-l2tp
     networkmanagerapplet
+    glib-networking
 
     # GPU utilities
 
