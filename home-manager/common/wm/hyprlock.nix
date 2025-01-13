@@ -23,7 +23,7 @@
         dots_size = 0.2; # Scale of input-field height, 0.2 - 0.8
         dots_spacing = 0.2; # Scale of dots' absolute size, 0.0 - 1.0
         dots_center = true;
-        outer_color = "rgba(0, 0, 0, 0)";
+        outer_color = "rgba(0, 0, 0, 1.0)";
         inner_color = "rgba(0, 0, 0, 0.5)";
         font_color = "rgb(205, 214, 244)";
         fade_on_empty = false;
@@ -38,9 +38,9 @@
       image = {
         path = "$HOME/.local/share/fastfetch/logos/nixos.png";
         position = "0, 175";
-        size = "100, 100";
+        size = 200;
         rounding = -2;
-        border_color = "rgb(180, 190, 254)";
+        "border_color" = "rgb(180, 190, 254)";
         halign = "center";
         valign = "center";
       };
