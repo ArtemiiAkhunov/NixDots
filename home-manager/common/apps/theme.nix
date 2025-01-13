@@ -4,11 +4,10 @@
     flavor = "mocha";
     enable = true;
     accent = "lavender";
+    #YES, NO ACCENTS HERE, PLEZ
+    zsh-syntax-highlighting.enable = false;
+    cursors.enable = false;
   };
-
-  #YES, NO ACCENTS HERE, PLEZ
-  programs.zsh.syntaxHighlighting.catppuccin.enable = false;
-  catppuccin.pointerCursor.enable = false;
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
