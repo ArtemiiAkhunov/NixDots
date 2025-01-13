@@ -49,6 +49,7 @@
     # School Apps
 
     obsidian
+    citrix_workspace
     zoom-us
     libreoffice-still
     slack
