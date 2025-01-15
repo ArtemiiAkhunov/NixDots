@@ -74,6 +74,16 @@
             inherit inputs outputs;
           };
         };
+        "aakhunov@data" = lib.homeManagerConfiguration {
+          pkgs = pkgsFor.x86_64-linux;
+          modules = [
+            ./home-manager/homes/data.nix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
+        };
       };
 
       nixosConfigurations = {
