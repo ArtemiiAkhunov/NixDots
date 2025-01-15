@@ -58,7 +58,7 @@
             ./home-manager/homes/kamigawa.nix
             inputs.catppuccin.homeManagerModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
-
+            inputs.nixvim.homeManagerModules.nixvim
           ];
           extraSpecialArgs = {
             inherit inputs outputs;
@@ -66,7 +66,10 @@
         };
         "voidwalker@theros" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
-          modules = [ ./home-manager/homes/theros.nix ];
+          modules = [ 
+            ./home-manager/homes/theros.nix
+            inputs.nixvim.homeManagerModules.nixvim
+          ];
           extraSpecialArgs = {
             inherit inputs outputs;
           };
@@ -84,7 +87,6 @@
               }
             )
             ./nixos/machines/kamigawa
-            inputs.nixvim.nixosModules.nixvim
             inputs.agenix.nixosModules.default
           ];
         };
@@ -98,7 +100,6 @@
               }
             )
             ./nixos/machines/theros
-            inputs.nixvim.nixosModules.nixvim
             inputs.agenix.nixosModules.default
             inputs.nix-minecraft.nixosModules.minecraft-servers
           ];
