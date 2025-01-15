@@ -24,9 +24,9 @@
       tinymist = {
         enable = true;
         rootDir = ''
-          function() 
-           return vim.fn.getcwd() 
-         end
+           function() 
+            return vim.fn.getcwd() 
+          end
         '';
         settings = {
           single_file_support = true;

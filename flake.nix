@@ -66,7 +66,7 @@
         };
         "voidwalker@theros" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
-          modules = [ 
+          modules = [
             ./home-manager/homes/theros.nix
             inputs.nixvim.homeManagerModules.nixvim
           ];

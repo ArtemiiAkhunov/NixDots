@@ -52,7 +52,7 @@
           return 404;
         '';
       };
-      "vw.lordofthelags.net" = { 
+      "vw.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
         locations."/" = {
