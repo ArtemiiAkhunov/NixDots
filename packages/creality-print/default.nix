@@ -5,7 +5,7 @@
 }:
 let
   pname = "creality-print-appimage";
-  version = "5.9.0";
+  version = "5.1.6";
   src = fetchurl {
     url = "https://github.com/CrealityOfficial/CrealityPrint/releases/download/v5.1.6/Creality_Print-v5.1.6.10470-x86_64-Release.AppImage";
     hash = "sha256-gS7b41UEvjwUWjCAWjJbD5Xz8QblZkT6tv5ceRhjYfI=";
