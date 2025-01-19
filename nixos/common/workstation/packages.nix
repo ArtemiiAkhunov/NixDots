@@ -53,6 +53,7 @@
     libreoffice-still
     slack
     cura-appimage
+    creality-print-appimage
 
     # Gaming
 
