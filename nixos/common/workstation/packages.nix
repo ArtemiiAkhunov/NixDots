@@ -20,7 +20,7 @@
 
     audacity
     blender
-    firefox
+    chromium
     telegram-desktop
     kitty
     kitty-themes
