@@ -2,8 +2,8 @@
 pkgs.writeShellScriptBin "handle_monitor_connect" ''
   handle() {
     case $1 in monitoradded*)
-      hyprctl reload
-      swww init
+      ${pkgs.hyprland}/bin/hyprctl reload
+      ${pkgs.swww}/bin/swww init
     esac
   }
 
