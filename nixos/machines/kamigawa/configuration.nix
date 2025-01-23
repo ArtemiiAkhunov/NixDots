@@ -1,5 +1,6 @@
+{ lib, ... }:
 {
-  time.timeZone = "America/Indianapolis";
+  time.timeZone = lib.mkForce null; # "America/Indianapolis";
 
   i18n.defaultLocale = "en_US.UTF-8"; # locale
 
