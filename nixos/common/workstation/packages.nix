@@ -4,6 +4,22 @@
   lib,
   ...
 }:
+let
+  microphoneStatus = (import ./scripts/microphone-status.nix { inherit pkgs; });
+  monitorConnect = (import ./scripts/handle-monitor-connect.nix { inherit pkgs; });
+  nvidiaOffload = (import ./scripts/nvidia-offload.nix { inherit pkgs; });
+  retroarchWithCores = (pkgs.retroarch.withCores (cores: with cores;[
+    mgba
+    desmume
+    ppsspp
+  ]));
+  customPackages = [
+    microphoneStatus
+    monitorConnect
+    nvidiaOffload
+    retroarchWithCores
+  ];
+in 
 {
   nixpkgs.config.allowUnfreePredicate =
     pkg:
@@ -82,8 +98,6 @@
     xwayland
     waybar
     wttrbar
-    (import ./scripts/microphone-status.nix { inherit pkgs; })
-    (import ./scripts/handle_monitor_connect.nix { inherit pkgs; })
     swaynotificationcenter
     wl-clipboard
     hyprland
@@ -108,7 +122,6 @@
     # GPU utilities
 
     lshw
-    (import ./scripts/nvidia-offload.nix { inherit pkgs; })
     cudaPackages.cudatoolkit
-  ];
+  ] ++ customPackages;
 }

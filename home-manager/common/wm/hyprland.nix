@@ -185,7 +185,7 @@
         #"${pkgs.lxde.lxsession}/bin/lxpolkit"
         "${pkgs.copyq}/bin/copyq --start-server"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"
-        "handle_monitor_connect"
+        "handle-monitor-connect"
       ];
 
       workspace = [
