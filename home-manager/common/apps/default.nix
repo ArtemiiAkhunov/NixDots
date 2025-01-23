@@ -5,5 +5,6 @@
     ./mpris.nix
     ./lf.nix
     ./spicetify.nix
+    ./timezone.nix
   ];
 }
