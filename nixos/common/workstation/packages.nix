@@ -56,7 +56,7 @@
 
     # Gaming
 
-    retroarch
+    retroarchFull
     cockatrice
     lutris
     heroic
