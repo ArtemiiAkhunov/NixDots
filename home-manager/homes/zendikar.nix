@@ -19,8 +19,8 @@
   };
   
   programs.zsh.envExtra = ''
-    DEVKITPRO=/opt/devkitpro/
-    DEVKITARM=/opt/devkitpro/devkitARM/
+    export DEVKITPRO=/opt/devkitpro/
+    export DEVKITARM=/opt/devkitpro/devkitARM/
   '';
 
   home.packages = with pkgs; [
