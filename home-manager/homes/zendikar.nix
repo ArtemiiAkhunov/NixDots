@@ -25,6 +25,8 @@
 
   home.packages = with pkgs; [
     ripgrep
+    fzf
+    tpm2-tss
   ];
 
   programs.home-manager.enable = true; # Leave home-manager in the system
