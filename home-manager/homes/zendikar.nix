@@ -25,6 +25,7 @@
   '';
 
   home.packages = with pkgs; [
+    tree
     ripgrep
     fzf
     tpm2-tss
