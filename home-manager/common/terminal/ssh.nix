@@ -12,6 +12,14 @@
           identityFile = rsa_key_path;
         };
 
+        zendikar = {
+          hostname = "172.17.57.225";
+          user = "voidwalker";
+          identityFile = rsa_key_path;
+          setEnv = {
+            "TERM" = "xterm";
+          };
+        };
         oracle = {
           hostname = "172.17.57.209";
           user = "ubuntu";
@@ -23,11 +31,13 @@
           user = "aakhunov";
           identityFile = rsa_key_path;
         };
+
         xinu = {
           hostname = "xinu20.cs.purdue.edu";
           user = "aakhunov";
           identityFile = rsa_key_path;
         };
+
       };
     };
 }
