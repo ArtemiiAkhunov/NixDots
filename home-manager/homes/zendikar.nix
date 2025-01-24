@@ -16,6 +16,7 @@
   programs.zsh.shellAliases = {
     "home-update" = "home-manager switch --flake ~/Dotfiles/.#voidwalker@zendikar --extra-experimental-features nix-command --extra-experimental-features flakes";
     "ff" = "${pkgs.fastfetch}/bin/fastfetch";
+    "python" = "pyhton3";
   };
   
   programs.zsh.envExtra = ''
