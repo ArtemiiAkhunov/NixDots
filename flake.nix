@@ -74,10 +74,10 @@
             inherit inputs outputs;
           };
         };
-        "aakhunov@data" = lib.homeManagerConfiguration {
+        "voidwalker@zendikar" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
           modules = [
-            ./home-manager/homes/data.nix
+            ./home-manager/homes/zendikar.nix
             inputs.nixvim.homeManagerModules.nixvim
           ];
           extraSpecialArgs = {
