@@ -61,6 +61,7 @@ in
     # Coding utilities
 
     android-tools
+    unityhub
 
     # School Apps
 
