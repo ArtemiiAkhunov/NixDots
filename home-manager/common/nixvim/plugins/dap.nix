@@ -1,37 +1,36 @@
 { pkgs, ... }:
 {
   programs.nixvim = {
-    plugins.dap = {
-      enable = true;
+    plugins = {
+      dap = {
+        enable = true;
 
-      signs = {
-        dapBreakpoint = {
-          text = "●";
-          texthl = "DapBreakpoint";
-        };
-        dapBreakpointCondition = {
-          text = "●";
-          texthl = "DapBreakpointCondition";
-        };
-        dapLogPoint = {
-          text = "◆";
-          texthl = "DapLogPoint";
-        };
-      };
-
-      extensions = {
-        dap-ui = {
-          enable = true;
-          floating.mappings = {
-            close = [
-              "<ESC>"
-              "q"
-            ];
+        signs = {
+          dapBreakpoint = {
+            text = "●";
+            texthl = "DapBreakpoint";
+          };
+          dapBreakpointCondition = {
+            text = "●";
+            texthl = "DapBreakpointCondition";
+          };
+          dapLogPoint = {
+            text = "◆";
+            texthl = "DapLogPoint";
           };
         };
-        dap-python.enable = true;
-        dap-virtual-text.enable = true;
       };
+      dap-ui = {
+        enable = true;
+        settings.floating.mappings = {
+          close = [
+            "<ESC>"
+            "q"
+          ];
+        };
+      };
+      dap-python.enable = true;
+      dap-virtual-text.enable = true;
     };
     extraConfigLua = ''
       local dap, dapui = require("dap"), require("dapui")
