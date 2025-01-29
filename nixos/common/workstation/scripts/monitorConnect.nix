@@ -1,5 +1,5 @@
 { pkgs }:
-pkgs.writeShellScriptBin "handle-monitor-connect" ''
+pkgs.writeShellScriptBin "monitorConnect" ''
   handle() {
     case $1 in monitoradded*)
       ${pkgs.hyprland}/bin/hyprctl reload

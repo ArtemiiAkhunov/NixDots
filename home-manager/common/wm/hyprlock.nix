@@ -38,8 +38,8 @@
       image = {
         path = "$HOME/.local/share/fastfetch/logos/nixos.png";
         position = "0, 175";
-        size = 200;
-        rounding = -2;
+        size = 170;
+        rounding = 60;
         "border_color" = "rgb(180, 190, 254)";
         halign = "center";
         valign = "center";

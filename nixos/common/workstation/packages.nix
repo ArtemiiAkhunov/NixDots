@@ -6,7 +6,7 @@
 }:
 let
   microphoneStatus = (import ./scripts/microphone-status.nix { inherit pkgs; });
-  monitorConnect = (import ./scripts/handle-monitor-connect.nix { inherit pkgs; });
+  monitorConnect = (import ./scripts/monitorConnect.nix { inherit pkgs; });
   nvidiaOffload = (import ./scripts/nvidia-offload.nix { inherit pkgs; });
   retroarchWithCores = (pkgs.retroarch.withCores (cores: with cores;[
     mgba
