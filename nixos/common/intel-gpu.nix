@@ -4,15 +4,13 @@
   # Enable OpenGL
   hardware.graphics = {
     enable = true;
-    enable32Bit = true;
     extraPackages = with pkgs; [
+      intel-compute-runtime
       intel-media-driver # LIBVA_DRIVER_NAME=iHD
-      intel-vaapi-driver # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
-      vaapiVdpau
-      libvdpau-va-gl
     ];
-    extraPackages32 = with pkgs.pkgsi686Linux; [ intel-vaapi-driver ];
   };
+
+  services.xserver.videoDrivers = [ "modesetting" ];
 
   environment.sessionVariables.LIBVA_DRIVER_NAME = "iHD";
 }
