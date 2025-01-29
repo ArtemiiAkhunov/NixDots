@@ -183,7 +183,7 @@
         "${pkgs.swaynotificationcenter}/bin/swaync"
         "${pkgs.copyq}/bin/copyq --start-server"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"
-        "${pkgs.monitorConnect}/bin/monitorConnect"
+        "monitorConnect"
         "${pkgs.waybar}/bin/waybar"
       ];
 
