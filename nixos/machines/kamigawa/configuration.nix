@@ -5,10 +5,13 @@
 
   networking.hostName = "kamigawa";
 
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ]; # Flakes
+  nix = {
+    settings.experimental-features = [
+      "nix-command"
+      "flakes"
+    ]; # Flakes
+    config.cudaSupport = true;
+  };
 
   system.stateVersion = "24.05"; # DO NOT TOUCH
 }
