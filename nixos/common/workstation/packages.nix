@@ -129,7 +129,6 @@ in
       # GPU utilities
 
       lshw
-      cudatoolkit
     ]
     ++ customPackages;
 }
