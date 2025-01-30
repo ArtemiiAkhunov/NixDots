@@ -1,6 +1,7 @@
 {
   imports = [
     ./bootloader.nix
+    ./cachix.nix
     ./lix.nix
     ./nh.nix
     ./packages.nix
