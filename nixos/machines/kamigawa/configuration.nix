@@ -10,7 +10,6 @@
       "nix-command"
       "flakes"
     ]; # Flakes
-    config.cudaSupport = true;
   };
 
   system.stateVersion = "24.05"; # DO NOT TOUCH
