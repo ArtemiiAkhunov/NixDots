@@ -21,7 +21,7 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_11; # Linux Kernel Version
+  boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
   boot.kernelParams = [
     "i915.force_probe=a7a0"
   ];
