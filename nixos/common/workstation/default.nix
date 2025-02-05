@@ -12,6 +12,7 @@
     ./nautilus.nix
     ./networkmanager.nix
     ./packages.nix
+    ./powersave.nix
     ./sound.nix
     ./steam.nix
     ./suspend-and-hibernate.nix
