@@ -36,7 +36,7 @@
 
         # Mem sleep
         MEM_SLEEP_ON_AC = "s2idle";
-        MEM_SLEEP_ON_BAT = "deep";
+        MEM_SLEEP_ON_BAT = "s2idle";
 
         # CPU shenanigans:
 
