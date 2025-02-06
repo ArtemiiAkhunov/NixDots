@@ -8,8 +8,6 @@
 
     powerManagement.enable = true;
 
-    powerManagement.finegrained = true;
-
     open = true;
 
     nvidiaSettings = true;
