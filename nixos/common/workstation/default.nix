@@ -15,7 +15,6 @@
     ./powersave.nix
     ./sound.nix
     ./steam.nix
-    # ./suspend-and-hibernate.nix
     ./xdg.nix
     ./yubikey.nix
   ];

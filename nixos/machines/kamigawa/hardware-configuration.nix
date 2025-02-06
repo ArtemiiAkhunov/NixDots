@@ -22,14 +22,20 @@
   ];
   boot.initrd.kernelModules = [ ];
   boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
+
   boot.kernelParams = [
-    "i915.force_probe=a7a0"
+    "mem_sleep_default=s2idle" # Deep Sleep and nvidia don't work well together
   ];
+
   boot.kernelModules = [
     "kvm-intel"
     "xhci_hcd"
   ];
   boot.extraModulePackages = [ ];
+
+  boot.blacklistedKernelModules = [
+    "nouveau"
+  ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/2fde8feb-807d-4d7d-9ad0-1a3798f44df1";
