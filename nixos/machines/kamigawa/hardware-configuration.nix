@@ -25,8 +25,6 @@
 
   boot.kernelParams = [
     "mem_sleep_default=s2idle" # Deep Sleep and nvidia don't work well together
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-    "nvidia_drm.fbdev=1"
   ];
 
   boot.kernelModules = [

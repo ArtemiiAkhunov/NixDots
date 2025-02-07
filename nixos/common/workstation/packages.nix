@@ -7,7 +7,6 @@
 let
   microphoneStatus = (import ./scripts/microphone-status.nix { inherit pkgs; });
   monitorConnect = (import ./scripts/monitorConnect.nix { inherit pkgs; });
-  nvidiaOffload = (import ./scripts/nvidia-offload.nix { inherit pkgs; });
   retroarchWithCores = (
     pkgs.retroarch.withCores (
       cores: with cores; [
@@ -20,7 +19,6 @@ let
   customPackages = [
     microphoneStatus
     monitorConnect
-    nvidiaOffload
     retroarchWithCores
   ];
 in
