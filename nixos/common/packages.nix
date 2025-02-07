@@ -36,6 +36,7 @@
     ripgrep
     speedtest-cli
     typst
+    nvtopPackages.full
 
     # Non-nixpkgs binaries
     cachix
