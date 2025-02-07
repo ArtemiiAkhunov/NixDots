@@ -55,14 +55,14 @@
         rounding = 10;
 
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
           new_optimizations = true;
         };
 
         shadow = {
-          enabled = true;
+          enabled = false;
           range = 4;
           render_power = 3;
           color = "rgba(f2cdcdee)";
@@ -70,7 +70,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
 
         bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
 
