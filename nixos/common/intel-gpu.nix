@@ -5,12 +5,20 @@
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      vaapiVdpau
+      libvdpau-va-gl
+      mesa
       intel-compute-runtime
-      intel-media-driver # LIBVA_DRIVER_NAME=iHD
     ];
+    extraPackages32 = with pkgs; [
+      intel-media-driver
+      intel-vaapi-driver
+      vaapiVdpau
+      libvdpau-va-gl
+      driversi686Linux.mesa
+    ];
+    enable32Bit = true;
   };
-
-  services.xserver.videoDrivers = [ "modesetting" ];
-
-  environment.sessionVariables.LIBVA_DRIVER_NAME = "iHD";
 }
