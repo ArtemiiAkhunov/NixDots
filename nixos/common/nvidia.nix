@@ -1,6 +1,11 @@
-{ pkgs, config, lib, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 let
-  nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" '' 
+  nvidia-offload = pkgs.writeShellScriptBin "nvidia-offload" ''
     export __NV_PRIME_RENDER_OFFLOAD=1
     export __NV_PRIME_RENDER_OFFLOAD_PROVIDER=NVIDIA-G0
     export __GLX_VENDOR_LIBRARY_NAME=nvidia
@@ -47,7 +52,8 @@ in
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
-  systemd.services.nvidiaoff = { # Nvidia Turns off on boot
+  systemd.services.nvidiaoff = {
+    # Nvidia Turns off on boot
     enable = true;
     unitConfig = {
       Type = "simple";
