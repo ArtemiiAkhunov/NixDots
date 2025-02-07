@@ -25,7 +25,7 @@
 
   boot.kernelParams = [
     "mem_sleep_default=s2idle" # Deep Sleep and nvidia don't work well together
-    "i915.force_probe=a7a0"
+    "i915.force_probe=a7a0" # Use iGPU on startup
   ];
 
   boot.kernelModules = [

@@ -59,8 +59,10 @@ in
       Type = "simple";
     };
     serviceConfig = {
+      ExecStartPre = "${pkgs.coreutils}/bin/sleep 4";
       ExecStart = "${nvidia-off}/bin/nvidia-off";
     };
+    before = [ "graphical.target" ];
     wantedBy = [ "multi-user.target" ];
   };
 }
