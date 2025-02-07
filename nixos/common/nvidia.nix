@@ -42,15 +42,8 @@ in
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
-
     modesetting.enable = lib.mkForce true;
-
-    powerManagement.enable = true;
-
     open = true;
-
-    nvidiaSettings = true;
-
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
 
@@ -60,7 +53,6 @@ in
       Type = "simple";
     };
     serviceConfig = {
-      ExecStartPre = "${pkgs.coreutils}/bin/sleep 6";
       ExecStart = "${nvidia-off}/bin/nvidia-off";
     };
     wantedBy = [ "multi-user.target" ];

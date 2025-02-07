@@ -22,5 +22,5 @@
     '';
   };
 
-  environment.variables.AQ_DRM_DEVICES = "/dev/dri/card1:/dev/dri/card0";
+  environment.variables.AQ_DRM_DEVICES = "/dev/dri/card1";
 }

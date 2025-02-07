@@ -1,6 +1,4 @@
 {
-  powerManagement.enable = true; # Trying to do sleep
-
   hardware.nvidia = {
     # Nvidia config
     prime = {

@@ -32,9 +32,4 @@
   programs.zsh.initExtra = ''
     fastfetch
   '';
-
-  # Use integrated graphics first
-  wayland.windowManager.hyprland.settings.env = [
-    "AQ_DRM_DEVICES,/dev/dri/card1:/dev/dri/card0"
-  ];
 }
