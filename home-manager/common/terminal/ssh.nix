@@ -13,7 +13,7 @@
         };
 
         zendikar = {
-          hostname = "172.17.57.225";
+          hostname = "172.17.57.12";
           user = "voidwalker";
           identityFile = rsa_key_path;
           setEnv = {
