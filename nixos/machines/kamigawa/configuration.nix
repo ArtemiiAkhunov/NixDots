@@ -1,7 +1,7 @@
 {
-  time.timeZone = "America/Indianapolis";
+  time.timeZone = null;#"America/Indianapolis";
 
-  i18n.defaultLocale = null;#"en_US.UTF-8"; # locale
+  i18n.defaultLocale = "en_US.UTF-8"; # locale
 
   networking.hostName = "kamigawa";
 
