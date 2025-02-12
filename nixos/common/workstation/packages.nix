@@ -65,6 +65,7 @@ in
       # Coding utilities
 
       android-tools
+      vscodium
       unityhub
 
       # School Apps
