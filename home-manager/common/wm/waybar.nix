@@ -9,7 +9,7 @@
         height = 70;
         spacing = 10;
         modules-left = [
-          "clock"
+          "custom/clock"
           "tray"
           "custom/weather"
         ];
@@ -48,6 +48,14 @@
           format = "{:%H:%M %m/%d}";
           tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
           format-alt = "{:%Y-%m-%d}";
+          tooltip = false;
+        };
+
+        "custom/clock" = { # TZ data messes with waybar's clock module
+          format = "{}";
+          tooltip = false;
+          exec = "date +'%H:%M %m/%d'";
+          interval = 60;
         };
 
         "backlight" = {
@@ -137,7 +145,7 @@
         background: transparent;
       }
 
-      #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc {
+      #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
         color: #1e1e2e;
         background-color: #f5e0dc;
         border-radius: 10px;
