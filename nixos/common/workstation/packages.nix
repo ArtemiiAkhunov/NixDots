@@ -117,6 +117,7 @@ in
       grim
       grimblast
       slurp
+      eww
       swappy
       papirus-nord
 

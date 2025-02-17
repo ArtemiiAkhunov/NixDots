@@ -6,5 +6,6 @@
     ./hyprland.nix
     ./hyprlock.nix
     ./swaync.nix
+    ./eww.nix
   ];
 }
