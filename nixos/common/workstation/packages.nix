@@ -7,7 +7,7 @@
 let
   microphoneStatus = (import ./scripts/microphoneStatus.nix { inherit pkgs; });
   monitorConnect = (import ./scripts/monitorConnect.nix { inherit pkgs; });
-  ewwTrigger = (import ./scripts/ewwTrigger.nix { inherit pkgs; });
+  triggerActivate = (import ./scripts/triggerActivate.nix { inherit pkgs; });
   retroarchWithCores = (
     pkgs.retroarch.withCores (
       cores: with cores; [
@@ -21,7 +21,7 @@ let
     microphoneStatus
     monitorConnect
     retroarchWithCores
-    ewwTrigger
+    triggerActivate
   ];
 in
 {
