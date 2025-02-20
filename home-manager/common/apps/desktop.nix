@@ -10,7 +10,7 @@ in
     cura = {
       name = "Cura";
       genericName = "3D Printing Software";
-      exec = "cura-appimage %U";
+      exec = "cura %U";
       icon = cura-icon;
       terminal = false;
       categories = [ "Utility" ];
