@@ -51,7 +51,8 @@
           tooltip = false;
         };
 
-        "custom/clock" = { # TZ data messes with waybar's clock module
+        "custom/clock" = {
+          # TZ data messes with waybar's clock module
           format = "{}";
           tooltip = false;
           exec = "date +'%H:%M %m/%d'";

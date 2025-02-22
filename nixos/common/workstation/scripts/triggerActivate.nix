@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 pkgs.writeShellScriptBin "triggerActivate" ''
   open="$(${pkgs.eww}/bin/eww active-windows | grep 'activate-linux' | wc -w)"
   if ((open == 0)); then
