@@ -22,13 +22,11 @@
       #window {
         margin: auto;
         padding: 10px;
-        border-radius: 20px;
       }
 
       #input {
         padding: 10px;
         margin-bottom: 10px;
-        border-radius: 15px;
       }
 
       #img {
@@ -37,7 +35,6 @@
 
       #entry {
         padding: 10px;
-        border-radius: 15px;
       }
 
       #text {
