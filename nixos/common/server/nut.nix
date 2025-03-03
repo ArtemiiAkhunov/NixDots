@@ -39,7 +39,7 @@
       ];
     };
 
-    users ={
+    users = {
       admin = {
         actions = [
           "set"
@@ -48,7 +48,7 @@
         instcmds = [
           "all"
         ];
-        upsmon="primary";
+        upsmon = "primary";
         passwordFile = config.age.secrets.nut_admin_password.path;
       };
       observer = {
