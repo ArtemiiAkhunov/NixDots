@@ -76,6 +76,14 @@
           proxyWebsockets = true;
         };
       };
+      "hydra.lordofthelags.net" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:4200";
+          proxyWebsockets = true;
+        };
+      };
     };
   };
 }

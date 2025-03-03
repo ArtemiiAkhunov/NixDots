@@ -2,6 +2,8 @@
   services.hydra = {
     enable = true;
     hydraURL = "https://hydra.lordofthelags.net";
+    port = 4200;
+    notificationSender = "hydra@localhost";
     useSubstitutes = true;
     buildMachinesFiles = [ ];
     minimumDiskFree = 5;
