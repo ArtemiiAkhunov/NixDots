@@ -6,8 +6,11 @@
     porkbun_api = {
       file = ../../../secrets/porkbun_api.age;
     };
-    synapse_secrets = {
-      file = ../../../secrets/synapse_secrets.age;
+    nut_admin_password = {
+      file = ../../../secrets/nut_admin_password.age;
+    };
+    nut_observer_password = {
+      file = ../../../secrets/nut_observer_password.age;
     };
   };
 }

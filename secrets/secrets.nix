@@ -9,5 +9,6 @@ in
 {
   "wireguard_private.age".publicKeys = users;
   "porkbun_api.age".publicKeys = users;
-  "synapse_secrets.age".publicKeys = users;
+  "nut_admin_password.age".publicKeys = users;
+  "nut_observer_password.age".publicKeys = users;
 }
