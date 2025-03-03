@@ -4,22 +4,25 @@
     enable = true;
     openFirewall = true;
     mode = "netserver"; # TODO: update to be a server
-    ups."spark" = {
-      description = "UPS for Servers";
-      driver = "usbhid-ups";
-      port = "auto";
+    ups.spark = {
+      description = ''"UPS for Servers"'';
+      driver = ''"usbhid-ups"'';
+      port = ''"auto"'';
       directives = [
         ''vendorid = "0764"''
         ''productid = "0601"''
         ''product = "CP1000PFCLCDa"''
         ''serial = "CX1PY7001483"''
         ''vendor = "CPS"''
+        ''bus = "001"''
+        ''device = "002"''
+        ''busport = "004"''
       ];
     };
 
     upsmon = {
       monitor.spark = {
-        system = "spark@localhost";
+        system = "spark@localhost:3494";
         powerValue = 1;
         user = "admin";
         type = "primary";
