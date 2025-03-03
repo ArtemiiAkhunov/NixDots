@@ -4,7 +4,7 @@
     ./docker.nix
     ./firewall.nix
     ./hydra.nix
-    #./minecraft.nix
+    ./minecraft.nix
     ./nginx.nix
     ./nut.nix
     ./packages.nix

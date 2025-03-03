@@ -7,29 +7,27 @@
     dataDir = "/data/minecraft/";
 
     servers = {
-      /*
-        dumDumServer = {
-          enable = true;
-          package = pkgs.vanillaServers.vanilla-1_18_2;
+      dumDumServer = {
+        enable = true;
+        package = pkgs.vanillaServers.vanilla-1_18_2;
 
-          serverProperties = {
-            gamemode = "survival";
-            motd = "Yes, it's a minecraft server!";
-            # dificulty = "something";
-            simulation-distance = 15;
-            white-list = true;
-            online-mode = false;
-          };
-
-          whitelist = {
-            MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
-            Ailani = "810273d9-1fe0-3149-bd8f-3e9fbae58fb1";
-            # Add some more of my friends
-          };
-          jvmOpts = "-Xms5120M -Xmx5120M -XX:+UseZGC";
+        serverProperties = {
+          gamemode = "survival";
+          motd = "Yes, it's a minecraft server!";
+          # dificulty = "something";
+          simulation-distance = 15;
+          white-list = true;
+          online-mode = false;
         };
-      */
 
+        whitelist = {
+          MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
+          Ailani = "810273d9-1fe0-3149-bd8f-3e9fbae58fb1";
+          # Add some more of my friends
+        };
+        jvmOpts = "-Xms5120M -Xmx5120M -XX:+UseZGC";
+      };
+/*
       moddedServer = {
         enable = true;
         package = pkgs.fabricServers.fabric-1_18_2.override { loaderVersion = "0.16.9"; };
@@ -110,7 +108,7 @@
           );
         };
         jvmOpts = "-Xms5120M -Xmx5120M -XX:+UseZGC";
-      };
+      };*/
     };
   };
 }
