@@ -48,6 +48,7 @@
         instcmds = [
           "all"
         ];
+        upsmon="primary";
         passwordFile = config.age.secrets.nut_admin_password.path;
       };
       observer = {
