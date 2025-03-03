@@ -12,5 +12,8 @@
     nut_observer_password = {
       file = ../../../secrets/nut_observer_password.age;
     };
+    hydra_secret = {
+      file = ../../../secrets/hydra_secret.age;
+    };
   };
 }
