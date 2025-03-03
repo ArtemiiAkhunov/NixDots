@@ -4,17 +4,17 @@
     enable = true;
     openFirewall = true;
     mode = "netserver"; # TODO: update to be a server
-    ups.spark = {
+    ups."spark" = {
       description = "UPS for Servers";
       driver = "usbhid-ups";
       port = "auto";
-      summary = ''
-        vendorid = "0764"
-        productid = "0601"
-        product = "CP1000PFCLCDa"
-        serial = "CX1PY7001483"
-        vendor = "CPS"
-      '';
+      directives = [
+        ''vendorid = "0764"''
+        ''productid = "0601"''
+        ''product = "CP1000PFCLCDa"''
+        ''serial = "CX1PY7001483"''
+        ''vendor = "CPS"''
+      ];
     };
 
     upsmon = {
@@ -23,7 +23,7 @@
         powerValue = 1;
         user = "admin";
         type = "primary";
-        passwordFile = config.age.secrets.nut_admin_password;
+        passwordFile = config.age.secrets.nut_admin_password.path;
       };
     };
     upsd = {
@@ -31,7 +31,7 @@
       listen = [
         {
           address = "0.0.0.0";
-          port = "3494";
+          port = 3494;
         }
       ];
     };
@@ -45,10 +45,10 @@
         instcmds = [
           "all"
         ];
-        passwordFile = config.age.secrets.nut_admin_password;
+        passwordFile = config.age.secrets.nut_admin_password.path;
       };
       observer = {
-        passwordFile = config.age.secrets.nut_observer_password;
+        passwordFile = config.age.secrets.nut_observer_password.path;
         upsmon = "secondary";
       };
     };
