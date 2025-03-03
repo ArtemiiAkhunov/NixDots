@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   services.hydra = {
     enable = true;
     hydraURL = "https://hydra.lordofthelags.net";
