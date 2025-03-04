@@ -28,6 +28,9 @@
         type = "primary";
         passwordFile = config.age.secrets.nut_admin_password.path;
       };
+      settings = { 
+        FINALDELAY = 180;
+      };
     };
     upsd = {
       enable = true;
