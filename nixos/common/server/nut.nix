@@ -5,7 +5,7 @@
     openFirewall = true;
     mode = "netserver"; # TODO: update to be a server
     ups.spark = {
-      description = ''"UPS for Servers"'';
+      description = "UPS for Servers";
       driver = ''"usbhid-ups"'';
       port = ''"auto"'';
       directives = [
