@@ -28,7 +28,7 @@
         type = "primary";
         passwordFile = config.age.secrets.nut_admin_password.path;
       };
-      settings = { 
+      settings = {
         FINALDELAY = 180;
         SHUTDOWNCMD = ''
           upsShutdown

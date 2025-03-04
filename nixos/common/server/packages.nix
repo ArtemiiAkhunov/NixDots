@@ -4,9 +4,12 @@ let
   customPackages = [
     upsShutdown
   ];
-in 
+in
 {
-  environment.systemPackages = with pkgs; [
-    nftables
-  ] ++ customPackages;
+  environment.systemPackages =
+    with pkgs;
+    [
+      nftables
+    ]
+    ++ customPackages;
 }

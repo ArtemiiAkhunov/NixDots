@@ -75,16 +75,19 @@
             inherit inputs outputs;
           };
         };
-        "voidwalker@zendikar" = lib.homeManagerConfiguration {
-          pkgs = pkgsFor.x86_64-linux;
-          modules = [
-            ./home-manager/homes/zendikar.nix
-            inputs.nixvim.homeManagerModules.nixvim
-          ];
-          extraSpecialArgs = {
-            inherit inputs outputs;
+        /*
+          Not needed for now
+          "voidwalker@zendikar" = lib.homeManagerConfiguration {
+            pkgs = pkgsFor.x86_64-linux;
+            modules = [
+              ./home-manager/homes/zendikar.nix
+              inputs.nixvim.homeManagerModules.nixvim
+            ];
+            extraSpecialArgs = {
+              inherit inputs outputs;
+            };
           };
-        };
+        */
       };
 
       nixosConfigurations = {
