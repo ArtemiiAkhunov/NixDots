@@ -1,4 +1,4 @@
-{ config, ... }:
+{ pkgs, config, ... }:
 {
   power.ups = {
     enable = true;
@@ -9,7 +9,6 @@
       driver = ''"usbhid-ups"'';
       port = ''"auto"'';
       directives = [
-        ''allow_killpower = 1''
         ''vendorid = "0764"''
         ''productid = "0601"''
         ''product = "CP1000PFCLCDa"''
@@ -31,6 +30,9 @@
       };
       settings = { 
         FINALDELAY = 180;
+        SHUTDOWNCMD = ''
+          ${pkgs.upsShutdown}/bin/upsShutdown
+        '';
       };
     };
     upsd = {
