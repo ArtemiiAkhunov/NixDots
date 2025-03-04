@@ -14,6 +14,9 @@
     };
     hydra_secret = {
       file = ../../../secrets/hydra_secret.age;
+      mode = "770";
+      owner = "hydra";
+      group = "hydra";
     };
   };
 }
