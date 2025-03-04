@@ -31,7 +31,7 @@
       settings = { 
         FINALDELAY = 180;
         SHUTDOWNCMD = ''
-          ${pkgs.upsShutdown}/bin/upsShutdown
+          upsShutdown
         '';
       };
     };
