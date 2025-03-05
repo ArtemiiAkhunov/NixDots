@@ -113,7 +113,6 @@ in
       swww
       wofi
       xdg-desktop-portal-hyprland
-      xdg-desktop-portal
       pipewire
       pavucontrol
       copyq
