@@ -76,7 +76,7 @@ in
       zoom-us
       libreoffice-still
       slack
-      prusa-slicer
+      cura-appimage
       gimp-with-plugins
 
       # Gaming
