@@ -37,9 +37,6 @@
     speedtest-cli
     typst
 
-    # Non-nixpkgs binaries
-    cachix
-
     # Networking
     cacert
 
