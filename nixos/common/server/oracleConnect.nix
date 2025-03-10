@@ -14,7 +14,7 @@
       preUp = "${pkgs.iproute2}/bin/ip rule add from 192.168.77.2 table 123 priority 456";
       postDown = "${pkgs.iproute2}/bin/ip rule del from 192.168.77.2 table 123 priority 456";
 
-      privateKeyFile = config.age.secrets.wireguard_private.path;
+      privateKeyFile = config.age.secrets.oracle_wireguard_private.path;
 
       peers = [
         {
