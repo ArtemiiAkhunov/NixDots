@@ -60,11 +60,11 @@
           proxyWebsockets = true;
         };
       };
-      "ollama.lordofthelags.net" = {
+      "proxmox.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
         locations."/" = {
-          proxyPass = "http://192.168.0.6:3000";
+          proxyPass = "http://192.168.0.6:8006";
           proxyWebsockets = true;
         };
       };
