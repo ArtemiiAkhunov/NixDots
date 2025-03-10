@@ -60,6 +60,7 @@
           proxyWebsockets = true;
         };
       };
+      /*
       "proxmox.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
@@ -67,7 +68,7 @@
           proxyPass = "https://192.168.0.6:8006";
           proxyWebsockets = true;
         };
-      };
+      };*/
       "kuma.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
