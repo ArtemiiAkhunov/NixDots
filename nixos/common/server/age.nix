@@ -3,9 +3,6 @@
     oracle_wireguard_private = {
       file = ../../../secrets/oracle_wireguard_private.age;
     };
-    hl_wireguard_private = {
-      file = ../../../secrets/hl_wireguard_private.age;
-    };
     porkbun_api = {
       file = ../../../secrets/porkbun_api.age;
     };
