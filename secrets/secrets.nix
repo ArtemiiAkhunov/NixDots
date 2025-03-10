@@ -8,7 +8,6 @@ let
 in
 {
   "oracle_wireguard_private.age".publicKeys = users;
-  "hl_wireguard_private.age".publicKeys = users;
   "porkbun_api.age".publicKeys = users;
   "nut_admin_password.age".publicKeys = users;
   "nut_observer_password.age".publicKeys = users;
