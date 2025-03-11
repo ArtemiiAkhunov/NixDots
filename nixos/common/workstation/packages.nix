@@ -92,7 +92,6 @@ in
       # CLI stuff
 
       cava
-      mosh
       bluez
       bluez-tools
       sherlock
