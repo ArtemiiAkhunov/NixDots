@@ -10,6 +10,8 @@ in
     with pkgs;
     [
       nftables
+      firefox
+      browsh
     ]
     ++ customPackages;
 }
