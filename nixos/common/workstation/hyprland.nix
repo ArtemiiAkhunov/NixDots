@@ -23,9 +23,4 @@
       auth required pam_deny.so # deny
     '';
   };
-
-  environment.variables = {
-    AQ_DRM_DEVICES = "/dev/dri/card1";
-    AQ_NO_MODIFIERS = 1;
-  };
 }
