@@ -60,15 +60,14 @@
           proxyWebsockets = true;
         };
       };
-      /*
-      "proxmox.lordofthelags.net" = {
+      "nextcloud.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
         locations."/" = {
-          proxyPass = "https://192.168.0.6:8006";
+          proxyPass = "https://192.168.0.7:8080";
           proxyWebsockets = true;
         };
-      };*/
+      };
       "kuma.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
