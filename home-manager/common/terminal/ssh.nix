@@ -11,14 +11,15 @@
           user = "voidwalker";
           identityFile = rsa_key_path;
         };
-
-        zendikar = {
-          hostname = "172.17.57.162";
+        proxmox = {
+          hostname = "172.17.57.246";
           user = "voidwalker";
           identityFile = rsa_key_path;
-          setEnv = {
-            "TERM" = "xterm";
-          };
+        };
+        ubuntu = {
+          hostname = "172.17.57.213";
+          user = "voidwalker";
+          identityFile = rsa_key_path;
         };
         oracle = {
           hostname = "172.17.57.209";
