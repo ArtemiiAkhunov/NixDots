@@ -13,7 +13,7 @@
         };
         proxmox = {
           hostname = "172.17.57.246";
-          user = "voidwalker";
+          user = "root";
           identityFile = rsa_key_path;
         };
         ubuntu = {
