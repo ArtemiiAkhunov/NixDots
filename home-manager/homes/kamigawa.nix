@@ -26,7 +26,7 @@
     "rebuild" = "nh os switch ~/Dotfiles --hostname kamigawa";
     "home-update" = "nh home switch ~/Dotfiles --configuration voidwalker@kamigawa";
     "ff" = "fastfetch";
-    "ssh" = "kitten ssh";
+    "ssh" = "mosh";
   };
 
   programs.zsh.initExtra = ''
