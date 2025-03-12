@@ -109,11 +109,9 @@ in
       wttrbar
       swaynotificationcenter
       wl-clipboard
-      hyprland
       hyprlock
       swww
       wofi
-      xdg-desktop-portal-hyprland
       pipewire
       pavucontrol
       copyq
