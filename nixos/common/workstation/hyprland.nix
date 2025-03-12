@@ -2,8 +2,11 @@
 {
   programs.hyprland.enable = true;
 
-  xdg.portal.config.hyprland = {
-    "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
+  xdg.portal = {
+    wlr.enable = true;
+    config.hyprland = {
+      "org.freedesktop.impl.portal.ScreenCast" = "hyprland";
+    };
   };
 
   # Hyprlock stuff
