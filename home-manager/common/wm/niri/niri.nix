@@ -1,4 +1,4 @@
 {
   # Placeholder for now
-  home.file.".config/niri/config.kdl".file = ./config.kdl; 
+  xdg.configFile."/niri/config.kdl".source = ./config.kdl; 
 }
