@@ -15,6 +15,7 @@
   imports = [
     ../common
     ../common/wm
+    ../common/wm/hyprland
     ../common/terminal
     ../common/static
     ../common/apps
