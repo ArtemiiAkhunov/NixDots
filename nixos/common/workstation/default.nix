@@ -7,11 +7,11 @@
     ./env.nix
     ./firewall.nix
     ./fprintd.nix
-    # ./hyprland.nix
+    ./hyprland.nix
     ./kanata.nix
     ./nautilus.nix
     ./networkmanager.nix
-    ./niri.nix
+    # ./niri.nix
     ./packages.nix
     ./powersave.nix
     ./sound.nix
