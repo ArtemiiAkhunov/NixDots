@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   xdg.configFile."niri/config.kdl".text = ''
     // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
@@ -86,7 +87,7 @@
 
     spawn-at-startup "${pkgs.swww}/bin/swww-daemon"
     spawn-at-startup "${pkgs.waybar}/bin/waybar"
-    
+
     spawn-at-startup "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
     spawn-at-startup "${pkgs.swaynotificationcenter}/bin/swaync"
     spawn-at-startup "${pkgs.copyq}/bin/copyq --start-server"
@@ -392,5 +393,5 @@
         // moving the mouse or pressing any other key.
         Mod+Shift+P { power-off-monitors; }
     }
-  ''; 
+  '';
 }

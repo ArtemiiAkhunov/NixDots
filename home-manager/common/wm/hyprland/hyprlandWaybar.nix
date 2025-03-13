@@ -1,7 +1,7 @@
 {
   programs.waybar = {
     settings.mainBar = {
-      position="top";
+      position = "top";
 
       modules-left = [
         "custom/clock"

@@ -49,19 +49,23 @@
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
       windowManager = {
         name = "hyprland";
-        nixPath = if windowManager.name == "hyprland" 
-                  then ./nixos/common/workstation/hyprland.nix
-                  else ./nixos/common/workstation/niri.nix;
-        hmPath = if windowManager.name == "hyprland"
-                  then ./home-manager/common/wm/hyprland
-                  else ./home-manager/common/wm/niri;
+        nixPath =
+          if windowManager.name == "hyprland" then
+            ./nixos/common/workstation/hyprland.nix
+          else
+            ./nixos/common/workstation/niri.nix;
+        hmPath =
+          if windowManager.name == "hyprland" then
+            ./home-manager/common/wm/hyprland
+          else
+            ./home-manager/common/wm/niri;
       };
-      
     in
     {
       formatter = forEachSystem (pkgs: pkgs.nixfmt-rfc-style);
       packages = forEachSystem (pkgs: import ./packages { inherit pkgs; });
       hydraJobs = import ./hydra.nix { inherit inputs outputs; };
+      
       homeConfigurations = {
         "voidwalker@kamigawa" = lib.homeManagerConfiguration {
           pkgs = pkgsFor.x86_64-linux;
@@ -86,19 +90,6 @@
             inherit inputs outputs;
           };
         };
-        /*
-          Not needed for now
-          "voidwalker@zendikar" = lib.homeManagerConfiguration {
-            pkgs = pkgsFor.x86_64-linux;
-            modules = [
-              ./home-manager/homes/zendikar.nix
-              inputs.nixvim.homeManagerModules.nixvim
-            ];
-            extraSpecialArgs = {
-              inherit inputs outputs;
-            };
-          };
-        */
       };
 
       nixosConfigurations = {
