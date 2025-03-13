@@ -28,44 +28,23 @@
         transform "normal"
     }
 
+    cursor {
+      hide-when-typing
+    }
+
     layout {
         gaps 16
 
-        // When to center a column when changing focus, options are:
-        // - "never", default behavior, focusing an off-screen column will keep at the left
-        //   or right edge of the screen.
-        // - "always", the focused column will always be centered.
-        // - "on-overflow", focusing a column will center it if it doesn't fit
-        //   together with the previously focused column.
         center-focused-column "never"
 
-        // You can customize the widths that "switch-preset-column-width" (Mod+R) toggles between.
         preset-column-widths {
             proportion 0.33333
             proportion 0.5
             proportion 0.66667
         }
 
-        // You can also customize the heights that "switch-preset-window-height" (Mod+Shift+R) toggles between.
-        // preset-window-heights { }
-
-        // You can change the default width of the new windows.
         default-column-width { proportion 0.5; }
-        // If you leave the brackets empty, the windows themselves will decide their initial width.
-        // default-column-width {}
 
-        // By default focus ring and border are rendered as a solid background rectangle
-        // behind windows. That is, they will show up through semitransparent windows.
-        // This is because windows using client-side decorations can have an arbitrary shape.
-        //
-        // If you don't like that, you should uncomment `prefer-no-csd` below.
-        // Niri will draw focus ring and border *around* windows that agree to omit their
-        // client-side decorations.
-        //
-        // Alternatively, you can override it with a window rule called
-        // `draw-border-with-background`.
-
-        // You can change how the focus ring looks.
         focus-ring {
             width 4
             active-gradient from="#a6e3a1ee" to="#808080" angle=45
@@ -85,15 +64,20 @@
         }
     }
 
+    switch-events {
+      lid-close { spawn "${pkgs.hyprlock}/bin/hyprlock"; }
+    }
+
     spawn-at-startup "${pkgs.swww}/bin/swww-daemon"
     spawn-at-startup "${pkgs.waybar}/bin/waybar"
 
-    spawn-at-startup "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
+    spawn-at-startup "${pkgs.swww}/bin/swww" "img" "~/.wallpaper/cat.png" "--transition-type" "none"
     spawn-at-startup "${pkgs.swaynotificationcenter}/bin/swaync"
-    spawn-at-startup "${pkgs.copyq}/bin/copyq --start-server"
+    spawn-at-startup "${pkgs.copyq}/bin/copyq" "--start-server"
     spawn-at-startup "${pkgs.networkmanagerapplet}/bin/nm-applet"
 
     spawn-at-startup "${pkgs.xwayland-satellite}/bin/xwayland-satellite"
+    spawn-at-startup "${pkgs.hyprlock}/bin/hyprlock"
 
 
     environment {
@@ -103,8 +87,6 @@
     hotkey-overlay {
       skip-at-startup
     }
-
-    // prefer-no-csd
 
     screenshot-path "~/Pictures/Screenshots/Screenshot%Y-%m-%d %H-%M-%S.png"
 
@@ -179,14 +161,8 @@
         Mod+B repeat=false { spawn "${pkgs.chromium}/bin/chromium"; }
         Mod+Shift+B repeat=false { spawn "${pkgs.chromium}/bin/chromium" "--incognito" "startpage.lordofthelags.net"; }
         Mod+D repeat=false { spawn "${pkgs.wofi}/bin/wofi"; }
-        Super+Shift+C repeat=false { spawn "${pkgs.hyprlock}/bin/hyrplock"; }
+        Mod+Shift+C repeat=false { spawn "${pkgs.hyprlock}/bin/hyprlock"; }
 
-        // You can also use a shell. Do this if you need pipes, multiple commands, etc.
-        // Note: the entire command goes as a single argument in the end.
-        // Mod+T { spawn "bash" "-c" "notify-send hello && exec alacritty"; }
-
-        // Example volume keys mappings for PipeWire & WirePlumber.
-        // The allow-when-locked=true property makes them work even when the session is locked.
         XF86AudioRaiseVolume allow-when-locked=true { spawn "${pkgs.wireplumber}/bin/wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
         XF86AudioLowerVolume allow-when-locked=true { spawn "${pkgs.wireplumber}/bin/wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
         XF86AudioMute        allow-when-locked=true repeat=false { spawn "${pkgs.wireplumber}/bin/wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
@@ -380,8 +356,8 @@
         // Mod+Shift+Space { switch-layout "prev"; }
 
         Mod+Print { screenshot; }
-        Mod+Shift+Print { screenshot-screen; }
-        Mod+Ctrl+Print { screenshot-window; }
+        Mod+Ctrl+Print { screenshot-screen; }
+        Mod+Shift+Print { screenshot-window; }
 
         // Applications such as remote-desktop clients and software KVM switches may
         // request that niri stops processing the keyboard shortcuts defined here
