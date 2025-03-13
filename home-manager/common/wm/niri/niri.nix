@@ -162,6 +162,7 @@
         Mod+Shift+B repeat=false { spawn "${pkgs.chromium}/bin/chromium" "--incognito" "startpage.lordofthelags.net"; }
         Mod+D repeat=false { spawn "${pkgs.wofi}/bin/wofi"; }
         Mod+Shift+C repeat=false { spawn "${pkgs.hyprlock}/bin/hyprlock"; }
+        Mod+N repeat=false { spawn "${pkgs.swaynotificationcenter}/bin/swaync-client" "-t"; }
 
         XF86AudioRaiseVolume allow-when-locked=true { spawn "${pkgs.wireplumber}/bin/wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
         XF86AudioLowerVolume allow-when-locked=true { spawn "${pkgs.wireplumber}/bin/wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
