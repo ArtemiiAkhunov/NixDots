@@ -53,8 +53,8 @@
                   then ./nixos/common/workstation/hyprland.nix
                   else ./nixos/common/workstation/niri.nix;
         hmPath = if windowManager.name == "hyprland"
-                  then ./home-manager/common/wm/niri
-                  else ./home-manager/common/wm/hyprland;
+                  then ./home-manager/common/wm/hyprland
+                  else ./home-manager/common/wm/niri;
       };
       
     in
