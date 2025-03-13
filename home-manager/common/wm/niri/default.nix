@@ -1,6 +1,6 @@
 {
   imports = [
     ./niri.nix
-    ./niriWaybar.nix
+    ./waybar.nix
   ];
 }

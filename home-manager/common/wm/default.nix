@@ -1,8 +1,8 @@
 {
   imports = [
     ./eww.nix
+    ./hyprlock.nix
     ./swappy.nix
-    ./waybar.nix
     ./wofi.nix
   ];
 }

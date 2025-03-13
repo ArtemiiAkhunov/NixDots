@@ -100,6 +100,10 @@
       DISPLAY ":0"
     }
 
+    hotkey-overlay {
+      skip-at-startup
+    }
+
     // prefer-no-csd
 
     screenshot-path "~/Pictures/Screenshots/Screenshot%Y-%m-%d %H-%M-%S.png"
@@ -171,11 +175,11 @@
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         // Suggested binds for running programs: terminal, app launcher, screen locker.
-        Mod+Return { spawn "kitty"; }
-        Mod+B { spawn "chromium"; }
-        Mod+Shift+B { spawn "chromium" "--incognito" "startpage.lordofthelags.net"; }
-        Mod+D { spawn "wofi"; }
-        Super+Shift+L { spawn "swaylock"; }
+        Mod+Return repeat=false { spawn "${pkgs.kitty}/bin/kitty"; }
+        Mod+B repeat=false { spawn "${pkgs.chromium}/bin/chromium"; }
+        Mod+Shift+B repeat=false { spawn "${pkgs.chromium}/bin/chromium" "--incognito" "startpage.lordofthelags.net"; }
+        Mod+D repeat=false { spawn "${pkgs.wofi}/bin/wofi"; }
+        Super+Shift+C repeat=false { spawn "${pkgs.hyprlock}/bin/hyrplock"; }
 
         // You can also use a shell. Do this if you need pipes, multiple commands, etc.
         // Note: the entire command goes as a single argument in the end.
@@ -183,12 +187,15 @@
 
         // Example volume keys mappings for PipeWire & WirePlumber.
         // The allow-when-locked=true property makes them work even when the session is locked.
-        XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-        XF86AudioLowerVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
-        XF86AudioMute        allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
-        XF86AudioMicMute     allow-when-locked=true { spawn "wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+        XF86AudioRaiseVolume allow-when-locked=true { spawn "${pkgs.wireplumber}/bin/wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05+"; }
+        XF86AudioLowerVolume allow-when-locked=true { spawn "${pkgs.wireplumber}/bin/wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.05-"; }
+        XF86AudioMute        allow-when-locked=true repeat=false { spawn "${pkgs.wireplumber}/bin/wpctl" "set-mute" "@DEFAULT_AUDIO_SINK@" "toggle"; }
+        XF86AudioMicMute     allow-when-locked=true repeat=false { spawn "${pkgs.wireplumber}/bin/wpctl" "set-mute" "@DEFAULT_AUDIO_SOURCE@" "toggle"; }
+        
+        XF86MonBrightnessUp    allow-when-locked=true { spawn "${pkgs.brightnessctl}/bin/brightnessctl" "set" "5%+"; }
+        XF86MonBrightnessDown  allow-when-locked=true { spawn "${pkgs.brightnessctl}/bin/brightnessctl" "set" "5%-"; }
 
-        Mod+Shift+Q { close-window; }
+        Mod+Shift+Q repeat=false { close-window; }
 
         Mod+H     { focus-column-left; }
         Mod+J     { focus-window-down; }
@@ -234,12 +241,12 @@
         // Mod+Shift+Ctrl+Left  { move-workspace-to-monitor-left; }
         // ...
 
-        Mod+Page_Down      { focus-workspace-down; }
-        Mod+Page_Up        { focus-workspace-up; }
-        Mod+U              { focus-workspace-down; }
-        Mod+I              { focus-workspace-up; }
-        Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
-        Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
+        Mod+Page_Down       { focus-workspace-down; }
+        Mod+Page_Up         { focus-workspace-up; }
+        Mod+U               { focus-workspace-down; }
+        Mod+I               { focus-workspace-up; }
+        Mod+Ctrl+Page_Down  { move-column-to-workspace-down; }
+        Mod+Ctrl+Page_Up    { move-column-to-workspace-up; }
         Mod+Shift+U         { move-column-to-workspace-down; }
         Mod+Shift+I         { move-column-to-workspace-up; }
 
@@ -249,8 +256,8 @@
 
         Mod+Shift+Page_Down { move-workspace-down; }
         Mod+Shift+Page_Up   { move-workspace-up; }
-        Mod+Ctrl+U         { move-workspace-down; }
-        Mod+Ctrl+I         { move-workspace-up; }
+        Mod+Ctrl+U          { move-workspace-down; }
+        Mod+Ctrl+I          { move-workspace-up; }
 
         // You can bind mouse wheel scroll ticks using the following syntax.
         // These binds will change direction based on the natural-scroll setting.
