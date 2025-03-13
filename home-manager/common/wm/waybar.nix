@@ -13,7 +13,6 @@
           "tray"
           "custom/weather"
         ];
-        modules-center = [ "hyprland/workspaces" ];
         modules-right = [
           "custom/microphone"
           "wireplumber"
@@ -23,21 +22,6 @@
           "battery"
           "custom/nc"
         ];
-        "hyprland/workspaces" = {
-          format = "{icon}";
-          format-icons = {
-            "1" = "";
-            "2" = "";
-            "3" = "";
-            "4" = "";
-            "5" = "";
-            "6" = "";
-            "7" = "";
-            "8" = "";
-            "9" = "";
-            "10" = "";
-          };
-        };
 
         "tray" = {
           icon-size = 24;

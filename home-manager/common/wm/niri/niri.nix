@@ -1,5 +1,4 @@
 {pkgs, ...}: {
-  # Placeholder for now
   xdg.configFile."niri/config.kdl".text = ''
     // https://github.com/YaLTeR/niri/wiki/Configuration:-Input
 
@@ -8,7 +7,6 @@
             xkb {
                 layout "us,ru"
                 options "grp:win_space_toggle"
-                track-layout "global"
             }
         }
 
@@ -23,10 +21,10 @@
         }
 
         warp-mouse-to-focus
+        focus-follows-mouse
     }
 
     output "eDP-1" {
-        mode "1920x1080@120.030"
         scale 1
         transform "normal"
     }
@@ -174,7 +172,8 @@
         Mod+Shift+Slash { show-hotkey-overlay; }
 
         // Suggested binds for running programs: terminal, app launcher, screen locker.
-        Mod+T { spawn "kitty"; }
+        Mod+Return { spawn "kitty"; }
+        Mod+B { spawn "chromium"; }
         Mod+D { spawn "wofi"; }
         Super+Shift+L { spawn "swaylock"; }
 

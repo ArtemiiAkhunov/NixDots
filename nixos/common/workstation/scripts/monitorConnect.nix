@@ -3,7 +3,6 @@ pkgs.writeShellScriptBin "monitorConnect" ''
   handle() {
     case $1 in monitoradded*)
       ${pkgs.hyprland}/bin/hyprctl dispatch moveworkspacetomonitor "9 1"
-      # ${pkgs.hyprland}/bin/hyprctl reload
       # ${pkgs.swww}/bin/swww init
     esac
   }
