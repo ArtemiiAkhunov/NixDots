@@ -47,6 +47,16 @@
         }
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
+      windowManager = {
+        name = "hyprland";
+        nixPath = if windowManager.name == "hyprland" 
+                  then ./nixos/common/workstation/hyprland.nix
+                  else ./nixos/common/workstation/niri.nix;
+        hmPath = if windowManager.name == "hyprland"
+                  then ./home-manager/common/wm/niri
+                  else ./home-manager/common/wm/hyprland;
+      };
+      
     in
     {
       formatter = forEachSystem (pkgs: pkgs.nixfmt-rfc-style);
@@ -57,6 +67,7 @@
           pkgs = pkgsFor.x86_64-linux;
           modules = [
             ./home-manager/homes/kamigawa.nix
+            windowManager.hmPath
             inputs.catppuccin.homeManagerModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
             inputs.nixvim.homeManagerModules.nixvim
@@ -101,6 +112,7 @@
               }
             )
             ./nixos/machines/kamigawa
+            windowManager.nixPath
             inputs.agenix.nixosModules.default
           ];
         };

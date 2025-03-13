@@ -19,8 +19,6 @@
         mouse {
             accel-profile "flat"
         }
-
-        warp-mouse-to-focus
         focus-follows-mouse
     }
 
@@ -174,6 +172,7 @@
         // Suggested binds for running programs: terminal, app launcher, screen locker.
         Mod+Return { spawn "kitty"; }
         Mod+B { spawn "chromium"; }
+        Mod+Shift+B { spawn "chromium" "--incognito" "startpage.lordofthelags.net"; }
         Mod+D { spawn "wofi"; }
         Super+Shift+L { spawn "swaylock"; }
 
@@ -240,8 +239,8 @@
         Mod+I              { focus-workspace-up; }
         Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
         Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
-        Mod+Ctrl+U         { move-column-to-workspace-down; }
-        Mod+Ctrl+I         { move-column-to-workspace-up; }
+        Mod+Shift+U         { move-column-to-workspace-down; }
+        Mod+Shift+I         { move-column-to-workspace-up; }
 
         // Alternatively, there are commands to move just a single window:
         // Mod+Ctrl+Page_Down { move-window-to-workspace-down; }
@@ -249,8 +248,8 @@
 
         Mod+Shift+Page_Down { move-workspace-down; }
         Mod+Shift+Page_Up   { move-workspace-up; }
-        Mod+Shift+U         { move-workspace-down; }
-        Mod+Shift+I         { move-workspace-up; }
+        Mod+Ctrl+U         { move-workspace-down; }
+        Mod+Ctrl+I         { move-workspace-up; }
 
         // You can bind mouse wheel scroll ticks using the following syntax.
         // These binds will change direction based on the natural-scroll setting.
