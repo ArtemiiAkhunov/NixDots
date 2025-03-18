@@ -10,6 +10,7 @@
     ./nut.nix
     ./oracleConnect.nix
     ./packages.nix
+    ./smb.nix
     ./ssh.nix
   ];
 }

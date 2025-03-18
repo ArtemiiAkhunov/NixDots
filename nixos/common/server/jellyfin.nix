@@ -1,10 +1,10 @@
 { ... }:
 let
-  jellyfinRoot="/data/jellyfin"; 
-in 
+  jellyfinRoot = "/data/jellyfin";
+in
 {
   services.jellyfin = {
-    enable=true;
+    enable = true;
     configDir = "${jellyfinRoot}/config";
     cacheDir = "${jellyfinRoot}/cache";
     dataDir = "${jellyfinRoot}/data";

@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.waybar = {
     enable = true;
     settings = {
@@ -7,9 +8,9 @@
         position = "right";
         height = 20;
         spacing = 10;
-        modules-left = [];
-        modules-center = [];
-        modules-right = [];
+        modules-left = [ ];
+        modules-center = [ ];
+        modules-right = [ ];
       };
     };
   };

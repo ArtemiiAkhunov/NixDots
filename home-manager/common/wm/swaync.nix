@@ -10,7 +10,6 @@
       layer-shell = true;
       cssPriority = "application";
 
-
       notification-2fa-action = true;
       notification-inline-replies = true;
       notification-window-width = 600;
