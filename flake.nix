@@ -48,7 +48,7 @@
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
       windowManager = {
-        name = "niri";
+        name = "hyprland";
         nixPath =
           if windowManager.name == "hyprland" then
             ./nixos/common/workstation/hyprland.nix
