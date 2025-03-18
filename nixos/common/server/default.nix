@@ -4,6 +4,7 @@
     ./docker.nix
     ./firewall.nix
     ./hydra.nix
+    ./jellyfin.nix
     ./minecraft.nix
     ./nginx.nix
     ./nut.nix
