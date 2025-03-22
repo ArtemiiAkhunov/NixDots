@@ -68,8 +68,6 @@ in
 
       android-tools
       vscodium
-      jetbrains.clion
-      unityhub
 
       # School Apps
 
