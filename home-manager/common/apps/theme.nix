@@ -7,6 +7,7 @@
     #YES, NO ACCENTS HERE, PLEZ
     zsh-syntax-highlighting.enable = false;
     cursors.enable = false;
+    swaync.enable = false;
   };
 
   dconf.settings = {
