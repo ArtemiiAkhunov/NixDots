@@ -8,6 +8,7 @@
     zsh-syntax-highlighting.enable = false;
     cursors.enable = false;
     swaync.enable = false;
+    hyprlock.enable = false;
   };
 
   dconf.settings = {
