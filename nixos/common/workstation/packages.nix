@@ -61,7 +61,7 @@ in
       sushi
       imv
       thunderbird
-      yubikey-manager-qt
+      yubioath-flutter
       ventoy-full
 
       # Coding utilities
