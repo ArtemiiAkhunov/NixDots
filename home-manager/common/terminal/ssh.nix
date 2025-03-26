@@ -8,7 +8,7 @@
       matchBlocks = {
         gitlab = {
           hostname = "gitlab.lordofthelags.net";
-          user = "voidwalker";
+          user = "git";
           identityFile = rsa_key_path;
           port=15917;
         };
