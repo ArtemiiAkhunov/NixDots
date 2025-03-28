@@ -85,14 +85,6 @@
           proxyWebsockets = true;
         };
       };
-      "gitlab.lordofthelags.net" = {
-        enableACME = true;
-        forceSSL = true;
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:1024";
-          proxyWebsockets = true;
-        };
-      };
     };
   };
 }
