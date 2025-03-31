@@ -72,7 +72,7 @@
           modules = [
             ./home-manager/homes/kamigawa.nix
             windowManager.hmPath
-            inputs.catppuccin.homeManager.catppuccin
+            inputs.catppuccin.homeModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
             inputs.nixvim.homeManagerModules.nixvim
           ];
