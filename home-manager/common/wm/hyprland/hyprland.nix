@@ -14,6 +14,8 @@
 
       monitor = ",preffered,auto,1.0";
 
+      ecosystem."no_update_news" = true;
+
       env = [
         "HYPRCURSOR_THEME,rose-pine-hyprcursor"
         "QR_QPA_PLATFORMTHEME,qt5ct"
