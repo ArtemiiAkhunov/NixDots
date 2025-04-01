@@ -12,7 +12,7 @@ let
     pkgs.retroarch.withCores (
       cores: with cores; [
         mgba
-        desmume
+        melonds
         ppsspp
       ]
     )
