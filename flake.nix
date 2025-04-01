@@ -48,7 +48,7 @@
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
       graphicalEnvironment = {
-        name = "gnome";
+        name = "hyprland";
         nixPath =
           if graphicalEnvironment.name == "hyprland" then
             [
