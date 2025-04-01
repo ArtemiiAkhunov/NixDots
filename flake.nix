@@ -48,11 +48,13 @@
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
       graphicalEnvironment = {
-        name = "hyprland";
+        name = "gnome";
         nixPath =
           if graphicalEnvironment.name == "hyprland" then
             [
               ./nixos/common/workstation/hyprland.nix
+              ./nixos/common/workstation/displaymanager.nix
+              ./nixos/common/workstation/powersave.nix
               ./nixos/common/nvidia-off.nix
             ]
           else
