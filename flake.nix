@@ -71,7 +71,7 @@
           pkgs = pkgsFor.x86_64-linux;
           modules = [
             ./home-manager/homes/kamigawa.nix
-            windowManager.hmPath
+            graphicalEnvironment.hmPath
             inputs.catppuccin.homeModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
             inputs.nixvim.homeManagerModules.nixvim
@@ -103,7 +103,7 @@
               }
             )
             ./nixos/machines/kamigawa
-            windowManager.nixPath
+            graphicalEnvironment.nixPath
             inputs.agenix.nixosModules.default
           ];
         };
