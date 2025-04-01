@@ -23,7 +23,7 @@
           identityFile = rsa_key_path;
         };
         ubuntu = {
-          hostname = "172.17.57.213";
+          hostname = "172.17.57.27";
           user = "voidwalker";
           identityFile = rsa_key_path;
         };
