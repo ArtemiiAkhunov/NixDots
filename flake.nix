@@ -51,14 +51,14 @@
         name = "hyprland";
         nixPath =
           if graphicalEnvironment.name == "hyprland" then
-            ./nixos/common/workstation/hyprland.nix
+            [ ./nixos/common/workstation/hyprland.nix ./nixos/common/workstation/nvidia-off.nix]
           else
-            ./nixos/common/workstation/gnome.nix;
+            [ ./nixos/common/workstation/gnome.nix ] ;
         hmPath =
           if graphicalEnvironment.name == "hyprland" then
-            ./home-manager/common/wm
+            [ ./home-manager/common/wm ]
           else
-            ./home-manager/common/de;
+            [ ./home-manager/common/de ];
       };
     in
     {
@@ -71,11 +71,10 @@
           pkgs = pkgsFor.x86_64-linux;
           modules = [
             ./home-manager/homes/kamigawa.nix
-            graphicalEnvironment.hmPath
             inputs.catppuccin.homeModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
             inputs.nixvim.homeManagerModules.nixvim
-          ];
+          ] ++ graphicalEnvironment.hmPath;
           extraSpecialArgs = {
             inherit inputs outputs;
           };
@@ -103,9 +102,8 @@
               }
             )
             ./nixos/machines/kamigawa
-            graphicalEnvironment.nixPath
             inputs.agenix.nixosModules.default
-          ];
+          ] ++ graphicalEnvironment.nixPath;
         };
         "theros" = lib.nixosSystem {
           system = "x86_64-linux";
