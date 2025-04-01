@@ -24,7 +24,7 @@ let
   '';
 in
 {
-  system.environmentPackages = [
+  environment.systemPackages = [
     nvidia-off
     nvidia-on
     pkgs.kmod
