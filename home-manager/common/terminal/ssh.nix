@@ -10,7 +10,7 @@
           hostname = "gitlab.lordofthelags.net";
           user = "git";
           identityFile = rsa_key_path;
-          port=15917;
+          port = 15917;
         };
         theros = {
           hostname = "172.17.57.245";

@@ -51,9 +51,12 @@
         name = "hyprland";
         nixPath =
           if graphicalEnvironment.name == "hyprland" then
-            [ ./nixos/common/workstation/hyprland.nix ./nixos/common/workstation/nvidia-off.nix]
+            [
+              ./nixos/common/workstation/hyprland.nix
+              ./nixos/common/nvidia-off.nix
+            ]
           else
-            [ ./nixos/common/workstation/gnome.nix ] ;
+            [ ./nixos/common/workstation/gnome.nix ];
         hmPath =
           if graphicalEnvironment.name == "hyprland" then
             [ ./home-manager/common/wm ]
