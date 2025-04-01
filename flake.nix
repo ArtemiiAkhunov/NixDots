@@ -47,18 +47,18 @@
         }
       );
       forEachSystem = f: lib.genAttrs systems (system: f pkgsFor.${system});
-      windowManager = {
+      graphicalEnvironment = {
         name = "hyprland";
         nixPath =
-          if windowManager.name == "hyprland" then
+          if graphicalEnvironment.name == "hyprland" then
             ./nixos/common/workstation/hyprland.nix
           else
-            ./nixos/common/workstation/niri.nix;
+            ./nixos/common/workstation/gnome.nix;
         hmPath =
-          if windowManager.name == "hyprland" then
-            ./home-manager/common/wm/hyprland
+          if graphicalEnvironment.name == "hyprland" then
+            ./home-manager/common/wm
           else
-            ./home-manager/common/wm/niri;
+            ./home-manager/common/de;
       };
     in
     {

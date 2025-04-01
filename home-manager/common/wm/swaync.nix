@@ -5,6 +5,11 @@
       "$schema" = "/etc/xdg/swaync/configSchema.json";
       positionX = "right";
       positionY = "top";
+      control-center-width = 500;
+      control-center-margin-top = 10;
+      control-center-margin-bottom = 20;
+      control-center-margin-right = 10;
+      control-center-margin-left = 0;
       layer = "overlay";
       control-center-layer = "top";
       layer-shell = true;

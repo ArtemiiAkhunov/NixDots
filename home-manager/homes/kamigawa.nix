@@ -14,8 +14,7 @@
 
   imports = [
     ../common
-    ../common/wm
-    # ../common/wm/niri Solved in flake.nix
+    # ../common/wm/ or de Solved in flake.nix
     ../common/terminal
     ../common/static
     ../common/apps
