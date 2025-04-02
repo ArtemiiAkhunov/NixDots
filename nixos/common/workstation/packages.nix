@@ -95,7 +95,6 @@ in
       sherlock
       gvfs
       qemu
-      libcap
 
       # Window Manager Requirements
 
