@@ -21,7 +21,7 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.supportedFileSystems = [ "nfs" ];
+  boot.supportedFilesystems = [ "nfs" ];
   boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
 
   boot.kernelParams = [
