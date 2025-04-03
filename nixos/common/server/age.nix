@@ -12,9 +12,6 @@
     nut_observer_password = {
       file = ../../../secrets/nut_observer_password.age;
     };
-    smb_credentials = {
-      file = ../../../secrets/smb_credentials.age;
-    };
     hydra_secret = {
       file = ../../../secrets/hydra_secret.age;
       mode = "770";
