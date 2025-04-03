@@ -5,6 +5,7 @@
     ./cups.nix
     ./env.nix
     ./firewall.nix
+    ./flatpak.nix
     ./fprintd.nix
     # ./hyprland.nix Solved in flake.nix
     ./kanata.nix
