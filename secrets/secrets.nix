@@ -12,5 +12,4 @@ in
   "nut_admin_password.age".publicKeys = users;
   "nut_observer_password.age".publicKeys = users;
   "hydra_secret.age".publicKeys = users;
-  "smb_credentials.age".publicKeys = users;
 }
