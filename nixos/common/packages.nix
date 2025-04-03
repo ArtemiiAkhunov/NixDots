@@ -1,4 +1,4 @@
-{ pkgs, agenix, ... }:
+{ pkgs, inputs, ... }:
 {
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.permittedInsecurePackages = [ "python-2.7.18.8" ];
@@ -43,7 +43,7 @@
     #Other
     home-manager
   ] ++ [
-    agenix.packages.x86_64-linux.default
+      inputs.agenix.packages.x86_64-linux.default
   ];
 
   fonts.packages =
