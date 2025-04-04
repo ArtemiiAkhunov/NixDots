@@ -6,7 +6,7 @@ in
     kitty = {
       name = "Kitty";
       genericName = "Terminal Emulator";
-      exec = "${pkgs.kitty}/bin/kitty --start-as=fullscreen %U";
+      exec = "${pkgs.kitty}/bin/kitty --start-as maximized %U";
       terminal = false;
       categories = [ "Utility" "TerminalEmulator" ];
     };
