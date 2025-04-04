@@ -9,6 +9,6 @@ in
       exec = "${pkgs.kitty}/bin/kitty --start-as=fullscreen %U";
       terminal = false;
       categories = [ "Application" "Terminal" ];
-    }
+    };
   };
 }
