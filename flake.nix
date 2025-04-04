@@ -105,7 +105,7 @@
                 nixpkgs.overlays = builtins.attrValues overlays;
                 environment.systemPackages = [
                   inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
-                  inputs.agenix.x86_64-linux.default
+                  inputs.agenix.packages.x86_64-linux.default
                 ];
               }
             )
@@ -120,7 +120,7 @@
               { ... }:
               {
                 nixpkgs.overlays = builtins.attrValues overlays ++ [ inputs.nix-minecraft.overlay ];
-                environment.systemPackages = [ inputs.agenix.x86_64-linux.default ];
+                environment.systemPackages = [ inputs.agenix.packages.x86_64-linux.default ];
               }
             )
             ./nixos/machines/theros
