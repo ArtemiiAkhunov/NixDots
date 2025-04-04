@@ -8,7 +8,7 @@ in
       genericName = "Terminal Emulator";
       exec = "${pkgs.kitty}/bin/kitty --start-as=fullscreen %U";
       terminal = false;
-      categories = [ "Application" "Terminal" ];
+      categories = [ "Utility" "TerminalEmulator" ];
     };
   };
 }
