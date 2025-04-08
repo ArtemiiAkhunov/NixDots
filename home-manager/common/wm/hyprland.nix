@@ -7,8 +7,8 @@
     settings = {
       "$mainMod" = "$SUPER";
       "$terminal" = "${pkgs.kitty}/bin/kitty";
-      "$browser" = "${pkgs.chromium}/bin/chromium";
-      "$privateBrowser" = "${pkgs.chromium}/bin/chromium --incognito startpage.lordofthelags.net";
+      "$browser" = "${pkgs.firefox}/bin/firefox";
+      "$privateBrowser" = "${pkgs.firefox}/bin/firefox --private-window google.com";
       "$openSchedule" = "${pkgs.imv}/bin/imv ~/Pictures/Schedule.png";
       "$menu" = "${pkgs.wofi}/bin/wofi --show drun";
 

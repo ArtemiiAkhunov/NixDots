@@ -42,7 +42,7 @@ in
 
       audacity
       blender
-      chromium
+      firefox
       telegram-desktop
       kitty
       kitty-themes
