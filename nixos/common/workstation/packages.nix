@@ -68,7 +68,7 @@ in
 
       android-tools
       vscodium
-      jetbrains.idea-community
+      jetbrains.idea-ultimate
 
       # School Apps
 
