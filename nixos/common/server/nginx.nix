@@ -48,7 +48,6 @@
       "minecraft.lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
-        acmeRoot = null;
         locations."/".extraConfig = ''
           return 404;
         '';
