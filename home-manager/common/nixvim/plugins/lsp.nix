@@ -23,11 +23,9 @@
       };
       tinymist = {
         enable = true;
-        rootDir = ''
-           function() 
-            return vim.fn.getcwd() 
-          end
-        '';
+        rootMarkers = [
+          ".git"
+        ];
         settings = {
           single_file_support = true;
         };
