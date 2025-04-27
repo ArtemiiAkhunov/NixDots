@@ -29,7 +29,7 @@
     "ssh" = "kitten ssh";
   };
 
-  programs.zsh.initExtra = ''
+  programs.zsh.initContent = ''
     fastfetch
   '';
 }
