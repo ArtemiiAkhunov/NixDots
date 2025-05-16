@@ -62,7 +62,6 @@ in
       imv
       thunderbird
       yubioath-flutter
-      ventoy-full
 
       # Coding utilities
 
