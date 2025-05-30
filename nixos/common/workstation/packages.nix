@@ -56,6 +56,7 @@ in
       kdePackages.kdenlive
       glaxnimate
       makemkv
+      helvum
       nautilus
       adwaita-icon-theme
       sushi
