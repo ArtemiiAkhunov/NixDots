@@ -8,6 +8,7 @@
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
+    "repl-flake"
   ]; # Flakes
 
   system.stateVersion = "24.11"; # DO NOT TOUCH
