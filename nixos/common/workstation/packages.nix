@@ -95,6 +95,7 @@ in
       bluez-tools
       sherlock
       gvfs
+      yt-dlp
       qemu
 
       # Window Manager Requirements
