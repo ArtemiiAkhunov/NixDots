@@ -51,7 +51,9 @@ in
       vesktop
       element-desktop
       evince
-      bottles
+      (bottles.override{
+        removeWarningPopup=true;
+      })
       qbittorrent
       kdePackages.kdenlive
       glaxnimate
