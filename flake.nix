@@ -67,7 +67,7 @@
       };
     in
     {
-      formatter = forEachSystem (pkgs: pkgs.nixfmt-rfc-style);
+      formatter = forEachSystem (pkgs: pkgs.nixfmt-tree);
       packages = forEachSystem (pkgs: import ./packages { inherit pkgs; });
       hydraJobs = import ./hydra.nix { inherit inputs outputs; };
 
