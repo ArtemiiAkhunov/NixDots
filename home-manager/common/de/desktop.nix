@@ -8,8 +8,11 @@ in
       genericName = "Terminal Emulator";
       exec = "${pkgs.kitty}/bin/kitty --start-as maximized %U";
       terminal = false;
-      categories = [ "Utility" "TerminalEmulator" ];
-      icon="kitty";
+      categories = [
+        "Utility"
+        "TerminalEmulator"
+      ];
+      icon = "kitty";
     };
   };
 }

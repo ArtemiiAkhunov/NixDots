@@ -51,8 +51,8 @@ in
       vesktop
       element-desktop
       evince
-      (bottles.override{
-        removeWarningPopup=true;
+      (bottles.override {
+        removeWarningPopup = true;
       })
       qbittorrent
       kdePackages.kdenlive
