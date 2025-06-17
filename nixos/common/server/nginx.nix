@@ -49,7 +49,7 @@
         enableACME = true;
         forceSSL = true;
         locations."/" = {
-          proxyPass = "http://127.0.0.1:2283";
+          proxyPass = "http://localhost:2283";
           proxyWebsockets = true;
         };
       };
