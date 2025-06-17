@@ -8,7 +8,10 @@ in
     openFirewall = true;
     port = 2283;
     mediaLocation = "${immichRoot}/photos";
-    settings.server.externalDomain = "https://immich.lordofthelags.net";  };
+    settings.server.externalDomain = "https://immich.lordofthelags.net";
+    redis.enable = false;
+    machine-learning.enable = false;
+  };
 
   boot.supportedFilesystems = [ "nfs" ];
   
