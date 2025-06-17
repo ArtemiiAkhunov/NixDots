@@ -80,6 +80,7 @@ in
       slack
       cura-appimage
       gimp-with-plugins
+      darktable
 
       # Gaming
 
