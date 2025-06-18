@@ -14,6 +14,7 @@
       libvdpau-va-gl
       mesa
       intel-compute-runtime
+      openvino
     ];
     extraPackages32 = with pkgs; [
       intel-media-driver
