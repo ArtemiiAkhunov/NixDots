@@ -6,7 +6,7 @@
     ./hydra.nix
     ./immich.nix
     ./jellyfin.nix
-    ./minecraft.nix
+    # ./minecraft.nix
     ./nginx.nix
     ./nut.nix
     ./oracleConnect.nix
