@@ -14,7 +14,7 @@
 
   imports = [
     ../common
-    # ../common/wm/ or de Solved in flake.nix
+    ../common/wm
     ../common/terminal
     ../common/static
     ../common/apps
