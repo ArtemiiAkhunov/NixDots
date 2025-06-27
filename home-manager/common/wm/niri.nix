@@ -11,5 +11,7 @@
     satelite = "${pkgs.xwayland-satellite}";
     swww = "${pkgs.swww}";
     networkmanagerapplet = "${pkgs.networkmanagerapplet}";
+    DEFAULT_AUDIO_SINK = null;
+    DEFAULT_AUDIO_SOURCE = null;
   };
 }
