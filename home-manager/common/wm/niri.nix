@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  xdg.configFile."niri/config.kdl" = pkgs.replaceVars ./niri.kdl {
+  xdg.configFile."niri/config.kdl".source = pkgs.replaceVars ./niri.kdl {
     wireplumber = "${pkgs.wireplumber}";
     copyq = "${pkgs.copyq}";
     hyprlock = "${pkgs.hyprlock}";
