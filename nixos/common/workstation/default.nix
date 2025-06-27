@@ -8,10 +8,10 @@
     ./firewall.nix
     ./flatpak.nix
     ./fprintd.nix
-    ./hyprland.nix
     ./kanata.nix
     ./nautilus.nix
     ./networkmanager.nix
+    ./niri.nix
     ./packages.nix
     ./powersave.nix
     ./sound.nix
