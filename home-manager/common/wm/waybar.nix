@@ -6,8 +6,8 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 70;
-        spacing = 10;
+        height = 50;
+        spacing = 3;
 
         modules-left = [
           "custom/clock"
@@ -15,14 +15,14 @@
           "custom/weather"
         ];
 
-        modules-center = [ "hyprland/workspaces" ];
+        modules-center = [ "niri/workspaces" ];
 
         modules-right = [
           "custom/microphone"
           "wireplumber"
           "network"
           "backlight"
-          "hyprland/language"
+          "niri/language"
           "battery"
           "custom/nc"
         ];
@@ -32,7 +32,7 @@
           spacing = 10;
         };
 
-        "hyprland/workspaces" = {
+        "niri/workspaces" = {
           format = "{icon}";
           format-icons = {
             "1" = "";
@@ -112,8 +112,8 @@
           on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
         };
 
-        "hyprland/language" = {
-          format = "{shortDescription}";
+        "niri/language" = {
+          format = "{short}";
         };
 
         "custom/weather" = {
@@ -141,9 +141,9 @@
       * {
         border: none;
         font-family:'Inconsolata', 'FontAwesome';
-        font-size: 20px;
+        font-size: 12px;
         font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-        min-height: 30px;
+        min-height: 15px;
       }
 
       window#waybar {
@@ -153,36 +153,36 @@
       #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
         color: #1e1e2e;
         background-color: #f5e0dc;
-        border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
+        border-radius: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
         margin-top:5px;
         margin-right: 5px;
       }
 
       #custom-microphone {
-        min-width: 15px;
+        min-width: 10px;
       }
 
       #wireplumber, #network, #backlight, #battery {
-        padding-right: 20px;
+        padding-right: 10px;
       }
 
       #workspaces button {
-        padding-right: 20px;
+        padding-right: 10px;
       }
 
       #custom-nc {
-        margin-right: 10px;  
+        margin-right: 5px;  
       }
 
       #tray {
-        font-size:16px;
+        font-size: 5px;
       }
 
       #workspaces button {
         color: #1e1e2e;
-        min-width: 30px;
+        min-width: 15px;
         background-color: #f5e0dc;
       }
 
