@@ -23,9 +23,4 @@
     ];
     ensureDefaultPrinter = "HP_WiFi";
   };
-
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-  };
 }

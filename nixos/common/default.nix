@@ -1,5 +1,6 @@
 {
   imports = [
+    ./avahi.nix
     ./bootloader.nix
     ./nh.nix
     ./nix.nix
