@@ -12,6 +12,7 @@ in
       nftables
       firefox
       browsh
+      smartmontools
     ]
     ++ customPackages;
 }
