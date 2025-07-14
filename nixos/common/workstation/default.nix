@@ -10,6 +10,7 @@
     ./fprintd.nix
     ./hyprland.nix
     ./kanata.nix
+    ./kdeconnect.nix
     ./nautilus.nix
     ./networkmanager.nix
     ./packages.nix

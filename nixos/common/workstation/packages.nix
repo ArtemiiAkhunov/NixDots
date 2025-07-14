@@ -65,7 +65,6 @@ in
       imv
       thunderbird
       yubioath-flutter
-      kdePackages.kdeconnect-kde
 
       # Coding utilities
 
