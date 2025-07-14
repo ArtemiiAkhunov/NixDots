@@ -188,6 +188,7 @@
         "${pkgs.copyq}/bin/copyq --start-server"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"
         "monitorConnect"
+        "kdeconnect-indicator"
         "${pkgs.waybar}/bin/waybar"
       ];
 
