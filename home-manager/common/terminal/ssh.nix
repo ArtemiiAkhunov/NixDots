@@ -13,7 +13,7 @@
           port = 15917;
         };
         theros = {
-          hostname = "172.17.57.245";
+          hostname = "172.17.57.73";
           user = "voidwalker";
           identityFile = rsa_key_path;
         };
