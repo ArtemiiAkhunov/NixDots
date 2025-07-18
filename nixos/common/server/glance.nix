@@ -15,11 +15,19 @@
               widgets = [
                 {
                   type = "dns-stats";
-                  service = "pihole";
+                  service = "pihole-v6";
+                  allow-insecure = true;
                   url = "http://127.0.0.1:2345";
-                  token = {
+                  password = {
                     _secret = "${config.age.secrets.pihole.path}";
                   };
+                }
+                {
+                  type = "repository";
+                  repository = "ArtemiiAkhunov/NixDots";
+                  pull-requests-limit = 5;
+                  issues-limit = 3;
+                  commits-limit = 3;
                 }
               ];
             }
@@ -68,19 +76,19 @@
                     {
                       title = "Pi-Hole";
                       url = "https://pihole.lordofthelags.net/admin";
-                      check-url = "http://192.168.42.2:2345";
+                      check-url = "http://192.168.42.2:2283/admin";
                       icon = "di:pi-hole";
                     }
                     {
                       title = "VaultWarden";
-                      url = "https://vw.lordofthelags.net/admin";
-                      check-url = "http://192.168.42.2:12345";
+                      url = "https://vw.lordofthelags.net";
+                      check-url = "https://vw.lordofthelags.net";
                       icon = "di:vaultwarden";
                     }
                     {
                       title = "NextCloud";
-                      url = "https://nextcloud.lordofthelags.net/admin";
-                      check-url = "http://192.168.42.7:8080";
+                      url = "https://nextcloud.lordofthelags.net";
+                      check-url = "https://nextcloud.lordofthelags.net";
                       icon = "di:nextcloud";
                     }
                   ];
