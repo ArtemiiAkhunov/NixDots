@@ -1,15 +1,18 @@
-{config, ...}: {
+{ config, ... }:
+{
   services.glance = {
     enable = true;
     openFirewall = true;
     settings = {
       server.port = 5667;
-      /*theme = {
-        
-      };*/
+      /*
+        theme = {
+
+        };
+      */
       pages = [
         {
-          columns =[
+          columns = [
             {
               size = "small";
               widgets = [
@@ -32,7 +35,7 @@
               ];
             }
             {
-              size="full";
+              size = "full";
               widgets = [
                 {
                   type = "search";

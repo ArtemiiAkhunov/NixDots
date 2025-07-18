@@ -5,7 +5,7 @@
     settings = {
       auto-optimise-store = true;
       substituters = [
-         "https://hydra.lordofthelags.net"
+        "https://hydra.lordofthelags.net"
         "https://cache.nixos.org"
       ];
       trusted-users = [

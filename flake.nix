@@ -61,7 +61,7 @@
             inputs.catppuccin.homeModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
             inputs.nixvim.homeManagerModules.nixvim
-          ]; 
+          ];
           extraSpecialArgs = {
             inherit inputs outputs;
           };
