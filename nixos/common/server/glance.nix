@@ -62,10 +62,6 @@
                       url = "https://jellyfin.lordofthelags.net";
                       check-url = "http://192.168.42.2:8096";
                       icon = "di:jellyfin";
-                      alt-status-codes = [
-                        401
-                        403
-                      ];
                     }
                     {
                       title = "Immich";
@@ -90,6 +86,18 @@
                       url = "https://nextcloud.lordofthelags.net";
                       check-url = "https://nextcloud.lordofthelags.net";
                       icon = "di:nextcloud";
+                    }
+                    {
+                      title = "Portainer";
+                      url = "https://portainer.lordofthelags.net";
+                      check-url = "http://192.168.42.2:9000";
+                      icon = "di:portainer";
+                    }
+                    {
+                      title = "Hydra";
+                      url = "https://hydra.lordofthelags.net";
+                      check-url = "http://192.168.42.2:4200";
+                      icon = "di:hydra";
                     }
                   ];
                 }
