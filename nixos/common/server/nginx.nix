@@ -98,6 +98,14 @@
           proxyWebsockets = true;
         };
       };
+      "pihole.lordofthelags.net" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:2345";
+          proxyWebsockets = true;
+        };
+      };
     };
   };
 }
