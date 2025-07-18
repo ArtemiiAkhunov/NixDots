@@ -3,6 +3,7 @@
     ./age.nix
     ./docker.nix
     ./firewall.nix
+    ./glance.nix
     ./hydra.nix
     ./immich.nix
     ./jellyfin.nix

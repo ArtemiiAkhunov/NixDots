@@ -12,6 +12,9 @@
     nut_observer_password = {
       file = ../../../secrets/nut_observer_password.age;
     };
+    pihole = {
+      file = ../../../secrets/pihole.age;
+    };
     hydra_secret = {
       file = ../../../secrets/hydra_secret.age;
       mode = "770";
