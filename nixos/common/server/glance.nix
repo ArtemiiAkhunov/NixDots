@@ -100,7 +100,7 @@
                       title = "Hydra";
                       url = "https://hydra.lordofthelags.net";
                       check-url = "http://192.168.42.2:4200";
-                      icon = "di:hydra";
+                      icon = "di:nixos";
                     }
                   ];
                 }
