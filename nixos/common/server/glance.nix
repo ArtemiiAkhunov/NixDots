@@ -26,6 +26,22 @@
                   };
                 }
                 {
+                  type = "server-stats";
+                  servers = [
+                    {
+                      type = "local";
+                      name = "Theros";
+                      hide-swap = true;
+                      mountpoints = {
+                        "/".name = "Root";
+                        "/boot".hide = true;
+                        "/data".name = "Data";
+                        "/nix/store".hide = true;
+                      };
+                    }
+                  ];
+                }
+                {
                   type = "repository";
                   repository = "ArtemiiAkhunov/NixDots";
                   pull-requests-limit = 5;
