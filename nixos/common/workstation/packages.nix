@@ -79,6 +79,7 @@ in
       libreoffice-still
       slack
       cura-appimage
+      gimp-with-plugins
       darktable
 
       # Gaming
