@@ -70,7 +70,6 @@ in
 
       android-tools
       vscodium
-      jetbrains.idea-ultimate
 
       # School Apps
 
@@ -79,8 +78,6 @@ in
       libreoffice-still
       slack
       cura-appimage
-      gimp-with-plugins
-      darktable
 
       # Gaming
 
