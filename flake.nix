@@ -60,7 +60,7 @@
             ./home-manager/homes/kamigawa.nix
             inputs.catppuccin.homeModules.catppuccin
             inputs.spicetify-nix.homeManagerModules.default
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
           extraSpecialArgs = {
             inherit inputs outputs;
@@ -70,7 +70,7 @@
           pkgs = pkgsFor.x86_64-linux;
           modules = [
             ./home-manager/homes/theros.nix
-            inputs.nixvim.homeManagerModules.nixvim
+            inputs.nixvim.homeModules.nixvim
           ];
           extraSpecialArgs = {
             inherit inputs outputs;
