@@ -17,6 +17,11 @@
           user = "voidwalker";
           identityFile = rsa_key_path;
         };
+        eldraine = {
+          hostname = "172.17.57.121";
+          user = "voidwalker";
+          identityFile = rsa_key_path;
+        };
         proxmox = {
           hostname = "172.17.57.246";
           user = "root";
