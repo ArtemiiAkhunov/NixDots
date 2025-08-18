@@ -65,6 +65,7 @@ in
       imv
       thunderbird
       yubioath-flutter
+      darktable
 
       # Coding utilities
 
