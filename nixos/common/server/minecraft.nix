@@ -16,7 +16,7 @@ in
 
     servers = {
       dumDumServer = {
-        enable = true;
+        enable = false;
         package = pkgs.vanillaServers.vanilla-1_20_2;
 
         serverProperties = {
@@ -32,8 +32,8 @@ in
         jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
       };
       moddedServer = {
-        enable = false;
-        package = pkgs.fabricServers.fabric-1_18_2.override { loaderVersion = "0.16.9"; };
+        enable = true;
+        package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.16.9"; };
 
         serverProperties = {
           gamemode = "survival";
@@ -48,7 +48,7 @@ in
         whitelist = userList;
 
         symlinks = {
-          mods = pkgs.linkFarmFromDrvs "mods" (
+         /* mods = pkgs.linkFarmFromDrvs "mods" (
             builtins.attrValues {
               WTHIT = pkgs.fetchurl {
                 url = "https://cdn.modrinth.com/data/6AQIaxuO/versions/nILqdVZG/wthit-fabric-4.13.6.jar";
@@ -103,7 +103,7 @@ in
                 sha512 = "3a1c538c712164f5ecd7a06d448bb7e3d67809b648ff5d64f291db5d5e2b90c205d290feb389a82515c0f74ab25c484c65e3766da2e72787d73df4aadebae325";
               };
             }
-          );
+          );*/
         };
         jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
       };
