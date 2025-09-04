@@ -38,7 +38,7 @@ in
         serverProperties = {
           gamemode = "survival";
           motd = "Yes, it's a minecraft server!";
-          dificulty = "hard";
+          dificulty = "normal";
           simulation-distance = 15;
           max-players = 5;
           white-list = true;
