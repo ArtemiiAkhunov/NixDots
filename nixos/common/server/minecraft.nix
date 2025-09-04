@@ -31,7 +31,7 @@ in
         whitelist = userList;
         jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
       };
-      moddedServer = {
+      moddedDumDumServer = {
         enable = true;
         package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.16.9"; };
 
