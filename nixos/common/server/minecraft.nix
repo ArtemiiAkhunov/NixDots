@@ -33,7 +33,7 @@ in
       };
       moddedDumDumServer = {
         enable = true;
-        package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.16.9"; };
+        package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.2"; };
 
         serverProperties = {
           gamemode = "survival";
