@@ -6,10 +6,11 @@
     Ailani = "810273d9-1fe0-3149-bd8f-3e9fbae58fb1";
     ProfTrench = "9f55640f-c2c1-3289-b707-c1ac3250e6d5";
   };
+  /*
   modpack = builtins.fetchTarball {
     url = "https://github.com/LordOfTheLags/mods/releases/download/release/mods.tar.gz";
-    sha256 = "0kc23z35xvacxc9z2fin6g6whhswv5v7zrpd2bj97xqn6sg2cbkn";
-  };
+    sha256 = "05w53ym90f6s30nbmvvrgvyjmh8kn856ybdz1ry12nv4m61l2c2d"
+  };*/
 in 
 {
   services.minecraft-servers = {
@@ -36,7 +37,7 @@ in
         jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
       };
 
-      moddedDumDumServer = {
+      /*moddedDumDumServer = {
         enable = true;
         package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.2"; };
 
@@ -57,7 +58,7 @@ in
         };
 
         jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
-      };
+      };*/
     };
   };
 }
