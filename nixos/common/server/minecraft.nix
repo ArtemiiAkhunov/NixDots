@@ -7,8 +7,8 @@
     ProfTrench = "9f55640f-c2c1-3289-b707-c1ac3250e6d5";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/releases/download/v0.0.1/mods.tar.gz";
-    sha256 = "05w53ym90f6s30nbmvvrgvyjmh8kn856ybdz1ry12nv4m61l2c2d";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.2.tar.gz";
+    sha256 = "0qwd2lwk6a2vrlvsvkj4w2d57kkdmqmwnvqf8rwnrm6b15863xli";
   };
 in 
 {
