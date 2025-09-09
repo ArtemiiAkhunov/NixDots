@@ -103,7 +103,7 @@ in
 
       brightnessctl
       libnotify
-      lxde.lxsession
+      lxsession
       xdg-user-dirs
       xwayland
       waybar
