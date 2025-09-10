@@ -15,6 +15,7 @@
     ./networkmanager.nix
     ./packages.nix
     ./powersave.nix
+    ./razer.nix
     ./sound.nix
     ./steam.nix
     ./xdg.nix
