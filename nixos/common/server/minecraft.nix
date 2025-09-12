@@ -45,7 +45,7 @@ in
           motd = "Yes, it's a minecraft server!";
           dificulty = "normal";
           simulation-distance = 15;
-          max-players = 5;
+          max-players = builtins.length (builtins.attrNames userList);
           white-list = true;
           online-mode = false;
         };
