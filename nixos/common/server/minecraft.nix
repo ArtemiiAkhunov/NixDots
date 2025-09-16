@@ -1,4 +1,5 @@
-{ pkgs, ... }: let
+{ pkgs, ... }:
+let
   userList = {
     MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
     MewodyChan = "e9361905-58f1-34d6-b545-728c6c6b3324";
@@ -10,7 +11,7 @@
     url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.2.tar.gz";
     sha256 = "0qwd2lwk6a2vrlvsvkj4w2d57kkdmqmwnvqf8rwnrm6b15863xli";
   };
-in 
+in
 {
   services.minecraft-servers = {
     enable = true;

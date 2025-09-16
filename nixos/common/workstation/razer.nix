@@ -5,5 +5,7 @@
     openrazer-daemon
     polychromatic
   ];
-  users.users.voidwalker = { extraGroups = [ "openrazer" ]; };
+  users.users.voidwalker = {
+    extraGroups = [ "openrazer" ];
+  };
 }
