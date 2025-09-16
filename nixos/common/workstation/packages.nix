@@ -70,6 +70,7 @@ in
       # Coding utilities
 
       android-tools
+      direnv
       vscode-fhs
 
       # School Apps
