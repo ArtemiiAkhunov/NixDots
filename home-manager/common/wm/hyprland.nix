@@ -91,9 +91,9 @@
         slave_count_for_center_master = 0;
       };
 
-      gestures = {
-        workspace_swipe = true;
-      };
+      gesture = [
+        "3, horizontal, workspace"
+      ];
 
       misc = {
         force_default_wallpaper = false;
