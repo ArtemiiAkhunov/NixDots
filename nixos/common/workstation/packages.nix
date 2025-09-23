@@ -70,7 +70,7 @@ in
       # Coding utilities
 
       android-tools
-      vscode-fhs
+      vscode
 
       # School Apps
 
