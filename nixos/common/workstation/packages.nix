@@ -25,16 +25,13 @@ let
   ];
 in
 {
-  nixpkgs.config = {
-    allowUnfreePredicate = 
+  nixpkgs.config.allowUnfreePredicate =
     pkg:
     builtins.elem (lib.getName pkg) [
       "steam"
       "steam-original"
       "steam-run"
-      ];
-    android_sdk.accept_license = true;
-  };
+    ];
 
   environment.systemPackages =
     with pkgs;
@@ -74,7 +71,6 @@ in
 
       android-tools
       vscode
-      android-studio
 
       # School Apps
 
@@ -100,8 +96,6 @@ in
       bluez-tools
       sherlock
       gvfs
-      jdk17
-      flutter
       yt-dlp
       qemu
 
