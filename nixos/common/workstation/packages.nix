@@ -66,6 +66,7 @@ in
       thunderbird
       yubioath-flutter
       darktable
+      tigervnc
 
       # Coding utilities
 
