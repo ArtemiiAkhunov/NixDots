@@ -18,6 +18,7 @@
 
     sessionVariables = {
       MANPAGER = "nvim +Man!";
+      ANDROID_HOME = "\$HOME/.android_sdk/";
     };
 
     history = {
