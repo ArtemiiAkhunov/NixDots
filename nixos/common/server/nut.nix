@@ -16,7 +16,7 @@
         ''vendor = "CPS"''
         ''bus = "001"''
         ''device = "002"''
-        ''busport = "001"''
+        ''busport = "004"''
       ];
     };
 
