@@ -14,9 +14,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    spicetify-nix = {
-      url = "github:Gerg-L/spicetify-nix";
-    };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
+    nix-alien.url = "github:thiagokokada/nix-alien";
 
     catppuccin.url = "github:catppuccin/nix";
 
@@ -88,7 +88,9 @@
                 environment.systemPackages = [
                   inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
                   inputs.agenix.packages.x86_64-linux.default
+                  inputs.nix-alien.packages.x86_64-linux.nix-alien
                 ];
+                programs.nix-ld.enable = true;
               }
             )
             ./nixos/machines/kamigawa
