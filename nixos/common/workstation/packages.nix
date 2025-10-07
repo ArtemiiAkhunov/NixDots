@@ -73,7 +73,6 @@ in
 
       # Coding utilities
 
-      androidenv.androidPkgs.androidsdk
       jdk17
       nss
       flutter
