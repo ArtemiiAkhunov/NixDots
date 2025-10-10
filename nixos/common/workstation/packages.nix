@@ -73,9 +73,7 @@ in
 
       # Coding utilities
 
-      jdk17
       nss
-      flutter
       vscode
 
       # School Apps
