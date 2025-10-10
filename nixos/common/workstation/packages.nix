@@ -87,6 +87,7 @@ in
       # Gaming
 
       cockatrice
+      gfn-electron
       lutris
       heroic
       mangohud
