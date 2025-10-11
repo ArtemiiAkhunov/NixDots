@@ -70,6 +70,7 @@ in
       yubioath-flutter
       darktable
       tigervnc
+      postman
 
       # Coding utilities
 
