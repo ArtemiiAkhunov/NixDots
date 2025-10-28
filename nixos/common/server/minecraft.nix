@@ -50,6 +50,7 @@ in
           max-players = builtins.length (builtins.attrNames userList);
           white-list = true;
           online-mode = false;
+          allow-cheats = true;
         };
 
         whitelist = userList;
