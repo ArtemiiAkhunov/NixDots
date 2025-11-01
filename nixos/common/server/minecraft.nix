@@ -9,7 +9,7 @@ let
     Reiiine = "e232bca4-2dd5-315d-b281-1f24f9277d8d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.2.tar.gz";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.3.tar.gz";
     sha256 = "0qwd2lwk6a2vrlvsvkj4w2d57kkdmqmwnvqf8rwnrm6b15863xli";
   };
 in
@@ -41,6 +41,14 @@ in
       moddedDumDumServer = {
         enable = true;
         package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.2"; };
+
+        operators = {
+          MadamOfTheLags = {
+            uuid = userList.MadamOfTheLags;
+            level = 3;
+            bypassesPlayerLimit = true;
+          };
+        };
 
         serverProperties = {
           gamemode = "survival";
