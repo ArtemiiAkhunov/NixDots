@@ -9,8 +9,8 @@ let
     Reiiine = "e232bca4-2dd5-315d-b281-1f24f9277d8d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.4.tar.gz";
-    sha256 = "0ajim0qm64w37y7gq4cfzybqdq8caaabc120v9j3mhb8sm3xbzwh";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.6.tar.gz";
+    sha256 = "1hfgmlcfnfq42pw0xdanp3qybx3avjs42am201lm6b5816k00xnd";
   };
 in
 {
