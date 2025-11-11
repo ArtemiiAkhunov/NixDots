@@ -10,7 +10,7 @@
     extraPackages = with pkgs; [
       intel-media-driver
       intel-vaapi-driver
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
       mesa
       intel-compute-runtime
@@ -19,7 +19,7 @@
     extraPackages32 = with pkgs; [
       intel-media-driver
       intel-vaapi-driver
-      vaapiVdpau
+      libva-vdpau-driver
       libvdpau-va-gl
       driversi686Linux.mesa
     ];

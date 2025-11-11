@@ -91,7 +91,7 @@ in
       lutris
       heroic
       mangohud
-      protonup
+      protonup-ng
       prismlauncher
 
       # CLI stuff
