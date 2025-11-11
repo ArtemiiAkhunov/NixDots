@@ -7,10 +7,11 @@ let
     Liushu = "c150778b-e9f1-3c4b-ae29-1c24dffc1fb4";
     ProfTrench = "9f55640f-c2c1-3289-b707-c1ac3250e6d5";
     Reiiine = "e232bca4-2dd5-315d-b281-1f24f9277d8d";
+    Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.0.6.tar.gz";
-    sha256 = "1hfgmlcfnfq42pw0xdanp3qybx3avjs42am201lm6b5816k00xnd";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.1.1.tar.gz";
+    sha256 = "1nzm7lqq9df89m4rw1l59wb9qddwqcg24z72ydd3aj19xijffnmr";
   };
 in
 {
@@ -40,7 +41,7 @@ in
 
       moddedDumDumServer = {
         enable = true;
-        package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.2"; };
+        package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.3"; };
 
         operators = {
           MadamOfTheLags = {
