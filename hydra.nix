@@ -7,11 +7,13 @@ let
   hasPlatform = sys: pkg: elem sys (pkg.meta.platforms or [ ]);
   filterValidPkgs =
     sys: pkgs: filterAttrs (_: pkg: hasPlatform sys pkg && notBroken pkg && isDistributable pkg) pkgs;
-  getCfg = _: cfg: cfg.config.system.build.toplevel;
+  getNixosCfg = _: cfg: cfg.config.system.build.toplevel;
   getHomeCfg = _: cfg: cfg.config.home.activationPackage;
+  getStdenv = _: cfg: cfg.stdenv;
 in
 {
   pkgs = mapAttrs filterValidPkgs outputs.packages;
-  hosts = mapAttrs getCfg outputs.nixosConfigurations;
+  hosts = mapAttrs getNixosCfg outputs.nixosConfigurations;
   homes = mapAttrs getHomeCfg outputs.homeConfigurations;
+  shells = mapAttrs getStdenv outputs.devShells.x86_64-linux;
 }
