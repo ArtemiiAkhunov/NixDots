@@ -23,6 +23,9 @@ in
 
   hardware.nvidia = {
     modesetting.enable = lib.mkForce true;
+    powerManagement = { 
+      enable = true;
+    };
     open = true;
     package = config.boot.kernelPackages.nvidiaPackages.latest;
   };
