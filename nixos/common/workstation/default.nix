@@ -1,6 +1,5 @@
 {
   imports = [
-    ./android.nix
     ./automount.nix
     ./bluetooth.nix
     ./cups.nix

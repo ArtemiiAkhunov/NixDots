@@ -33,7 +33,6 @@ in
         "steam-original"
         "steam-run"
       ];
-    android_sdk.accept_license = true;
   };
 
   environment.systemPackages =
