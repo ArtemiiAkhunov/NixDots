@@ -37,7 +37,7 @@ in
         };
 
         whitelist = {
-          MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
+          MadamOfTheLags = "f9f91bbf-5755-4de6-8828-0c54ab2bbb53";
           Shoonatic = "6f7c02d9-a426-4b82-9960-989ec4ac4c0e";
         };
         jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
