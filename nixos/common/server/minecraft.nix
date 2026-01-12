@@ -22,6 +22,27 @@ in
     dataDir = "/data/minecraft/";
 
     servers = {
+
+      mainServer = {
+        enable = true;
+        package = pkgs.vanillaServers.vanilla-1_21_11;
+
+        serverProperties = {
+          gamemode = "survival";
+          motd = "Yes, it's a minecraft server!";
+          # dificulty = "something";
+          simulation-distance = 15;
+          white-list = true;
+          online-mode = true;
+        };
+
+        whitelist = {
+          MadamOfTheLags = "52ab5996-386b-3ffc-a686-ac6b4a7fd802";
+          Shoonatic = "6f7c02d9-a426-4b82-9960-989ec4ac4c0e";
+        };
+        jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
+      };
+
       dumDumServer = {
         enable = false;
         package = pkgs.vanillaServers.vanilla-1_20_2;
@@ -40,7 +61,7 @@ in
       };
 
       moddedDumDumServer = {
-        enable = true;
+        enable = false;
         package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.3"; };
 
         operators = {
