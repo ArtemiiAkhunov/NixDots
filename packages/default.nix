@@ -1,4 +1,4 @@
 { pkgs, ... }:
 rec {
-  gfn-electron = pkgs.callPackage ./gfn-electron { };
+  #gfn-electron = pkgs.callPackage ./gfn-electron { };
 }
