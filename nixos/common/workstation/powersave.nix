@@ -6,7 +6,7 @@
       let
         sound_save_level = 10;
         min_bat_level = 40;
-        max_bat_level = 90;
+        max_bat_level = 80;
       in
       {
         TLP_DEFAULT_MODE = "AC";
