@@ -100,14 +100,14 @@
         disable_hyprland_logo = true;
       };
 
-      windowrulev2 = [
+      windowrule = [
         # Pretty
-        "opacity 0.8,class:^(kitty)$"
-        "float, class:^(floating)$"
-        "float, floating:1"
-        "opacity 0.8,workspace:special:magic"
+        "opacity 0.8,match:class kitty"
+        "float on, match:class floating"
+        "float on, match:float true"
+        "opacity 0.8, match:workspace special:magic"
         # Wofi Visual
-        "noanim,class:^(wofi)$"
+        "no_anim on,match:class wofi"
       ];
 
       bind = [
