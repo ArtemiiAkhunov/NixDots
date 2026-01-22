@@ -10,13 +10,10 @@ let
   getNixosCfg = _: cfg: cfg.config.system.build.toplevel;
   getHomeCfg = _: cfg: cfg.config.home.activationPackage;
   #getStdenv = _: cfg: cfg.stdenv;
-  pkgs =
-  mapAttrs
-    (sys: pkgsForSys:
-      if inputs.nixpkgs.lib.isAttrs pkgsForSys
-      then filterValidPkgs sys pkgsForSys
-      else { })
-    outputs.packages;
+  pkgs = mapAttrs (
+    sys: pkgsForSys:
+    if inputs.nixpkgs.lib.isAttrs pkgsForSys then filterValidPkgs sys pkgsForSys else { }
+  ) outputs.packages;
 in
 {
   pkgs = mapAttrs pkgs;

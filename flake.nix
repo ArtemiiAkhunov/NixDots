@@ -2,6 +2,9 @@
   description = "Void Walker's System Configuration";
 
   inputs = {
+    # ==================
+    #   GENERAL INPUTS
+    # ==================
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
@@ -9,25 +12,49 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    lix = {
+      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+      flake = false;
+    };
+
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.lix.follows = "lix";
+    };
+
+    lix-hydra = {
+      url = "https://git.lix.systems/lix-project/hydra/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.lix.follows = "lix";
+    };
+
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
-
-    nix-alien.url = "github:thiagokokada/nix-alien";
-
-    catppuccin.url = "github:catppuccin/nix";
 
     agenix = {
       url = "github:ryantm/agenix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+    # ==================
+    #   LAPTOP INPUTS
+    # ==================
+
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
+    catppuccin.url = "github:catppuccin/nix";
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
+
+    # ==================
+    #   SERVER INPUTS
+    # ==================
+
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
   };
 
   outputs =
@@ -88,13 +115,13 @@
                 environment.systemPackages = [
                   inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
                   inputs.agenix.packages.x86_64-linux.default
-                  inputs.nix-alien.packages.x86_64-linux.nix-alien
                 ];
                 programs.nix-ld.enable = true;
               }
             )
             ./nixos/machines/kamigawa
             inputs.agenix.nixosModules.default
+            inputs.lix-module.nixosModules.default
           ];
         };
         "theros" = lib.nixosSystem {
@@ -110,6 +137,7 @@
             ./nixos/machines/theros
             inputs.agenix.nixosModules.default
             inputs.nix-minecraft.nixosModules.minecraft-servers
+            inputs.lix-module.nixosModules.default
           ];
         };
       };

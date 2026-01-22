@@ -23,7 +23,7 @@ in
 
   hardware.nvidia = {
     modesetting.enable = lib.mkForce true;
-    powerManagement = { 
+    powerManagement = {
       enable = true;
     };
     open = true;

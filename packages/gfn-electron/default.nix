@@ -86,4 +86,3 @@ buildNpmPackage {
     mainProgram = "geforcenow-electron";
   };
 }
-

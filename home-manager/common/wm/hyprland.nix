@@ -124,7 +124,7 @@
         ", XF86AudioMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SINK@ toggle"
         ", XF86AudioMicMute, exec, ${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SOURCE@ toggle"
         ''$mainMod SHIFT, Print, exec, ${pkgs.grim}/bin/grim -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.swappy}/bin/swappy -f - ''
-        ''$mainMod, Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -''
+        "$mainMod, Print, exec, ${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -"
         "$mainMod SHIFT, C, exec, ${pkgs.hyprlock}/bin/hyprlock"
         "$mainMod, N, exec, ${pkgs.swaynotificationcenter}/bin/swaync-client -t"
         # Moving Around
