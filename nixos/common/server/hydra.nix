@@ -2,7 +2,6 @@
 {
   services.hydra = {
     enable = true;
-    package = pkgs.lix-hydra;
     hydraURL = "https://hydra.lordofthelags.net";
     port = 4200;
     notificationSender = "hydra@localhost";

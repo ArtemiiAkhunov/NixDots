@@ -121,7 +121,6 @@
             )
             ./nixos/machines/kamigawa
             inputs.agenix.nixosModules.default
-            inputs.lix-module.nixosModules.default
           ];
         };
         "theros" = lib.nixosSystem {
@@ -137,7 +136,6 @@
             ./nixos/machines/theros
             inputs.agenix.nixosModules.default
             inputs.nix-minecraft.nixosModules.minecraft-servers
-            inputs.lix-module.nixosModules.default
           ];
         };
       };
