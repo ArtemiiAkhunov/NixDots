@@ -29,7 +29,7 @@ in
 
         serverProperties = {
           gamemode = "survival";
-          motd = "Yes, it's a minecraft server!";
+          motd = "First we mine then we craft!";
           # dificulty = "something";
           simulation-distance = 15;
           white-list = true;

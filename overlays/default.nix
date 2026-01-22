@@ -19,7 +19,7 @@
 
   modifications = final: prev: {
 
-    nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
+    #nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
 
   };
 }
