@@ -45,6 +45,14 @@
           proxyWebsockets = true;
         };
       };
+      "navidrome.lordofthelags.net" = {
+        enableACME = true;
+        forceSSL = true;
+        locations."/" = {
+          proxyPass = "http://127.0.0.1:4533";
+          proxyWebsockets = true;
+        };
+      };
       "immich.lordofthelags.net" = {
         enableACME = true;
         forceSSL = true;
