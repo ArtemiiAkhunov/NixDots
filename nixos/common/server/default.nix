@@ -13,5 +13,6 @@
     ./oracleConnect.nix
     ./packages.nix
     ./ssh.nix
+    ./virtualization.nix
   ];
 }
