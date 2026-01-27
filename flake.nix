@@ -49,6 +49,9 @@
 
     rose-pine-hyprcursor.url = "github:ndom91/rose-pine-hyprcursor";
 
+    # Temp fix for copyq
+    nixpkgs-copyq.url = "github:NixOS/nixpkgs/5f8f0b633274f3f20ef8e72672f02d55667ea24f";
+
     # ==================
     #   SERVER INPUTS
     # ==================
