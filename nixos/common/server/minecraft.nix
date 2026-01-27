@@ -30,7 +30,7 @@ in
         serverProperties = {
           gamemode = "survival";
           motd = "First we mine then we craft!";
-          # dificulty = "something";
+          dificulty = "easy";
           simulation-distance = 15;
           white-list = true;
           online-mode = true;
