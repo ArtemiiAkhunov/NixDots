@@ -325,6 +325,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-copyq": {
+      "locked": {
+        "lastModified": 1749665132,
+        "narHash": "sha256-ESyUPBeXQONo7HG9vOuXIcIa7jYLiXlWlFaCI8zpx6k=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f8f0b633274f3f20ef8e72672f02d55667ea24f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "5f8f0b633274f3f20ef8e72672f02d55667ea24f",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1748929857,
@@ -421,6 +437,7 @@
         "lix-module": "lix-module",
         "nix-minecraft": "nix-minecraft",
         "nixpkgs": "nixpkgs_3",
+        "nixpkgs-copyq": "nixpkgs-copyq",
         "nixvim": "nixvim",
         "rose-pine-hyprcursor": "rose-pine-hyprcursor",
         "spicetify-nix": "spicetify-nix"
