@@ -1,5 +1,6 @@
 {
   imports = [
+    ./dconf.nix
     ./desktop.nix
     ./theme.nix
     ./mpris.nix

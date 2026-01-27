@@ -18,7 +18,7 @@
     ./razer.nix
     ./sound.nix
     ./steam.nix
-    ./workstation.nix
+    ./virtualization.nix
     ./xdg.nix
     ./yubikey.nix
   ];
