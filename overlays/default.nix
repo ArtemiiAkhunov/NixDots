@@ -22,7 +22,7 @@
     #nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
 
     # copyq fix
-    copyq = (import inputs.nixpkgs-copyq {system = final.system; }).pkgs.copyq;
-  
+    copyq = (import inputs.nixpkgs-copyq { system = final.system; }).pkgs.copyq;
+
   };
 }
