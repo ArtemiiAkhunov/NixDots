@@ -83,6 +83,7 @@ in
       libreoffice-still
       slack
       cura-appimage
+      openconnect
 
       # Gaming
 
