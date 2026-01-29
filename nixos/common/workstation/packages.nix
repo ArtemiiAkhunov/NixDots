@@ -57,7 +57,6 @@ in
         removeWarningPopup = true;
       })
       qbittorrent
-      kdePackages.kdenlive
       glaxnimate
       makemkv
       helvum
