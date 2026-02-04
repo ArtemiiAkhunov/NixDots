@@ -1,5 +1,5 @@
 {
-  time.timeZone = "America/Indianapolis"; # timezone
+  time.timeZone = "America/Chicago"; # timezone
 
   i18n.defaultLocale = "en_US.UTF-8"; # locale
 
