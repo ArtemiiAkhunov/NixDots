@@ -50,7 +50,7 @@ in
       kitty-themes
       obs-studio
       mpv
-      vesktop
+      discord # I love vesktop but discord doesnt
       element-desktop
       evince
       (bottles.override {
