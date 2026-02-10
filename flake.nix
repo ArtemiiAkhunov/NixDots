@@ -58,7 +58,7 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
-    nixos-rasberrypi.url = "github:nvmd/nixos-rasberrypi/main";
+    nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
   };
 
   outputs =
@@ -143,12 +143,12 @@
             inputs.nix-minecraft.nixosModules.minecraft-servers
           ];
         };
-        "eldraine" = inputs.nixos-rasberrypi.lib.nixosSystem {
+        "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
           system = "aarch64-linux";
           modules = [
             ./nixos/machines/eldraine
-            inputs.nixos-rasberrypi.nixosModules.rasberry-pi-5.base
-            inputs.nixos-rasberrypi.nixosModules.rasberry-pi-5.bluetooth
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.bluetooth
           ];
         };
       };
