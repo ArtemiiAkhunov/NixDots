@@ -58,6 +58,7 @@
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
+    nixos-rasberrypi.url = "github:nvmd/nixos-rasberrypi/main";
   };
 
   outputs =
@@ -67,7 +68,7 @@
       lib = inputs.nixpkgs.lib // inputs.home-manager.lib;
       overlays = import ./overlays { inherit inputs outputs; };
 
-      systems = [ "x86_64-linux" ];
+      systems = [ "x86_64-linux" "aarch64-linux" ];
       pkgsFor = lib.genAttrs systems (
         system:
         import inputs.nixpkgs {
@@ -110,6 +111,7 @@
 
       nixosConfigurations = {
         "kamigawa" = lib.nixosSystem {
+          system = "x86_64-linux";
           modules = [
             (
               { ... }:
@@ -139,6 +141,14 @@
             ./nixos/machines/theros
             inputs.agenix.nixosModules.default
             inputs.nix-minecraft.nixosModules.minecraft-servers
+          ];
+        };
+        "eldraine" = inputs.nixos-rasberrypi.lib.nixosSystem {
+          system = "aarch64-linux";
+          modules = [
+            ./nixos/machines/eldraine
+            inputs.nixos-rasberrypi.nixosModules.rasberry-pi-5.base
+            inputs.nixos-rasberrypi.nixosModules.rasberry-pi-5.bluetooth
           ];
         };
       };
