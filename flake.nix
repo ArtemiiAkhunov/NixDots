@@ -68,7 +68,7 @@
       lib = inputs.nixpkgs.lib // inputs.home-manager.lib;
       overlays = import ./overlays { inherit inputs outputs; };
 
-      systems = [ "x86_64-linux" "aarch64-linux" ];
+      systems = [ "x86_64-linux" ];
       pkgsFor = lib.genAttrs systems (
         system:
         import inputs.nixpkgs {
@@ -143,14 +143,29 @@
             inputs.nix-minecraft.nixosModules.minecraft-servers
           ];
         };
+        /*
         "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
-          system = "aarch64-linux";
+          specialArgs = inputs;
           modules = [
+            ({config, pkgs, lib, ...}: {
+              networking.hostName = "eldraine";
+              system.nixos.tags = let
+                cfg = config.boot.loader.raspberry-pi;
+              in [ 
+                "raspberry-pi-${cfg.variant}"
+                cfg.bootloader
+                config.boot.kernelPackages.kernel.version
+              ];
+            })
             ./nixos/machines/eldraine
             inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
             inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.bluetooth
+            inputs.agenix.packages.aarch64-linux.default
           ];
         };
+        */
       };
     };
 }

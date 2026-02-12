@@ -10,7 +10,7 @@
     ../../common/packages.nix
     ../../common/polkit.nix
     ../../common/secrets.nix
-    ../..common/user.nix
+    ../../common/user.nix
     ../../common/zerotier.nix
 
     ../../common/server/age.nix
