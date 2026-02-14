@@ -98,7 +98,7 @@ in
       cava
       bluez
       bluez-tools
-      sherlock
+      openseeface      sherlock
       gvfs
       yt-dlp
       qemu
