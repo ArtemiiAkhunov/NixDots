@@ -13,6 +13,7 @@
     ./kdeconnect.nix
     ./nautilus.nix
     ./networkmanager.nix
+    ./obs.nix
     ./packages.nix
     ./powersave.nix
     ./razer.nix
