@@ -23,26 +23,6 @@ in
 
     servers = {
 
-      mainServer = {
-        enable = true;
-        package = pkgs.vanillaServers.vanilla-1_21_11;
-
-        serverProperties = {
-          gamemode = "survival";
-          motd = "First we mine then we craft!";
-          dificulty = "easy";
-          simulation-distance = 15;
-          white-list = true;
-          online-mode = true;
-        };
-
-        whitelist = {
-          MadamOfTheLags = "f9f91bbf-5755-4de6-8828-0c54ab2bbb53";
-          Shoonatic = "6f7c02d9-a426-4b82-9960-989ec4ac4c0e";
-        };
-        jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
-      };
-
       dumDumServer = {
         enable = false;
         package = pkgs.vanillaServers.vanilla-1_20_2;
