@@ -16,6 +16,10 @@
         from = 8000;
         to = 8010;
       }
+      {
+        from = 50000;
+        to = 60000;
+      }
     ];
     checkReversePath = "loose";
   };
