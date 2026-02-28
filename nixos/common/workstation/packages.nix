@@ -51,6 +51,7 @@ in
       obs-studio
       mpv
       discord # I love vesktop but discord doesnt
+      betterdiscordctl
       element-desktop
       evince
       (bottles.override {
