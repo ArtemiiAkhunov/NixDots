@@ -8,10 +8,6 @@
 
     gnumake
     gcc
-    python312
-    (python312.withPackages (ps: with ps; [ requests ]))
-    python312Packages.debugpy
-    python312Packages.evdev
     vscode-extensions.ms-vscode.cpptools
     gdb
     rustc
@@ -20,6 +16,7 @@
     # CLI stuff
 
     fastfetch
+    python3
     pciutils
     usbutils
     file
