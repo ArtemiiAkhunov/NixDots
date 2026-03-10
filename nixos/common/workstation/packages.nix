@@ -60,6 +60,7 @@ in
       qbittorrent
       glaxnimate
       makemkv
+      crosspipe
       nautilus
       adwaita-icon-theme
       sushi
