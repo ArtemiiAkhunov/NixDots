@@ -12,7 +12,6 @@
     gdb
     rustc
     rustup
-    rust
     cargo
 
     # CLI stuff
