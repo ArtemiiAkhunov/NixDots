@@ -11,6 +11,8 @@
     vscode-extensions.ms-vscode.cpptools
     gdb
     rustc
+    rustup
+    rust
     cargo
 
     # CLI stuff
