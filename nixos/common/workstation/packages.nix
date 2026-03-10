@@ -60,7 +60,6 @@ in
       qbittorrent
       glaxnimate
       makemkv
-      helvum
       nautilus
       adwaita-icon-theme
       sushi
