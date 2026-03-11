@@ -6,12 +6,6 @@
     {
       enable = true;
       matchBlocks = {
-        gitlab = {
-          hostname = "gitlab.lordofthelags.net";
-          user = "git";
-          identityFile = rsa_key_path;
-          port = 15917;
-        };
         theros = {
           hostname = "172.17.57.73";
           user = "voidwalker";
@@ -32,22 +26,16 @@
           user = "voidwalker";
           identityFile = rsa_key_path;
         };
+        aws = {
+          hostname = "172.17.57.127";
+          user = "ubuntu";
+          identityFile = rsa_key_path;
+        };
         oracle = {
           hostname = "172.17.57.209";
           user = "ubuntu";
           identityFile = "/home/voidwalker/.ssh/oracle";
         };
-        data = {
-          hostname = "data.cs.purdue.edu";
-          user = "aakhunov";
-          identityFile = rsa_key_path;
-        };
-        xinu = {
-          hostname = "xinu20.cs.purdue.edu";
-          user = "aakhunov";
-          identityFile = rsa_key_path;
-        };
-
       };
     };
 }
