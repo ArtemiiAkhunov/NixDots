@@ -27,7 +27,7 @@
           identityFile = rsa_key_path;
         };
         aws = {
-          hostname = "172.17.57.244";
+          hostname = "172.17.57.101";
           user = "ubuntu";
           identityFile = rsa_key_path;
         };
