@@ -1,7 +1,6 @@
 {
   imports = [
     ./age.nix
-    ./battmon.nix
     ./docker.nix
     ./firewall.nix
     ./glance.nix

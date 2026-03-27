@@ -1,6 +1,7 @@
 {
   imports = [
     ./automount.nix
+    ./battmon.nix
     ./bluetooth.nix
     ./cups.nix
     ./displaymanager.nix
