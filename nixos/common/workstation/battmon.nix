@@ -2,11 +2,11 @@
 let
   battmon = pkgs.writeShellScriptBin "battmon" ''
     HIGH_THRESHOLD=95
-    LOW_THRESHOLD=10
+    LOW_THRESHOLD=15
     LOGFILE="/tmp/battmon.log"
 
     # Get the battery level
-    LEVEL=$(${pkgs.acpi}/bin/acpi -b | awk -F', ' '{print $2}' | tr -d '%,')
+    LEVEL=$(${pkgs.acpi}/bin/acpi -b | ${pkgs.gawk}/bin/awk -F', ' '{print $2}' | tr -d '%,')
 
     # Ensure LEVEL is a valid number
     if [[ "$LEVEL" =~ ^[0-9]+$ ]]; then
@@ -19,7 +19,7 @@ let
         # Check for low battery level
         if [ "$LEVEL" -le "$LOW_THRESHOLD" ]; then
             echo "$(date) - Battery at $LEVEL%. Sending low battery warning..." >> "$LOGFILE"
-            DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 ${pkgs.libnotify}/bin/notify-send -t 0 "Battery Low" "Your battery is critically low. Please plug in your charger!" >> "$LOGFILE"
+            DISPLAY=:0 XDG_RUNTIME_DIR=/run/user/1000 ${pkgs.libnotify}/bin/notify-send -u critical -t 0 "Battery Low" "Your battery is critically low. Please plug in your charger!" >> "$LOGFILE"
         fi
     fi
   '';
@@ -43,7 +43,7 @@ in
     '';
     serviceConfig = {
       Type = "oneshot";
-      User = "root";
+      User = "voidwalker";
       RunAfterExit = true;
     };
   };
