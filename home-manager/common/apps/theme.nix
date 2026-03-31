@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   catppuccin = {
     flavor = "mocha";
@@ -16,7 +16,7 @@
       color-scheme = "prefer-dark";
     };
   };
-
+  gtk.gtk4.theme = config.gtk.theme;
   gtk = {
     enable = true;
     theme = {
