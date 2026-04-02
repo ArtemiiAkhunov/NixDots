@@ -57,6 +57,7 @@ in
       (bottles.override {
         removeWarningPopup = true;
       })
+      alsa-scarlett-gui
       qbittorrent
       glaxnimate
       makemkv
