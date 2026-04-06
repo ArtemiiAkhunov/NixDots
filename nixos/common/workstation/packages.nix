@@ -86,6 +86,13 @@ in
       cura-appimage
       openconnect
 
+      # Audio Effects
+      carla
+      guitarix
+      calf
+      lsp-plugins
+      x42-plugins
+
       # Gaming
 
       cockatrice
@@ -100,7 +107,8 @@ in
       cava
       bluez
       bluez-tools
-      openseeface      sherlock
+      openseeface
+      sherlock
       gvfs
       yt-dlp
       qemu
