@@ -182,8 +182,6 @@
 
       exec-once = [
         "${pkgs.hyprlock}/bin/hyprlock"
-        "${pkgs.swww}/bin/swww-daemon"
-        "${pkgs.swww}/bin/swww img ~/.wallpaper/cat.png --transition-type none"
         "${pkgs.swaynotificationcenter}/bin/swaync"
         "${pkgs.copyq}/bin/copyq --start-server"
         "${pkgs.networkmanagerapplet}/bin/nm-applet"

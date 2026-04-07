@@ -125,7 +125,6 @@ in
       swaynotificationcenter
       wl-clipboard
       hyprlock
-      swww
       wofi
       pipewire
       pavucontrol
