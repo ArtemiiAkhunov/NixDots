@@ -34,6 +34,7 @@
     ripgrep
     speedtest-cli
     typst
+    borgbackup
 
     # Networking
     cacert
