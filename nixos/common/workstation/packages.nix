@@ -76,6 +76,7 @@ in
 
       nss
       vscode
+      claude-code
 
       # School Apps
 
