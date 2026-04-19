@@ -1,14 +1,7 @@
 {
-  time.timeZone = "America/Chicago"; # timezone
-
-  i18n.defaultLocale = "en_US.UTF-8"; # locale
+  time.timeZone = "America/Chicago";
 
   networking.hostName = "theros";
-
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ]; # Flakes
 
   system.stateVersion = "24.11"; # DO NOT TOUCH
 }

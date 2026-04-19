@@ -6,7 +6,6 @@
     ../../common/nix.nix
     ../../common/avahi.nix
     ../../common/nh.nix
-    ../../common/nix.nix
     ../../common/packages.nix
     ../../common/polkit.nix
     ../../common/secrets.nix

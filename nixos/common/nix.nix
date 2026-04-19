@@ -4,6 +4,10 @@
     package = pkgs.lix;
     settings = {
       auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
       substituters = [
         "https://hydra.lordofthelags.net"
         "https://nixos-raspberrypi.cachix.org"
