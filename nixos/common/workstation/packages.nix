@@ -83,6 +83,9 @@ in
       calf
       lsp-plugins
       x42-plugins
+      zam-plugins
+      dragonfly-reverb
+      ir-lv2
 
       # Gaming
 
