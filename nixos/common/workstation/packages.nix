@@ -80,6 +80,7 @@ in
       # Audio Effects
       carla
       guitarix
+      gxplugins-lv2
       calf
       lsp-plugins
       x42-plugins
