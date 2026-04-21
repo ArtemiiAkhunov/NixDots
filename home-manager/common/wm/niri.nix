@@ -50,7 +50,6 @@ in
       touchpad {
         natural-scroll
         scroll-factor 0.6
-        disable-while-typing false
       }
 
       mouse {
@@ -152,8 +151,8 @@ in
       Mod+WheelScrollUp { focus-workspace-up; }
 
       // Mouse drag/resize
-      Mod+BTN_LEFT { drag-window; }
-      Mod+BTN_RIGHT { resize-window; }
+      Mod+MouseLeft { drag-window; }
+      Mod+MouseRight { resize-window; }
 
       // Media keys
       XF86AudioMute { spawn "${pkgs.wireplumber}/bin/wpctl" "set-mute" "@DEFAULT_SINK@" "toggle"; }
