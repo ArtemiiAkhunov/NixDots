@@ -5,76 +5,72 @@
     settings = {
       mainBar = {
         layer = "top";
-        position = "top";
-        height = 70;
-        spacing = 10;
+        position = "left";
+        width = 75;
+        spacing = 4;
 
+        # top → bottom on a vertical bar
         modules-left = [
+          "custom/nc"
           "custom/clock"
-          "tray"
           "custom/weather"
         ];
 
-        modules-center = [ "hyprland/workspaces" ];
+        modules-center = [ "niri/workspaces" ];
 
         modules-right = [
           "custom/microphone"
           "wireplumber"
           "network"
           "backlight"
-          "hyprland/language"
           "battery"
-          "custom/nc"
+          "tray"
         ];
 
         "tray" = {
-          icon-size = 24;
-          spacing = 10;
+          icon-size = 20;
+          spacing = 6;
         };
 
-        "hyprland/workspaces" = {
+        "niri/workspaces" = {
           format = "{icon}";
           format-icons = {
-            "1" = "";
-            "2" = "";
-            "3" = "";
-            "4" = "";
-            "5" = "";
-            "6" = "";
-            "7" = "";
-            "8" = "";
-            "9" = "";
-            "10" = "";
+            "1" = "";
+            "2" = "";
+            "3" = "";
+            "4" = "";
+            "5" = "";
+            "6" = "";
+            "7" = "";
+            "8" = "";
+            "9" = "";
+            "10" = "";
           };
-        };
-
-        "clock" = {
-          format = "{:%H:%M %m/%d}";
-          tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          format-alt = "{:%Y-%m-%d}";
-          tooltip = false;
         };
 
         "custom/clock" = {
           # TZ data messes with waybar's clock module
+          # Show time on one line, date on the next via tooltip
           format = "{}";
-          tooltip = false;
-          exec = "date +'%H:%M %m/%d'";
+          tooltip = true;
+          exec = ''date +'{"text":"%H:%M","tooltip":"%A\n%d %b %Y"}'';
+          return-type = "json";
           interval = 60;
         };
 
         "backlight" = {
-          format = "{percent}% {icon}";
+          format = "{icon}";
+          tooltip-format = "{percent}%";
           format-icons = [
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
-            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
+            ""
           ];
         };
 
@@ -84,36 +80,38 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon}";
-          format-charging = "{capacity}% ";
-          format-plugged = "{capacity}% ";
-          format-alt = "{time} {icon}";
+          format = "{icon}";
+          format-charging = "";
+          format-plugged = "";
+          tooltip-format = "{capacity}% — {time}";
           format-icons = [
-            ""
-            ""
-            ""
-            ""
-            ""
+            ""
+            ""
+            ""
+            ""
+            ""
           ];
         };
 
         "network" = {
-          format-wifi = "{essid} ";
-          format-ethernet = "{ipaddr}/{cidr} ";
-          tooltip-format = "{ifname} via {gwaddr} ";
-          format-linked = "{ifname} (No IP) ";
-          format-disconnected = "Disconnected ⚠";
-          format-alt = "{ifname}: {ipaddr}/{cidr}";
+          format-wifi = "";
+          format-ethernet = "";
+          format-disconnected = "⚠";
+          tooltip-format-wifi = "{essid} ({signalStrength}%)";
+          tooltip-format-ethernet = "{ipaddr}/{cidr}";
+          tooltip-format-disconnected = "Disconnected";
         };
 
         "wireplumber" = {
-          format = "  {volume}%";
+          format = "{icon}";
           format-muted = "󰝟";
+          format-icons = [
+            ""
+            ""
+            ""
+          ];
+          tooltip-format = "{volume}%";
           on-click = "${pkgs.pavucontrol}/bin/pavucontrol";
-        };
-
-        "hyprland/language" = {
-          format = "{shortDescription}";
         };
 
         "custom/weather" = {
@@ -131,64 +129,94 @@
           interval = 1;
           return-type = "json";
         };
+
         "custom/nc" = {
-          format = "";
+          format = "";
           on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
+          tooltip = false;
         };
       };
     };
     style = ''
       * {
         border: none;
-        font-family:'Inconsolata', 'FontAwesome';
-        font-size: 20px;
+        font-family: 'Inconsolata', 'FontAwesome';
+        font-size: 18px;
         font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-        min-height: 30px;
+        min-height: 0;
+        min-width: 0;
       }
 
       window#waybar {
         background: transparent;
       }
 
-      #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
+      /* Every pill: full width, vertical spacing */
+      #clock,
+      #workspaces,
+      #tray,
+      #network,
+      #wireplumber,
+      #battery,
+      #backlight,
+      #custom-weather,
+      #custom-microphone,
+      #custom-nc,
+      #custom-clock {
         color: #1e1e2e;
         background-color: #f5e0dc;
         border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top:5px;
-        margin-right: 5px;
+        padding: 8px 0;
+        margin: 3px 5px;
       }
 
-      #custom-microphone {
-        min-width: 15px;
-      }
-
-      #wireplumber, #network, #backlight, #battery {
-        padding-right: 20px;
-      }
-
-      #workspaces button {
-        padding-right: 20px;
-      }
-
-      #custom-nc {
-        margin-right: 10px;  
-      }
-
-      #tray {
-        font-size:16px;
+      /* Workspace column: no extra padding, buttons fill the pill */
+      #workspaces {
+        padding: 4px 0;
       }
 
       #workspaces button {
         color: #1e1e2e;
-        min-width: 30px;
-        background-color: #f5e0dc;
+        background: transparent;
+        padding: 6px 0;
+        min-height: 28px;
+        min-width: 65px;
+        border-radius: 8px;
+        transition: all 0.15s ease;
+      }
+
+      #workspaces button:hover {
+        background: rgba(30, 30, 46, 0.15);
       }
 
       #workspaces button.active {
         background: #1e1e2e;
         color: #f5e0dc;
+      }
+
+      /* Tray icons are smaller — tighten its pill */
+      #tray {
+        font-size: 14px;
+        padding: 6px 0;
+      }
+
+      /* Bell is the top item — give it breathing room from the screen edge */
+      #custom-nc {
+        margin-top: 8px;
+      }
+
+      /* Battery warning/critical colours */
+      #battery.warning {
+        color: #fe640b;
+      }
+
+      #battery.critical {
+        color: #d20f39;
+        animation: blink 1s linear infinite;
+      }
+
+      @keyframes blink {
+        to { opacity: 0.5; }
       }
     '';
   };

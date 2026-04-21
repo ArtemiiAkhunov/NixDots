@@ -120,6 +120,9 @@ in
       swaynotificationcenter
       wl-clipboard
       hyprlock
+      jq
+      swaybg
+      swayidle
       wofi
       pipewire
       pavucontrol

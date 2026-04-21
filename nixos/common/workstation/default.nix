@@ -9,7 +9,7 @@
     ./firewall.nix
     ./flatpak.nix
     ./fprintd.nix
-    ./hyprland.nix
+    ./niri.nix
     ./kanata.nix
     ./kdeconnect.nix
     ./nautilus.nix
