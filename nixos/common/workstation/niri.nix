@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   programs.niri.enable = true;
 
@@ -7,7 +7,7 @@
       xdg-desktop-portal-gtk
     ];
     config.niri = {
-      default = "gtk";
+      default = lib.mkForce "gtk";
     };
   };
 
