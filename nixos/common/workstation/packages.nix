@@ -41,7 +41,7 @@ in
       obs-studio
       mpv
       discord # I love vesktop but discord doesnt
-      teamspeak3
+      teamspeak6-client
       betterdiscordctl
       element-desktop
       evince
