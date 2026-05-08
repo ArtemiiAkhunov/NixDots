@@ -45,9 +45,9 @@ in
       betterdiscordctl
       element-desktop
       evince
-      (bottles.override {
+      /*(bottles.override {
         removeWarningPopup = true;
-      })
+      })*/
       alsa-scarlett-gui
       qbittorrent
       glaxnimate
@@ -92,7 +92,6 @@ in
       # Gaming
 
       cockatrice
-      lutris
       heroic
       mangohud
       protonup-ng
