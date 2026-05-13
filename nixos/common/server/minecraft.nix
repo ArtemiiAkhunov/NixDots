@@ -10,8 +10,8 @@ let
     Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v0.1.1.tar.gz";
-    sha256 = "1nzm7lqq9df89m4rw1l59wb9qddwqcg24z72ydd3aj19xijffnmr";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.0.tar.gz";
+    sha256 = "03advzdiki07msly47if63yijm4csjfcf19baq03mlqlbxb5lgvy";
   };
 in
 {
@@ -41,7 +41,7 @@ in
       };
 
       moddedDumDumServer = {
-        enable = false;
+        enable = true;
         package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.3"; };
 
         operators = {
