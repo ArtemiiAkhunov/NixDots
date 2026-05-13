@@ -42,7 +42,7 @@ in
 
       moddedDumDumServer = {
         enable = true;
-        package = pkgs.fabricServers.fabric-1_21_1.override { loaderVersion = "0.17.3"; };
+        package = pkgs.neoforgeServers.neoforge-1_21_1;
 
         operators = {
           MadamOfTheLags = {
