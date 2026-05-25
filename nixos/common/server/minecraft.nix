@@ -10,8 +10,8 @@ let
     Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.0.tar.gz";
-    sha256 = "03advzdiki07msly47if63yijm4csjfcf19baq03mlqlbxb5lgvy";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.1.tar.gz";
+    sha256 = "0d8gganznrnsj24bip2cmi8jihqvcrhnfvbf503j34119jx7s6lx";
   };
 in
 {
@@ -69,7 +69,7 @@ in
           "mods" = "${modpack}";
         };
 
-        jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
+        jvmOpts = "-Xms8G -Xmx8G -XX:+UseZGC -XX:+ZGenerational";
       };
     };
   };
