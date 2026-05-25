@@ -9,6 +9,7 @@
     cursors.enable = false;
     swaync.enable = false;
     hyprlock.enable = false;
+    hyprland.enable = false;
   };
 
   dconf.settings = {

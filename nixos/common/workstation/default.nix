@@ -17,7 +17,7 @@
     ./obs.nix
     ./packages.nix
     ./powersave.nix
-    ./razer.nix
+    #./razer.nix
     ./sound.nix
     ./steam.nix
     ./virtualization.nix
