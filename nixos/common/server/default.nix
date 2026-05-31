@@ -1,6 +1,7 @@
 {
   imports = [
     ./age.nix
+    ./backup.nix
     ./docker.nix
     ./firewall.nix
     ./glance.nix
