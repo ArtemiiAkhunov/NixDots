@@ -18,6 +18,7 @@
 
     fastfetch
     claude-code
+    context7-mcp
     python3
     pciutils
     usbutils
