@@ -144,27 +144,27 @@
           ];
         };
         /*
-        "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
-          specialArgs = inputs;
-          modules = [
-            ({config, pkgs, lib, ...}: {
-              networking.hostName = "eldraine";
-              system.nixos.tags = let
-                cfg = config.boot.loader.raspberry-pi;
-              in [ 
-                "raspberry-pi-${cfg.variant}"
-                cfg.bootloader
-                config.boot.kernelPackages.kernel.version
-              ];
-            })
-            ./nixos/machines/eldraine
-            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
-            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
-            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
-            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.bluetooth
-            inputs.agenix.packages.aarch64-linux.default
-          ];
-        };
+          "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
+            specialArgs = inputs;
+            modules = [
+              ({config, pkgs, lib, ...}: {
+                networking.hostName = "eldraine";
+                system.nixos.tags = let
+                  cfg = config.boot.loader.raspberry-pi;
+                in [
+                  "raspberry-pi-${cfg.variant}"
+                  cfg.bootloader
+                  config.boot.kernelPackages.kernel.version
+                ];
+              })
+              ./nixos/machines/eldraine
+              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
+              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
+              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
+              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.bluetooth
+              inputs.agenix.packages.aarch64-linux.default
+            ];
+          };
         */
       };
     };

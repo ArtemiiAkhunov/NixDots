@@ -9,7 +9,7 @@
   ...
 }:
 
-{ 
+{
   # Just a file path for now, will need to add additional modules
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/44444444-4444-4444-8888-888888888888"; # PLZ CHANGE
@@ -27,7 +27,6 @@
       "x-systemd.idle-timeout=1min"
     ];
   };
-
 
   nixpkgs.hostPlatform = lib.mkDefault "aarch64-linux";
 

@@ -8,7 +8,7 @@ let
     url = "https://answers.uillinois.edu/images/group356/shared/xr5550dt.ppd";
     sha256 = "1001hnjqpz5djdiqh3q9dgswzjx517pmx1na7if4slzbyfya79b4";
   };
-in 
+in
 {
   services.avahi = {
     openFirewall = true;

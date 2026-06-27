@@ -17,6 +17,7 @@
     # CLI stuff
 
     fastfetch
+    claude-code
     python3
     pciutils
     usbutils

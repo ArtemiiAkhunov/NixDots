@@ -1,4 +1,4 @@
-{pkgs, ...}: 
+{ pkgs, ... }:
 let
   battmon = pkgs.writeShellScriptBin "battmon" ''
     HIGH_THRESHOLD=95

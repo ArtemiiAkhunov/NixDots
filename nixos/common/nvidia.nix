@@ -14,12 +14,15 @@ let
   '';
 in
 {
-  environment.systemPackages = with pkgs.cudaPackages; [
-    cudatoolkit
-    cudnn
-  ] ++ [
-    nvidia-offload 
-  ];
+  environment.systemPackages =
+    with pkgs.cudaPackages;
+    [
+      cudatoolkit
+      cudnn
+    ]
+    ++ [
+      nvidia-offload
+    ];
 
   services.xserver.videoDrivers = [ "nvidia" ];
 

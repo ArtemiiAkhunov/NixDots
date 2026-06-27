@@ -13,7 +13,6 @@
       ls = "ls --color=auto";
       grep = "grep --color=auto";
       yolo = ''git commit -m "$(curl -s https://whatthecommit.com/index.txt)"'';
-
     };
 
     sessionVariables = {

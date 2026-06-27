@@ -45,9 +45,11 @@ in
       betterdiscordctl
       element-desktop
       evince
-      /*(bottles.override {
-        removeWarningPopup = true;
-      })*/
+      /*
+        (bottles.override {
+          removeWarningPopup = true;
+        })
+      */
       alsa-scarlett-gui
       qbittorrent
       glaxnimate
