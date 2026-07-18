@@ -18,6 +18,7 @@
 
     fastfetch
     claude-code
+    nodejs
     context7-mcp
     python3
     pciutils
