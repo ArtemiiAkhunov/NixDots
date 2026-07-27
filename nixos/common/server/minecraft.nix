@@ -10,8 +10,8 @@ let
     Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.1.tar.gz";
-    sha256 = "0d8gganznrnsj24bip2cmi8jihqvcrhnfvbf503j34119jx7s6lx";
+    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.9.tar.gz";
+    sha256 = "0cilfmlhzndmv8qza1mb739m9p7vhv0jlzb4dhgni7qv66450cyn";
   };
 in
 {
@@ -25,7 +25,7 @@ in
 
       dumDumServer = {
         enable = false;
-        package = pkgs.vanillaServers.vanilla-1_20_2;
+        package = pkgs.neoforgeServers.neoforge-1_21_1;
 
         serverProperties = {
           gamemode = "survival";
@@ -37,7 +37,7 @@ in
         };
 
         whitelist = userList;
-        jvmOpts = "-Xms10240M -Xmx10240M -XX:+UseZGC";
+        jvmOpts = "-Xms8G -Xmx8G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:G1HeapRegionSize=16M";
       };
 
       moddedDumDumServer = {
@@ -69,7 +69,7 @@ in
           "mods" = "${modpack}";
         };
 
-        jvmOpts = "-Xms8G -Xmx8G -XX:+UseZGC -XX:+ZGenerational";
+        jvmOpts = "-Xms8G -Xmx8G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:G1HeapRegionSize=16M";
       };
     };
   };
