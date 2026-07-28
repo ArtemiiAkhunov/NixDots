@@ -102,10 +102,10 @@
 
       windowrule = [
         # Pretty
-        "opacity 0.8,match:class kitty"
+        "opacity 1,match:class kitty"
         "float on, match:class floating"
         "float on, match:float true"
-        "opacity 0.8, match:workspace special:magic"
+        "opacity 1, match:workspace special:magic"
         # Wofi Visual
         "no_anim on,match:class wofi"
       ];

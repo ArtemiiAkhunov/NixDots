@@ -10,7 +10,7 @@
       scrollback_lines = 10000;
       enable_audio_bell = false;
       font_size = 20;
-      background_opacity = 0;
+      background_opacity = 1;
       remember_window_size = false;
       linux_display_server = "wayland";
     };
