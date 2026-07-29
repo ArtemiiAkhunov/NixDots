@@ -28,8 +28,4 @@
     "ff" = "fastfetch";
     "ssh" = "kitten ssh";
   };
-
-  programs.zsh.initContent = ''
-    fastfetch
-  '';
 }
