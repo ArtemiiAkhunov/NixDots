@@ -5,36 +5,37 @@
     in
     {
       enable = true;
-      matchBlocks = {
+      enableDefaultConfig = false;
+      settings = {
         theros = {
-          hostname = "172.17.57.73";
-          user = "voidwalker";
-          identityFile = rsa_key_path;
+          HostName = "172.17.57.73";
+          User = "voidwalker";
+          IdentityFile = rsa_key_path;
         };
         eldraine = {
-          hostname = "172.17.57.200";
-          user = "voidwalker";
-          identityFile = rsa_key_path;
+          HostName = "172.17.57.200";
+          User = "voidwalker";
+          IdentityFile = rsa_key_path;
         };
         proxmox = {
-          hostname = "172.17.57.246";
-          user = "root";
-          identityFile = rsa_key_path;
+          HostName = "172.17.57.246";
+          User = "root";
+          IdentityFile = rsa_key_path;
         };
         ubuntu = {
-          hostname = "172.17.57.27";
-          user = "voidwalker";
-          identityFile = rsa_key_path;
+          HostName = "172.17.57.27";
+          User = "voidwalker";
+          IdentityFile = rsa_key_path;
         };
         aws = {
-          hostname = "172.17.57.201";
-          user = "ubuntu";
-          identityFile = rsa_key_path;
+          HostName = "172.17.57.201";
+          User = "ubuntu";
+          IdentityFile = rsa_key_path;
         };
         oracle = {
-          hostname = "172.17.57.209";
-          user = "ubuntu";
-          identityFile = "/home/voidwalker/.ssh/oracle";
+          HostName = "172.17.57.209";
+          User = "ubuntu";
+          IdentityFile = "/home/voidwalker/.ssh/oracle";
         };
       };
     };

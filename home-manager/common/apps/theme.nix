@@ -3,6 +3,7 @@
   catppuccin = {
     flavor = "mocha";
     enable = true;
+    autoEnable = true;
     accent = "lavender";
     #YES, NO ACCENTS HERE, PLEZ
     zsh-syntax-highlighting.enable = false;
