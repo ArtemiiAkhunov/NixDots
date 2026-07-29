@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, inputs, ... }:
 {
   security.acme = {
     acceptTerms = true;
@@ -19,23 +19,7 @@
       "lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
-        acmeRoot = null;
-        locations = {
-          "/.well-known/matrix/client" = {
-            return = ''200 '{"m.homeserver": {"base_url": "https://matrix.lordofthelags.net"}}' '';
-            extraConfig = ''
-              default_type application/json;
-              add_header Access-Control-Allow-Origin *;
-            '';
-          };
-          "/.well-known/matrix/server" = {
-            return = ''200 '{"server": {"m.server": "matrix.lordofthelags.net:433"}}' '';
-            extraConfig = ''
-              default_type application/json;
-              add_header Access-Control-Allow-Origin *;
-            '';
-          };
-        };
+        root=inputs.laggy-world.packages.x86_64-linux.default;
       };
       "portainer.lordofthelags.net" = {
         enableACME = true;

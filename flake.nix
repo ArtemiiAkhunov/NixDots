@@ -23,12 +23,6 @@
       inputs.lix.follows = "lix";
     };
 
-    lix-hydra = {
-      url = "https://git.lix.systems/lix-project/hydra/archive/main.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.lix.follows = "lix";
-    };
-
     nixvim = {
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,9 +50,17 @@
     #   SERVER INPUTS
     # ==================
 
+    lix-hydra = {
+      url = "https://git.lix.systems/lix-project/hydra/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.lix.follows = "lix";
+    };
+
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
+
+    laggy-world.url = "github:lordofthelags/website";
   };
 
   outputs =
@@ -142,6 +144,9 @@
             inputs.agenix.nixosModules.default
             inputs.nix-minecraft.nixosModules.minecraft-servers
           ];
+          specialArgs = {
+            inherit inputs;
+          };
         };
         /*
           "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
