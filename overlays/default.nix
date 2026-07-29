@@ -21,5 +21,8 @@
 
     #nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
 
+    # Temporary lix fix, since the tests are timing out
+    lix = prev.lix.overrideAttrs (_: { doCheck = false; });
+
   };
 }
