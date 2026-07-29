@@ -33,6 +33,15 @@
               # Formatting
 
               "<leader>fo" = ":lua vim.lsp.buf.format()<CR>";
+
+              # Git hunks
+
+              "]c" = ":Gitsigns nav_hunk next<CR>";
+              "[c" = ":Gitsigns nav_hunk prev<CR>";
+              "<leader>gp" = ":Gitsigns preview_hunk<CR>";
+              "<leader>gs" = ":Gitsigns stage_hunk<CR>";
+              "<leader>gr" = ":Gitsigns reset_hunk<CR>";
+              "<leader>gb" = ":Gitsigns blame_line<CR>";
             };
         visual = lib.mapAttrsToList (key: action: {
           mode = "v";

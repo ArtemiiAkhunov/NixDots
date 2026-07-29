@@ -10,6 +10,8 @@
     ./telescope.nix
     ./alpha.nix
     ./treesitter.nix
+    ./gitsigns.nix
+    ./none-ls.nix
     ./lsp-format.nix
     ./floaterm.nix
     ./web-devicons.nix
