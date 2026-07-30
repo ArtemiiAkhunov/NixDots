@@ -9,7 +9,6 @@
         "flakes"
       ];
       substituters = [
-        "https://cache.lix.systems"
         "https://hydra.lordofthelags.net"
         "https://nixos-raspberrypi.cachix.org"
         "https://cache.nixos.org"
@@ -20,7 +19,6 @@
         "@wheel"
       ];
       trusted-public-keys = [
-        "cache.lix.systems-1:aBnZUw8zA7H35Cz2RyKFVs3H4PlGTLawyY5KRbvJR8o="
         "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
         "nixos-raspberrypi.cachix.org-1:4iMO9LXa8BqhU+Rpg6LQKiGa2lsNh/j2oiYLNOQ5sPI="
         "hydra.lordofthelags.net:v3OFf3HWmShqFqJIYCBRDVGpFxyq9Pc8QMflK8hcOYE="
