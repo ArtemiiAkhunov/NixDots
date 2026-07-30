@@ -34,6 +34,10 @@
 
               "<leader>fo" = ":lua vim.lsp.buf.format()<CR>";
 
+              # Diagnostics
+
+              "<leader>dg" = ":lua vim.diagnostic.open_float()<CR>";
+
               # Git hunks
 
               "]c" = ":Gitsigns nav_hunk next<CR>";
