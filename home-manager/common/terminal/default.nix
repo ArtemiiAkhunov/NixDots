@@ -4,6 +4,5 @@
     ./kitty.nix
     ./fastfetch.nix
     ./ssh.nix
-    ./herdr.nix
   ];
 }
