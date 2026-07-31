@@ -20,9 +20,9 @@ jobs:
           inputs: laggy-world
           token: ${{ secrets.FLAKE_UPDATE_TOKEN }}
           commit-msg: "laggy-world: bump to latest upstream site"
-          pr-title: "Auto-update: laggy.world website"
+          pr-title: "Auto-update: laggy world website"
           pr-body: |
-            Automated bump of the laggy.world site. Build-tested, merges itself
+            Automated bump of the laggy world site. Build-tested, merges itself
             when checks pass, deployed by theros' nightly auto-upgrade.
 
             ```
