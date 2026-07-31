@@ -1,0 +1,32 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  eval:
+    name: Eval flake (hosts, packages, hydraJobs, lockfile)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix flake check --no-build
+
+  homes:
+    name: Eval home configurations
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix eval --raw '.#homeConfigurations."voidwalker@kamigawa".activationPackage.drvPath'
+      - run: nix eval --raw '.#homeConfigurations."voidwalker@theros".activationPackage.drvPath'
+
+  format:
+    name: Check formatting
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix fmt -- --ci

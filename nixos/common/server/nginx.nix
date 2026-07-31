@@ -19,7 +19,7 @@
       "lordofthelags.net" = {
         forceSSL = true;
         enableACME = true;
-        root=inputs.laggy-world.packages.x86_64-linux.default;
+        root = inputs.laggy-world.packages.x86_64-linux.default;
       };
       "portainer.lordofthelags.net" = {
         enableACME = true;

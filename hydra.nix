@@ -16,7 +16,7 @@ let
   ) outputs.packages;
 in
 {
-  pkgs = mapAttrs pkgs;
+  inherit pkgs;
   hosts = mapAttrs getNixosCfg outputs.nixosConfigurations;
   homes = mapAttrs getHomeCfg outputs.homeConfigurations;
   #shells = mapAttrs getStdenv outputs.devShells.x86_64-linux;
