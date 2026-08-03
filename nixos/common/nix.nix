@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   nix = {
-    package = pkgs.lix;
+    package = pkgs.lixPackageSets.stable.lix;
     settings = {
       auto-optimise-store = true;
       experimental-features = [
