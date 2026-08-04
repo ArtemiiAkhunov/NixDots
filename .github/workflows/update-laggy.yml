@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: DeterminateSystems/nix-installer-action@main
-      - name: Build new site before touching anything
+      - name: Build New Site
         run: nix build --no-link github:lordofthelags/website
       - name: Update flake.lock
         id: update
