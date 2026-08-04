@@ -12,19 +12,11 @@
     ) inputs;
   };
 
-  lix = inputs.lix-module.overlays.default;
-  lix-hydra = inputs.lix-hydra.overlays.default;
-
   additions = final: prev: import ../packages { pkgs = final; } // { };
 
   modifications = final: prev: {
 
     #nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
-
-    # Temporary lix fix, since the tests are timing out
-    lix = prev.lix.overrideAttrs (_: {
-      doCheck = false;
-    });
 
   };
 }
