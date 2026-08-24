@@ -22,5 +22,14 @@
       }
     ];
     checkReversePath = "loose";
+
+    # Reject martian ZeroTier-sourced packets fast; a silent drop stalls
+    # WebRTC ICE gathering ~40s and breaks Vesktop voice.
+    extraCommands = ''
+      iptables -I OUTPUT -s 172.17.57.0/24 ! -o zt+ -j REJECT --reject-with icmp-net-unreachable
+    '';
+    extraStopCommands = ''
+      iptables -D OUTPUT -s 172.17.57.0/24 ! -o zt+ -j REJECT --reject-with icmp-net-unreachable || true
+    '';
   };
 }
