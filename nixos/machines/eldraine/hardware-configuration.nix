@@ -10,15 +10,15 @@
 }:
 
 {
-  # Just a file path for now, will need to add additional modules
+  # Labels are set at install time by mkfs; see the install notes.
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/44444444-4444-4444-8888-888888888888"; # PLZ CHANGE
+    device = "/dev/disk/by-label/NIXOS_SD";
     fsType = "ext4";
     options = [ "noatime" ];
   };
 
   fileSystems."/boot/firmware" = {
-    device = "/dev/disk/by-uuid/2175-794E";
+    device = "/dev/disk/by-label/FIRMWARE";
     fsType = "vfat";
     options = [
       "noatime"

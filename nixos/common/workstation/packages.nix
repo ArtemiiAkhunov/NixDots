@@ -84,10 +84,7 @@ in
 
       # Gaming
 
-      cockatrice
       heroic
-      mangohud
-      protonup-ng
       prismlauncher
 
       # CLI stuff

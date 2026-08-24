@@ -19,6 +19,10 @@
     "git+ssh://github.com/"
   ];
 
+  # Lets localhost execute aarch64 binaries (for eldraine), and registers
+  # aarch64-linux in nix.settings.extra-platforms.
+  boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
+
   nix.buildMachines = [
     {
       hostName = "localhost";
@@ -30,6 +34,16 @@
         "benchmark"
       ];
       maxJobs = 2;
+    }
+    {
+      # Emulated, so no kvm/nixos-test.
+      hostName = "localhost";
+      system = "aarch64-linux";
+      supportedFeatures = [
+        "big-parallel"
+        "benchmark"
+      ];
+      maxJobs = 1;
     }
   ];
 

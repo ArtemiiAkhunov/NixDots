@@ -2,6 +2,8 @@
   imports = [
     ./avahi.nix
     ./bootloader.nix
+    ./dev.nix
+    ./fonts.nix
     ./locale.nix
     ./nh.nix
     ./nix.nix

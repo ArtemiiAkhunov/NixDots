@@ -15,6 +15,7 @@
     ../../common/workstation/hyprland.nix
     ../../common/workstation/kanata.nix
     ../../common/workstation/nautilus.nix
+    ../../common/workstation/steam.nix
     ../../common/workstation/networkmanager.nix
     ../../common/workstation/powersave.nix
     ../../common/workstation/sound.nix
