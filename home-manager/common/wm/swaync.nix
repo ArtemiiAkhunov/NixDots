@@ -1,3 +1,8 @@
+{ config, ... }:
+let
+  px = config.ui.px;
+  cssPx = n: "${toString (px n)}px";
+in
 {
   services.swaync = {
     enable = true;
@@ -5,10 +10,10 @@
       "$schema" = "/etc/xdg/swaync/configSchema.json";
       positionX = "right";
       positionY = "top";
-      control-center-width = 500;
-      control-center-margin-top = 10;
-      control-center-margin-bottom = 20;
-      control-center-margin-right = 10;
+      control-center-width = px 500;
+      control-center-margin-top = px 10;
+      control-center-margin-bottom = px 20;
+      control-center-margin-right = px 10;
       control-center-margin-left = 0;
       layer = "overlay";
       control-center-layer = "top";
@@ -17,10 +22,10 @@
 
       notification-2fa-action = true;
       notification-inline-replies = true;
-      notification-window-width = 600;
-      notification-icon-size = 50;
-      notification-body-image-height = 140;
-      notification-body-image-width = 180;
+      notification-window-width = px 600;
+      notification-icon-size = px 50;
+      notification-body-image-height = px 140;
+      notification-body-image-width = px 180;
 
       timeout = 6;
       timeout-low = 3;
@@ -53,8 +58,8 @@
           text = "Notification";
         };
         mpris = {
-          image-size = 90;
-          image-radius = 10;
+          image-size = px 90;
+          image-radius = px 10;
         };
         volume.label = "";
         backlight.label = "󰃟";
@@ -63,7 +68,7 @@
     style = ''
       * {
         all: unset;
-        font-size: 14px;
+        font-size: ${cssPx 14};
         font-family: "FiraCode Nerd Font Mono";
         transition: 200ms;
       }
@@ -75,8 +80,8 @@
       scale trough {
         margin: 0rem 1rem;
         background-color: #313244;
-        min-height: 8px;
-        min-width: 70px;
+        min-height: ${cssPx 8};
+        min-width: ${cssPx 70};
       }
 
       slider {
@@ -84,29 +89,29 @@
       }
 
       .floating-notifications.background .notification-row .notification-background {
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #313244;
-        border-radius: 12.6px;
-        margin: 18px;
+        box-shadow: 0 0 ${cssPx 8} 0 rgba(0, 0, 0, 0.8), inset 0 0 0 ${cssPx 1} #313244;
+        border-radius: ${cssPx 12.6};
+        margin: ${cssPx 18};
         background-color: #1e1e2e;
         color: #cdd6f4;
         padding: 0;
       }
 
       .floating-notifications.background .notification-row .notification-background .notification {
-        padding: 7px;
-        border-radius: 12.6px;
+        padding: ${cssPx 7};
+        border-radius: ${cssPx 12.6};
       }
 
       .floating-notifications.background .notification-row .notification-background .notification.critical {
-        box-shadow: inset 0 0 7px 0 #f38ba8;
+        box-shadow: inset 0 0 ${cssPx 7} 0 #f38ba8;
       }
 
       .floating-notifications.background .notification-row .notification-background .notification .notification-content {
-        margin: 7px;
+        margin: ${cssPx 7};
       }
 
       .floating-notifications.background .notification-row .notification-background .notification .notification-content .summary {
-        font-size: 18px;
+        font-size: ${cssPx 18};
         color: #cdd6f4;
       }
 
@@ -115,7 +120,7 @@
       }
 
       .floating-notifications.background .notification-row .notification-background .notification .notification-content .body {
-        font-size: 14px;
+        font-size: ${cssPx 14};
         color: #cdd6f4;
       }
 
@@ -124,29 +129,29 @@
       }
 
       .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
-        border-radius: 7px;
+        border-radius: ${cssPx 7};
         color: #cdd6f4;
         background-color: #313244;
-        box-shadow: inset 0 0 0 1px #45475a;
-        margin: 7px;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
+        margin: ${cssPx 7};
       }
 
       .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #313244;
         color: #cdd6f4;
       }
 
       .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #74c7ec;
         color: #cdd6f4;
       }
 
       .floating-notifications.background .notification-row .notification-background .close-button {
-        margin: 7px;
-        padding: 2px;
-        border-radius: 6.3px;
+        margin: ${cssPx 7};
+        padding: ${cssPx 2};
+        border-radius: ${cssPx 6.3};
         color: #1e1e2e;
         background-color: #f38ba8;
       }
@@ -162,12 +167,12 @@
       }
 
       .control-center {
-        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #313244;
-        border-radius: 12.6px;
-        margin: 18px;
+        box-shadow: 0 0 ${cssPx 8} 0 rgba(0, 0, 0, 0.8), inset 0 0 0 ${cssPx 1} #313244;
+        border-radius: ${cssPx 12.6};
+        margin: ${cssPx 18};
         background-color: #1e1e2e;
         color: #cdd6f4;
-        padding: 14px;
+        padding: ${cssPx 14};
       }
 
       .control-center .widget-title > label {
@@ -176,44 +181,44 @@
       }
 
       .control-center .widget-title button {
-        border-radius: 7px;
+        border-radius: ${cssPx 7};
         color: #cdd6f4;
         background-color: #313244;
-        box-shadow: inset 0 0 0 1px #45475a;
-        padding: 8px;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
+        padding: ${cssPx 8};
       }
 
       .control-center .widget-title button:hover {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #585b70;
         color: #cdd6f4;
       }
 
       .control-center .widget-title button:active {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #74c7ec;
         color: #1e1e2e;
       }
 
       .control-center .notification-row .notification-background {
-        border-radius: 7px;
+        border-radius: ${cssPx 7};
         color: #cdd6f4;
         background-color: #313244;
-        box-shadow: inset 0 0 0 1px #45475a;
-        margin-top: 14px;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
+        margin-top: ${cssPx 14};
       }
 
       .control-center .notification-row .notification-background .notification {
-        padding: 7px;
-        border-radius: 7px;
+        padding: ${cssPx 7};
+        border-radius: ${cssPx 7};
       }
 
       .control-center .notification-row .notification-background .notification.critical {
-        box-shadow: inset 0 0 7px 0 #f38ba8;
+        box-shadow: inset 0 0 ${cssPx 7} 0 #f38ba8;
       }
 
       .control-center .notification-row .notification-background .notification .notification-content {
-        margin: 7px;
+        margin: ${cssPx 7};
       }
 
       .control-center .notification-row .notification-background .notification .notification-content .summary {
@@ -233,35 +238,35 @@
       }
 
       .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
-        border-radius: 7px;
+        border-radius: ${cssPx 7};
         color: #cdd6f4;
         background-color: #11111b;
-        box-shadow: inset 0 0 0 1px #45475a;
-        margin: 7px;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
+        margin: ${cssPx 7};
       }
 
       .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #313244;
         color: #cdd6f4;
       }
 
       .control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #74c7ec;
         color: #cdd6f4;
       }
 
       .control-center .notification-row .notification-background .close-button {
-        margin: 7px;
-        padding: 2px;
-        border-radius: 6.3px;
+        margin: ${cssPx 7};
+        padding: ${cssPx 2};
+        border-radius: ${cssPx 6.3};
         color: #1e1e2e;
         background-color: #eba0ac;
       }
 
       .close-button {
-        border-radius: 6.3px;
+        border-radius: ${cssPx 6.3};
       }
 
       .control-center .notification-row .notification-background .close-button:hover {
@@ -275,13 +280,13 @@
       }
 
       .control-center .notification-row .notification-background:hover {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #7f849c;
         color: #cdd6f4;
       }
 
       .control-center .notification-row .notification-background:active {
-        box-shadow: inset 0 0 0 1px #45475a;
+        box-shadow: inset 0 0 0 ${cssPx 1} #45475a;
         background-color: #74c7ec;
         color: #cdd6f4;
       }
@@ -296,10 +301,10 @@
       }
 
       .control-center-dnd {
-        margin-top: 5px;
-        border-radius: 8px;
+        margin-top: ${cssPx 5};
+        border-radius: ${cssPx 8};
         background: #313244;
-        border: 1px solid #45475a;
+        border: ${cssPx 1} solid #45475a;
         box-shadow: none;
       }
 
@@ -309,19 +314,19 @@
 
       .control-center-dnd slider {
         background: #45475a;
-        border-radius: 8px;
+        border-radius: ${cssPx 8};
       }
 
       .widget-dnd {
-        margin: 0px;
+        margin: ${cssPx 0};
         font-size: 1.1rem;
       }
 
       .widget-dnd > switch {
         font-size: initial;
-        border-radius: 8px;
+        border-radius: ${cssPx 8};
         background: #313244;
-        border: 1px solid #45475a;
+        border: ${cssPx 1} solid #45475a;
         box-shadow: none;
       }
 
@@ -330,18 +335,18 @@
       }
 
       .widget-dnd > label {
-        font-size:24px;
+        font-size:${cssPx 24};
       }
 
       .widget-dnd > switch slider {
         background: #45475a;
-        border-radius: 8px;
-        border: 1px solid #6c7086;
+        border-radius: ${cssPx 8};
+        border: ${cssPx 1} solid #6c7086;
       }
 
       .widget-mpris .widget-mpris-player {
         background: #313244;
-        padding: 7px;
+        padding: ${cssPx 7};
       }
 
       .widget-mpris .widget-mpris-title {

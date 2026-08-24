@@ -1,5 +1,6 @@
 { ... }: {
   imports = [
+    ./ui.nix
     ./shell
     ./nixvim
     ./terminal/ssh.nix

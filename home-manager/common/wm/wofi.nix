@@ -1,3 +1,8 @@
+{ config, ... }:
+let
+  px = config.ui.px;
+  cssPx = n: "${toString (px n)}px";
+in
 {
   programs.wofi = {
     enable = true;
@@ -5,7 +10,7 @@
       mode = "drun";
       allow_images = true;
       prompt = "";
-      image_size = 16;
+      image_size = px 16;
       location = "center";
       lines = 10;
       line_wrap = "word";
@@ -15,30 +20,30 @@
     };
     style = ''
       * {
-        font-size: 24px;
+        font-size: ${cssPx 24};
         font-family: 'Inconsolata';
       }
 
       #window {
         margin: auto;
-        padding: 10px;
+        padding: ${cssPx 10};
       }
 
       #input {
-        padding: 10px;
-        margin-bottom: 10px;
+        padding: ${cssPx 10};
+        margin-bottom: ${cssPx 10};
       }
 
       #img {
-        margin-right: 6px;
+        margin-right: ${cssPx 6};
       }
 
       #entry {
-        padding: 10px;
+        padding: ${cssPx 10};
       }
 
       #text {
-        margin: 2px;
+        margin: ${cssPx 2};
       }
     '';
   };

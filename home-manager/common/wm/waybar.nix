@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  px = config.ui.px;
+  cssPx = n: "${toString (px n)}px";
+in
 {
   programs.waybar = {
     enable = true;
@@ -6,8 +10,8 @@
       mainBar = {
         layer = "top";
         position = "top";
-        height = 70;
-        spacing = 10;
+        height = px 70;
+        spacing = px 10;
 
         modules-left = [
           "custom/clock"
@@ -28,8 +32,8 @@
         ];
 
         "tray" = {
-          icon-size = 24;
-          spacing = 10;
+          icon-size = px 24;
+          spacing = px 10;
         };
 
         "hyprland/workspaces" = {
@@ -141,9 +145,9 @@
       * {
         border: none;
         font-family:'Inconsolata', 'FontAwesome';
-        font-size: 20px;
+        font-size: ${cssPx 20};
         font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-        min-height: 30px;
+        min-height: ${cssPx 30};
       }
 
       window#waybar {
@@ -153,36 +157,36 @@
       #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
         color: #1e1e2e;
         background-color: #f5e0dc;
-        border-radius: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        margin-top:5px;
-        margin-right: 5px;
+        border-radius: ${cssPx 10};
+        padding-left: ${cssPx 10};
+        padding-right: ${cssPx 10};
+        margin-top: ${cssPx 5};
+        margin-right: ${cssPx 5};
       }
 
       #custom-microphone {
-        min-width: 15px;
+        min-width: ${cssPx 15};
       }
 
       #wireplumber, #network, #backlight, #battery {
-        padding-right: 20px;
+        padding-right: ${cssPx 20};
       }
 
       #workspaces button {
-        padding-right: 20px;
+        padding-right: ${cssPx 20};
       }
 
       #custom-nc {
-        margin-right: 10px;  
+        margin-right: ${cssPx 10};  
       }
 
       #tray {
-        font-size:16px;
+        font-size: ${cssPx 16};
       }
 
       #workspaces button {
         color: #1e1e2e;
-        min-width: 30px;
+        min-width: ${cssPx 30};
         background-color: #f5e0dc;
       }
 

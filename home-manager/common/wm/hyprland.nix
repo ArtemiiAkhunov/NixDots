@@ -1,4 +1,7 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  px = n: toString (config.ui.px n);
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -8,8 +11,8 @@
     extraConfig = ''
       local mainMod = "SUPER"
       local terminal = "${pkgs.kitty}/bin/kitty"
-      local browser = "${pkgs.firefox}/bin/firefox"
-      local privateBrowser = "${pkgs.firefox}/bin/firefox --private-window google.com"
+      local browser = "${config.ui.firefoxPackage}/bin/firefox"
+      local privateBrowser = "${config.ui.firefoxPackage}/bin/firefox --private-window google.com"
       local openSchedule = "${pkgs.imv}/bin/imv ~/Pictures/Schedule.png"
       local menu = "${pkgs.wofi}/bin/wofi --show drun"
 
@@ -49,9 +52,9 @@
         },
 
         general = {
-          gaps_in = 5,
-          gaps_out = 20,
-          border_size = 2,
+          gaps_in = ${px 5},
+          gaps_out = ${px 20},
+          border_size = ${px 2},
           col = {
             active_border = { colors = { "rgba(a6e3a1ee)", "rgba(74c7ecee)" }, angle = 45 },
             inactive_border = "rgba(b4befeee)",
@@ -63,7 +66,7 @@
         },
 
         decoration = {
-          rounding = 10,
+          rounding = ${px 10},
 
           blur = {
             enabled = false,
@@ -177,7 +180,7 @@
         hl.exec_cmd("${pkgs.waybar}/bin/waybar")
       end)
 
-      hl.workspace_rule({ workspace = "special:magic", gaps_in = 40, gaps_out = 60 })
+      hl.workspace_rule({ workspace = "special:magic", gaps_in = ${px 40}, gaps_out = ${px 60} })
       hl.workspace_rule({ workspace = "special:schedule", on_created_empty = openSchedule })
       hl.workspace_rule({ workspace = "special:magic", on_created_empty = "spotify" })
     '';
