@@ -14,6 +14,18 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - run: nix flake check --no-build
 
+  hosts:
+    name: Eval host configurations
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        host: [eldraine, kaldheim, kamigawa, theros]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DeterminateSystems/nix-installer-action@main
+      - run: nix eval --raw ".#nixosConfigurations.${{ matrix.host }}.config.system.build.toplevel.drvPath"
+
   homes:
     name: Eval home configurations
     runs-on: ubuntu-latest
