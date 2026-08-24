@@ -4,16 +4,6 @@
   nixpkgs.config.permittedInsecurePackages = [ "python-2.7.18.8" ];
 
   environment.systemPackages = with pkgs; [
-    # Coding utilities
-
-    gnumake
-    gcc
-    vscode-extensions.ms-vscode.cpptools
-    gdb
-    rustc
-    rustup
-    cargo
-
     # CLI stuff
 
     fastfetch
@@ -46,14 +36,4 @@
     #Other
     home-manager
   ];
-
-  fonts.packages =
-    with pkgs;
-    [
-      font-awesome
-      fira-code
-      inconsolata
-    ]
-    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-
 }

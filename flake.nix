@@ -161,29 +161,38 @@
             inputs.agenix.nixosModules.default
           ];
         };
-        /*
-          "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
-            specialArgs = inputs;
-            modules = [
-              ({config, pkgs, lib, ...}: {
-                networking.hostName = "eldraine";
-                system.nixos.tags = let
-                  cfg = config.boot.loader.raspberry-pi;
-                in [
-                  "raspberry-pi-${cfg.variant}"
-                  cfg.bootloader
-                  config.boot.kernelPackages.kernel.version
+        "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
+          modules = [
+            (
+              { config, ... }:
+              {
+                nixpkgs.overlays = builtins.attrValues overlays ++ [
+                  # nixos-raspberrypi pins nixpkgs 26.05; backport what landed after it
+                  (_: _: { inherit (inputs.nixpkgs.legacyPackages.aarch64-linux) herdr; })
                 ];
-              })
-              ./nixos/machines/eldraine
-              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
-              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
-              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
-              inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.bluetooth
-              inputs.agenix.packages.aarch64-linux.default
-            ];
+                environment.systemPackages = [ inputs.agenix.packages.aarch64-linux.default ];
+                system.nixos.tags =
+                  let
+                    cfg = config.boot.loader.raspberry-pi;
+                  in
+                  [
+                    "raspberry-pi-${cfg.variant}"
+                    cfg.bootloader
+                    config.boot.kernelPackages.kernel.version
+                  ];
+              }
+            )
+            ./nixos/machines/eldraine
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.base
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.page-size-16k
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.display-vc4
+            inputs.nixos-raspberrypi.nixosModules.raspberry-pi-5.bluetooth
+            inputs.agenix.nixosModules.default
+          ];
+          specialArgs = {
+            inherit inputs;
           };
-        */
+        };
       };
     };
 }

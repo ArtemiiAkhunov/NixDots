@@ -12,7 +12,6 @@
     ../../common/user.nix
     ../../common/zerotier.nix
 
-    ../../common/server/age.nix
     ../../common/server/docker.nix
     ../../common/server/ssh.nix
     ../../common/server/firewall.nix
