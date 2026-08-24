@@ -5,7 +5,6 @@
     ./bluetooth.nix
     ./cups.nix
     ./displaymanager.nix
-    ./env.nix
     ./firewall.nix
     ./flatpak.nix
     ./fprintd.nix
