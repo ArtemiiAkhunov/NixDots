@@ -8,6 +8,7 @@
     ../../common/workstation/automount.nix
     ../../common/workstation/battmon.nix
     ../../common/workstation/bluetooth.nix
+    ../../common/workstation/communication.nix
     ../../common/workstation/cups.nix
     ../../common/workstation/displaymanager.nix
     ../../common/workstation/firewall.nix
