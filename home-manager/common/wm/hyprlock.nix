@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
+let
+  px = config.ui.px;
+  pos = x: y: "${toString (px x)}, ${toString (px y)}";
+in
 {
   programs.hyprlock = {
     enable = true;
@@ -18,8 +22,8 @@
       };
 
       input-field = {
-        size = "250, 60";
-        outline_thickness = 2;
+        size = pos 250 60;
+        outline_thickness = px 2;
         dots_size = 0.2; # Scale of input-field height, 0.2 - 0.8
         dots_spacing = 0.2; # Scale of dots' absolute size, 0.0 - 1.0
         dots_center = true;
@@ -30,16 +34,16 @@
         font_family = "Inconsolata";
         placeholder_text = ''<i><span foreground="##cdd6f4">Input Password...</span></i>'';
         hide_input = false;
-        position = "0, -120";
+        position = pos 0 (-120);
         halign = "center";
         valign = "center";
       };
 
       image = {
         path = "$HOME/.local/share/fastfetch/logos/nixos.png";
-        position = "0, 175";
-        size = 170;
-        rounding = 60;
+        position = pos 0 175;
+        size = px 170;
+        rounding = px 60;
         "border_color" = "rgb(180, 190, 254)";
         halign = "center";
         valign = "center";
@@ -49,18 +53,18 @@
         {
           text = ''cmd[update:1000] echo "$(date +"%-I:%M%p")"'';
           color = "rgb(180, 190, 254)";
-          font_size = 120;
+          font_size = px 120;
           font_family = "Inconsolata";
-          position = "0, -300";
+          position = pos 0 (-300);
           halign = "center";
           valign = "top";
         }
         {
           text = "Hi there $USER!";
           color = "rgb(180, 190, 254)";
-          font_size = 25;
+          font_size = px 25;
           font_family = "Inconsolata";
-          position = "0, -40";
+          position = pos 0 (-40);
           halign = "center";
           valign = "center";
         }
