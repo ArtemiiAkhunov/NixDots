@@ -4,6 +4,7 @@
     ./hardware-configuration.nix
     ../../common
     ../../common/intel-gpu.nix
+    ../../common/geoclue.nix
     ../../common/workstation/automount.nix
     ../../common/workstation/battmon.nix
     ../../common/workstation/bluetooth.nix

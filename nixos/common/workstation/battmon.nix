@@ -27,6 +27,7 @@ in
 {
   environment.systemPackages = [
     battmon
+    pkgs.acpi
   ];
   systemd.timers."battery-check" = {
     wantedBy = [ "timers.target" ];

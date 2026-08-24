@@ -1,52 +1,87 @@
-{ ... }:
+{ lib, config, ... }:
+let
+  cfg = config.powersave;
+in
 {
-  services.tlp = {
-    enable = true;
-    settings =
-      let
-        sound_save_level = 10;
-        min_bat_level = 40;
-        max_bat_level = 80;
-      in
-      {
-        TLP_DEFAULT_MODE = "AC";
+  options.powersave.chargeThresholds = lib.mkOption {
+    type = lib.types.nullOr (
+      lib.types.submodule {
+        options = {
+          start = lib.mkOption {
+            type = lib.types.ints.between 0 100;
+            description = "Resume charging once the battery falls below this percentage.";
+          };
+          stop = lib.mkOption {
+            type = lib.types.ints.between 0 100;
+            description = "Stop charging at this percentage, to reduce cell wear.";
+          };
+        };
+      }
+    );
+    default = {
+      start = 40;
+      stop = 80;
+    };
+    example = null;
+    description = ''
+      Battery charge thresholds passed to TLP, or `null` to leave charging
+      alone.
 
-        # Generic Power Profile:
-        PLATFORM_PROFILE_ON_AC = "balanced";
-        PLATFORM_PROFILE_ON_BAT = "low-power";
+      These only do anything if the EC exposes
+      `charge_control_start_threshold` / `charge_control_end_threshold` under
+      {file}`/sys/class/power_supply/BAT0/`. TLP accepts the settings either
+      way and fails silently when the files are absent, so check the sysfs
+      paths on a new host before assuming a cap is in effect.
+    '';
+  };
 
-        # Sound
-        SOUND_POWER_SAVE_ON_AC = sound_save_level;
-        SOUND_POWER_SAVE_ON_BAT = sound_save_level;
-        SOUND_POWER_SAVE_CONTROLLER = "Y";
+  config = {
+    services.tlp = {
+      enable = true;
+      settings =
+        let
+          sound_save_level = 10;
+        in
+        {
+          TLP_DEFAULT_MODE = "AC";
 
-        # Battery
-        START_CHARGE_THRESH_BAT0 = min_bat_level;
-        STOP_CHARGE_THRESH_BAT0 = max_bat_level;
+          # Generic Power Profile:
+          PLATFORM_PROFILE_ON_AC = "balanced";
+          PLATFORM_PROFILE_ON_BAT = "low-power";
 
-        # Disable watchdog
-        NMI_WATCHDOG = 0;
+          # Sound
+          SOUND_POWER_SAVE_ON_AC = sound_save_level;
+          SOUND_POWER_SAVE_ON_BAT = sound_save_level;
+          SOUND_POWER_SAVE_CONTROLLER = "Y";
 
-        # WiFi
-        WIFI_PWR_ON_AC = "off";
-        WIFI_PWR_ON_BAT = "on";
+          # Disable watchdog
+          NMI_WATCHDOG = 0;
 
-        # Wake On LAN disable
-        WOL_DISABLE = "Y";
+          # WiFi
+          WIFI_PWR_ON_AC = "off";
+          WIFI_PWR_ON_BAT = "on";
 
-        # Mem sleep
-        MEM_SLEEP_ON_AC = "s2idle";
-        MEM_SLEEP_ON_BAT = "s2idle";
+          # Wake On LAN disable
+          WOL_DISABLE = "Y";
 
-        # CPU shenanigans:
+          # Mem sleep
+          MEM_SLEEP_ON_AC = "s2idle";
+          MEM_SLEEP_ON_BAT = "s2idle";
 
-        CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
-        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+          # CPU shenanigans:
 
-        # USB suspend:
+          CPU_ENERGY_PERF_POLICY_ON_AC = "balance_performance";
+          CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
 
-        USB_AUTOSUSPEND = 1;
-        USB_EXCLUDE_PHONE = 1;
-      };
+          # USB suspend:
+
+          USB_AUTOSUSPEND = 1;
+          USB_EXCLUDE_PHONE = 1;
+        }
+        // lib.optionalAttrs (cfg.chargeThresholds != null) {
+          START_CHARGE_THRESH_BAT0 = cfg.chargeThresholds.start;
+          STOP_CHARGE_THRESH_BAT0 = cfg.chargeThresholds.stop;
+        };
+    };
   };
 }
