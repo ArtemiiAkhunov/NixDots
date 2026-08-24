@@ -92,6 +92,18 @@
             inherit inputs outputs;
           };
         };
+        "voidwalker@kaldheim" = lib.homeManagerConfiguration {
+          pkgs = pkgsFor.x86_64-linux;
+          modules = [
+            ./home-manager/homes/kaldheim.nix
+            inputs.catppuccin.homeModules.catppuccin
+            inputs.spicetify-nix.homeManagerModules.default
+            inputs.nixvim.homeModules.nixvim
+          ];
+          extraSpecialArgs = {
+            inherit inputs outputs;
+          };
+        };
       };
 
       nixosConfigurations = {
@@ -130,6 +142,23 @@
           specialArgs = {
             inherit inputs;
           };
+        };
+        "kaldheim" = lib.nixosSystem {
+          system = "x86_64-linux";
+          modules = [
+            (
+              { ... }:
+              {
+                nixpkgs.overlays = builtins.attrValues overlays;
+                environment.systemPackages = [
+                  inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
+                  inputs.agenix.packages.x86_64-linux.default
+                ];
+              }
+            )
+            ./nixos/machines/kaldheim
+            inputs.agenix.nixosModules.default
+          ];
         };
         /*
           "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
