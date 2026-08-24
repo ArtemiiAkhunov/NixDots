@@ -83,7 +83,7 @@ in
         };
 
         "battery" = {
-          battery = "BAT0";
+          bat = "BAT0";
           states = {
             warning = 30;
             critical = 15;
@@ -91,7 +91,7 @@ in
           format = "{capacity}% {icon}";
           format-charging = "{capacity}% ";
           format-plugged = "{capacity}% ";
-          format-alt = "{time} {icon}";
+          format-alt = "{capacity}% {time} {icon}";
           format-icons = [
             ""
             ""
@@ -170,6 +170,21 @@ in
 
       #wireplumber, #network, #backlight, #battery {
         padding-right: ${cssPx 20};
+      }
+
+      /* The `states` above make waybar add these classes; without rules for
+         them a critical battery looked identical to a full one. */
+      #battery.charging, #battery.plugged {
+        background-color: #a6e3a1;
+      }
+
+      #battery.warning:not(.charging) {
+        background-color: #fab387;
+      }
+
+      #battery.critical:not(.charging) {
+        background-color: #f38ba8;
+        color: #f5e0dc;
       }
 
       #workspaces button {
