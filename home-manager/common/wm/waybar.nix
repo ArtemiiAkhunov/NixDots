@@ -1,7 +1,47 @@
-{ pkgs, config, ... }:
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
 let
   px = config.ui.px;
   cssPx = n: "${toString (px n)}px";
+
+  hyprctl = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl";
+
+  wsIds = lib.range 1 10;
+  # Every workspace used the same glyph in the original format-icons.
+  wsIcon = "";
+
+  # Hyprland's lua config manager (hyprland.nix: configType = "lua") evaluates
+  # IPC `dispatch` as Lua, so waybar's built-in hyprland/workspaces click --
+  # which sends the legacy `dispatch workspace N` -- is a Lua syntax error and
+  # silently does nothing. Waybar has no per-button click hook, so each
+  # workspace needs its own module to route the click to the right target.
+  # ponytail: 1s poll per module; move to `signal` if the wakeups ever matter.
+  wsStatus = pkgs.writeShellScript "waybar-ws-status" ''
+    ${hyprctl} --batch "j/activeworkspace;j/workspaces" \
+      | ${pkgs.jq}/bin/jq -sc --argjson id "$1" --arg icon "$2" \
+          '{ text: (if (.[1] | any(.id == $id)) then $icon else "" end),
+             class: (if .[0].id == $id then "active" else "occupied" end) }'
+  '';
+
+  wsModules = lib.listToAttrs (
+    map (
+      i:
+      lib.nameValuePair "custom/ws${toString i}" {
+        format = "{}";
+        return-type = "json";
+        interval = 1;
+        exec = "${wsStatus} ${toString i} '${wsIcon}'";
+        on-click = "${hyprctl} dispatch 'hl.dsp.focus({workspace=${toString i}})'";
+        tooltip = false;
+      }
+    ) wsIds
+  );
+
+  wsSelector = suffix: lib.concatMapStringsSep "," (i: "#custom-ws${toString i}${suffix}") wsIds;
 in
 {
   programs.waybar = {
@@ -19,7 +59,7 @@ in
           "custom/weather"
         ];
 
-        modules-center = [ "hyprland/workspaces" ];
+        modules-center = map (i: "custom/ws${toString i}") wsIds;
 
         modules-right = [
           "custom/microphone"
@@ -34,22 +74,6 @@ in
         "tray" = {
           icon-size = px 24;
           spacing = px 10;
-        };
-
-        "hyprland/workspaces" = {
-          format = "{icon}";
-          format-icons = {
-            "1" = "";
-            "2" = "";
-            "3" = "";
-            "4" = "";
-            "5" = "";
-            "6" = "";
-            "7" = "";
-            "8" = "";
-            "9" = "";
-            "10" = "";
-          };
         };
 
         "clock" = {
@@ -139,7 +163,8 @@ in
           format = "";
           on-click = "${pkgs.swaynotificationcenter}/bin/swaync-client -t";
         };
-      };
+      }
+      // wsModules;
     };
     style = ''
       * {
@@ -154,7 +179,7 @@ in
         background: transparent;
       }
 
-      #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
+      #clock,${wsSelector ""},#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
         color: #1e1e2e;
         background-color: #f5e0dc;
         border-radius: ${cssPx 10};
@@ -187,10 +212,6 @@ in
         color: #f5e0dc;
       }
 
-      #workspaces button {
-        padding-right: ${cssPx 20};
-      }
-
       #custom-nc {
         margin-right: ${cssPx 10};  
       }
@@ -199,14 +220,15 @@ in
         font-size: ${cssPx 16};
       }
 
-      #workspaces button {
-        color: #1e1e2e;
+      ${wsSelector ""} {
         min-width: ${cssPx 30};
-        background-color: #f5e0dc;
+        margin-right: 0;
+        padding-left: ${cssPx 5};
+        padding-right: ${cssPx 5};
       }
 
-      #workspaces button.active {
-        background: #1e1e2e;
+      ${wsSelector ".active"} {
+        background-color: #1e1e2e;
         color: #f5e0dc;
       }
     '';
