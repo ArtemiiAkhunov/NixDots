@@ -1,0 +1,22 @@
+{
+  imports = [
+    ./configuration.nix
+    ./hardware-configuration.nix
+    ../../common
+    ../../common/intel-gpu.nix
+    ../../common/workstation/automount.nix
+    ../../common/workstation/battmon.nix
+    ../../common/workstation/bluetooth.nix
+    ../../common/workstation/cups.nix
+    ../../common/workstation/displaymanager.nix
+    ../../common/workstation/env.nix
+    ../../common/workstation/firewall.nix
+    ../../common/workstation/hyprland.nix
+    ../../common/workstation/kanata.nix
+    ../../common/workstation/nautilus.nix
+    ../../common/workstation/networkmanager.nix
+    ../../common/workstation/powersave.nix
+    ../../common/workstation/sound.nix
+    ../../common/workstation/xdg.nix
+  ];
+}

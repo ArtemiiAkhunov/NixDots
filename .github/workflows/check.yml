@@ -22,6 +22,7 @@ jobs:
       - uses: DeterminateSystems/nix-installer-action@main
       - run: nix eval --raw '.#homeConfigurations."voidwalker@kamigawa".activationPackage.drvPath'
       - run: nix eval --raw '.#homeConfigurations."voidwalker@theros".activationPackage.drvPath'
+      - run: nix eval --raw '.#homeConfigurations."voidwalker@kaldheim".activationPackage.drvPath'
 
   format:
     name: Check formatting
