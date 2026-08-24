@@ -161,6 +161,7 @@
             inputs.agenix.nixosModules.default
           ];
         };
+        /*
         "eldraine" = inputs.nixos-raspberrypi.lib.nixosSystem {
           modules = [
             (
@@ -193,6 +194,7 @@
             inherit inputs;
           };
         };
+        */
       };
     };
 }
