@@ -35,15 +35,11 @@ in
       audacity
       blender
       firefox
-      telegram-desktop
       kitty
       kitty-themes
       obs-studio
       mpv
-      discord # I love vesktop but discord doesnt
       teamspeak6-client
-      betterdiscordctl
-      element-desktop
       evince
       (bottles.override {
         removeWarningPopup = true;
@@ -67,14 +63,11 @@ in
 
       nss
       vscode
-      claude-code
 
       # School Apps
 
       obsidian
-      zoom-us
       libreoffice-still
-      slack
       cura-appimage
       openconnect
 

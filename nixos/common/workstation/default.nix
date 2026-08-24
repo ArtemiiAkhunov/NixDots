@@ -3,6 +3,7 @@
     ./automount.nix
     ./battmon.nix
     ./bluetooth.nix
+    ./communication.nix
     ./cups.nix
     ./displaymanager.nix
     ./firewall.nix
