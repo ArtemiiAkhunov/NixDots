@@ -9,7 +9,6 @@
     ../../common/workstation/bluetooth.nix
     ../../common/workstation/cups.nix
     ../../common/workstation/displaymanager.nix
-    ../../common/workstation/env.nix
     ../../common/workstation/firewall.nix
     ../../common/workstation/hyprland.nix
     ../../common/workstation/kanata.nix

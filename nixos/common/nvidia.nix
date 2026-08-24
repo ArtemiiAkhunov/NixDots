@@ -24,6 +24,18 @@ in
       nvidia-offload
     ];
 
+  environment.variables = {
+    OCL_ICD_VENDORS = "/run/opengl-driver/etc/OpenCL/vendors";
+    CUDA_PATH = "${pkgs.cudatoolkit}";
+    EXTRA_LDFLAGS = "-L/lib -L${pkgs.linuxPackages.nvidia_x11}/lib";
+    EXTRA_CCFLAGS = "-I/usr/include";
+  };
+
+  nix.settings = {
+    substituters = [ "https://cache.nixos-cuda.org" ];
+    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  };
+
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
