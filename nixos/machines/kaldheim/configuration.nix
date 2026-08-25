@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  triggerActivate = (import ../../common/workstation/scripts/triggerActivate.nix { inherit pkgs; });
+in
 {
   time.timeZone = null;
 
@@ -8,12 +11,17 @@
   # /sys/class/power_supply/BAT0, so TLP's thresholds were silently no-ops.
   powersave.chargeThresholds = null;
 
-  environment.systemPackages = with pkgs; [
-    firefox
-    libreoffice
-    evince
-    mpv
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+      firefox
+      libreoffice
+      evince
+      mpv
+    ]
+    ++ [
+      triggerActivate
+    ];
 
   system.stateVersion = "25.05"; # DO NOT TOUCH
 }
