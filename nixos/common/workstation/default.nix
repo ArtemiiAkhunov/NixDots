@@ -8,7 +8,6 @@
     ./displaymanager.nix
     ./firewall.nix
     ./flatpak.nix
-    ./fprintd.nix
     ./hyprland.nix
     ./kanata.nix
     ./kdeconnect.nix
