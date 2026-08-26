@@ -95,6 +95,7 @@ in
         misc = {
           force_default_wallpaper = false,
           disable_hyprland_logo = true,
+          vrr = 2,
         },
       })
 
