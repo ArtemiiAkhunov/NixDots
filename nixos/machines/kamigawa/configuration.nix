@@ -1,5 +1,5 @@
 {
-  time.timeZone = null;
+  time.timeZone = "America/Chicago";
 
   networking.hostName = "kamigawa";
 
