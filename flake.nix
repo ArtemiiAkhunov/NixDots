@@ -23,6 +23,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    lanzaboote = {
+      url = "github:nix-community/lanzaboote/v1.1.0";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # ==================
     #   LAPTOP INPUTS
     # ==================
@@ -147,14 +152,20 @@
         "kaldheim" = lib.nixosSystem {
           system = "x86_64-linux";
           modules = [
+            inputs.lanzaboote.nixosModules.lanzaboote
             (
-              { ... }:
+              { lib, ... }:
               {
                 nixpkgs.overlays = builtins.attrValues overlays;
                 environment.systemPackages = [
                   inputs.rose-pine-hyprcursor.packages.x86_64-linux.default
                   inputs.agenix.packages.x86_64-linux.default
                 ];
+                boot.loader.systemd-boot.enable = lib.mkForce false;
+                boot.lanzaboote = {
+                  enable = true;
+                  pkiBundle = "/var/lib/sbctl";
+                };
               }
             )
             ./nixos/machines/kaldheim
