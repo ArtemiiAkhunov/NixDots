@@ -19,6 +19,7 @@
     wget
     git
     btop
+    sbctl
     unzip
     zip
     killall
