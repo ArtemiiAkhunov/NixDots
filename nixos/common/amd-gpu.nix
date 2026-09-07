@@ -1,3 +1,4 @@
+{ pkgs, ... }:
 {
   hardware.amdgpu = {
     initrd.enable = true; # amdgpu in the initrd, so KMS is up before the display manager
@@ -10,4 +11,7 @@
     enable = true;
     enable32Bit = true;
   };
+  environment.systemPackages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = [ "multi-user.target" ];
+
 }
