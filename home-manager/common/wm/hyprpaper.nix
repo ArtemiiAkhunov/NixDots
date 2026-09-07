@@ -6,7 +6,7 @@
 
       wallpaper = [
         {
-          monitor = "eDP-1";
+          monitor = "";
           path = "~/.wallpaper/cat.png";
           fit_mode = "cover";
         }
