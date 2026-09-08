@@ -16,6 +16,9 @@
 
   modifications = final: prev: {
 
+    waybar = prev.waybar.overrideAttrs (old: {
+      patches = (old.patches or [ ]) ++ [ ./waybar-hyprland-lua-dispatch.patch ];
+    });
     #nginxStable = prev.nginxStable.override { openssl = prev.pkgs.libressl; };
 
   };
