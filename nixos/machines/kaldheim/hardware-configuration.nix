@@ -21,6 +21,7 @@
     "usb_storage"
     "sd_mod"
   ];
+  boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
