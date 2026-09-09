@@ -7,7 +7,7 @@
 
   environment.systemPackages = with pkgs; [
     cockatrice
-    protonup-ng
+    protonup-qt
     mangohud
   ];
 
