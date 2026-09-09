@@ -44,7 +44,7 @@
   wayland.windowManager.hyprland.extraConfig = ''
     hl.monitor({
       output = "desc:Acer Technologies XV272U W2 F54901D808123",
-      mode = "2560x1440@144.00",
+      mode = "2560x1440@240.00",
       position = "auto",
       scale = 1.0,
     })
