@@ -1,7 +1,22 @@
+{ lib, ... }:
 {
   programs.ssh =
     let
       rsa_key_path = "/home/voidwalker/.ssh/id_ed25519";
+
+      uiuc_hosts = lib.listToAttrs (
+        map (
+          n:
+          let
+            nn = lib.fixedWidthNumber 2 n;
+          in
+          lib.nameValuePair "fa26-cs425-26${nn} uiuc${nn}" {
+            HostName = "fa26-cs425-26${nn}.cs.illinois.edu";
+            User = "akhunov2";
+            IdentityFile = "/home/voidwalker/.ssh/uiuc";
+          }
+        ) (lib.range 1 10)
+      );
     in
     {
       enable = true;
@@ -37,6 +52,7 @@
           User = "ubuntu";
           IdentityFile = "/home/voidwalker/.ssh/oracle";
         };
-      };
+      }
+      // uiuc_hosts;
     };
 }
