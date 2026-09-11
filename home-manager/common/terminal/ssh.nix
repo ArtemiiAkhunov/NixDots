@@ -12,7 +12,7 @@
           in
           lib.nameValuePair "fa26-cs425-26${nn} uiuc${nn}" {
             HostName = "fa26-cs425-26${nn}.cs.illinois.edu";
-            User = "akhunov2";
+            User = "root";
             IdentityFile = "/home/voidwalker/.ssh/uiuc";
           }
         ) (lib.range 1 10)
