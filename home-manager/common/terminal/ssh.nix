@@ -10,7 +10,7 @@
           let
             nn = lib.fixedWidthNumber 2 n;
           in
-          lib.nameValuePair "fa26-cs425-26${nn} uiuc${nn}" {
+          lib.nameValuePair "fa26-cs425-26${nn}.cs.illinois.edu uiuc${nn}" {
             HostName = "fa26-cs425-26${nn}.cs.illinois.edu";
             User = "root";
             IdentityFile = "/home/voidwalker/.ssh/uiuc";
