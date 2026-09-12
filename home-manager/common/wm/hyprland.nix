@@ -133,8 +133,8 @@ in
       -- Utilities
       hl.bind("XF86AudioMute", hl.dsp.exec_cmd("${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SINK@ toggle"))
       hl.bind("XF86AudioMicMute", hl.dsp.exec_cmd("${pkgs.wireplumber}/bin/wpctl set-mute @DEFAULT_SOURCE@ toggle"))
-      hl.bind(mainMod .. " + SHIFT + Print", hl.dsp.exec_cmd("${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.swappy}/bin/swappy -f -"))
-      hl.bind(mainMod .. " + Print", hl.dsp.exec_cmd("${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -"))
+      hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("${pkgs.grim}/bin/grim -g \"$(${pkgs.slurp}/bin/slurp)\" - | ${pkgs.swappy}/bin/swappy -f -"))
+      hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("${pkgs.grim}/bin/grim - | ${pkgs.swappy}/bin/swappy -f -"))
       hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("${pkgs.hyprlock}/bin/hyprlock"))
       hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("${pkgs.swaynotificationcenter}/bin/swaync-client -t"))
       -- Moving Around
