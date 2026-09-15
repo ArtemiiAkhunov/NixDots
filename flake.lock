@@ -328,13 +328,15 @@
       "locked": {
         "lastModified": 1788541387,
         "narHash": "sha256-StsVqgipV1tXCISWNs1sJKic8b9uA/tWuRRh3fBJRf0=",
+        "ref": "refs/heads/main",
         "rev": "ef873d07fea9ef88b0b14b70e569563336dddb4c",
-        "type": "tarball",
-        "url": "https://git.lix.systems/api/v1/repos/lix-project/hydra/archive/ef873d07fea9ef88b0b14b70e569563336dddb4c.tar.gz?rev=ef873d07fea9ef88b0b14b70e569563336dddb4c"
+        "revCount": 4402,
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/hydra"
       },
       "original": {
-        "type": "tarball",
-        "url": "https://git.lix.systems/lix-project/hydra/archive/main.tar.gz"
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/hydra"
       }
     },
     "nix-minecraft": {

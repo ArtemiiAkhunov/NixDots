@@ -46,7 +46,7 @@
     # ==================
 
     lix-hydra = {
-      url = "https://git.lix.systems/lix-project/hydra/archive/main.tar.gz";
+      url = "git+https://git.lix.systems/lix-project/hydra";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
