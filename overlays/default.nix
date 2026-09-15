@@ -16,6 +16,9 @@
 
   modifications = final: prev: {
 
+    # nixpkgs' hydra is built against CppNix; the Lix fork speaks to the Lix daemon.
+    hydra = final.inputs.lix-hydra.hydra;
+
     waybar = prev.waybar.overrideAttrs (old: {
       patches = (old.patches or [ ]) ++ [ ./waybar-hyprland-lua-dispatch.patch ];
     });
