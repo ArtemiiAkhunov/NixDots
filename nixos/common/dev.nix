@@ -9,4 +9,10 @@
     rustup
     cargo
   ];
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableZshIntegration = true;
+    settings."warn_timeout" = 0;
+  };
 }
