@@ -10,8 +10,8 @@ let
     Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.9.tar.gz";
-    sha256 = "0cilfmlhzndmv8qza1mb739m9p7vhv0jlzb4dhgni7qv66450cyn";
+    url = "https://github.com/LordOfTheLags/modpack";
+    sha256 = ""; # TODO: Fix the link and the Shawww
   };
 in
 {
@@ -66,7 +66,9 @@ in
         whitelist = userList;
 
         symlinks = {
-          "mods" = "${modpack}";
+          "mods" = "${modpack}/mods";
+          "config" = "${modpack}/config";
+          "world/datapacks" = "${modpack}/datapacks";
         };
 
         jvmOpts = "-Xms8G -Xmx8G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:G1HeapRegionSize=16M";
