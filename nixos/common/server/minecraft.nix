@@ -10,11 +10,13 @@ let
     Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
   modpack = builtins.fetchTarball {
-    url = "https://github.com/LordOfTheLags/mods/archive/refs/tags/v2.9.tar.gz";
-    sha256 = "0cilfmlhzndmv8qza1mb739m9p7vhv0jlzb4dhgni7qv66450cyn";
+    url = "https://github.com/LordOfTheLags/modpack/archive/refs/tags/v1.0.tar.gz";
+    sha256 = "0rh9b0ajp0bd0j4pvlds9psl9wsxb8zaslasra3x5k48pr6gjgpi";
   };
 in
 {
+  networking.firewall.allowedUDPPorts = [ 24454 ]; # Simple Voice Chat
+
   services.minecraft-servers = {
     enable = true;
     eula = true;
@@ -25,7 +27,7 @@ in
 
       dumDumServer = {
         enable = false;
-        package = pkgs.neoforgeServers.neoforge-1_21_1;
+        package = pkgs.neoforgeServers.neoforge-1_21_1.override { jre_headless = pkgs.jdk21_headless; };
 
         serverProperties = {
           gamemode = "survival";
@@ -42,7 +44,7 @@ in
 
       moddedDumDumServer = {
         enable = true;
-        package = pkgs.neoforgeServers.neoforge-1_21_1;
+        package = pkgs.neoforgeServers.neoforge-1_21_1.override { jre_headless = pkgs.jdk21_headless; };
 
         operators = {
           MadamOfTheLags = {
@@ -55,7 +57,7 @@ in
         serverProperties = {
           gamemode = "survival";
           motd = "Yes, it's a minecraft server!";
-          dificulty = "normal";
+          difficulty = "normal";
           simulation-distance = 15;
           max-players = builtins.length (builtins.attrNames userList);
           white-list = true;
@@ -66,7 +68,12 @@ in
         whitelist = userList;
 
         symlinks = {
-          "mods" = "${modpack}";
+          "mods" = "${modpack}/mods";
+          "world/datapacks" = "${modpack}/datapacks";
+        };
+
+        files = {
+          "config" = "${modpack}/config";
         };
 
         jvmOpts = "-Xms8G -Xmx8G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:G1HeapRegionSize=16M";
