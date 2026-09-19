@@ -9,6 +9,16 @@ let
     Reiiine = "e232bca4-2dd5-315d-b281-1f24f9277d8d";
     Littledreamystar = "d6f1120b-404f-3482-b1ed-d39c9592a60d";
   };
+  # Real Mojang account UUIDs (required for online-mode = true). ProfTrench
+  # omitted: no current Mojang account matches that username.
+  onlineUserList = {
+    MadamOfTheLags = "f9f91bbf-5755-4de6-8828-0c54ab2bbb53";
+    MewodyChan = "fea8cb5f-cfdc-4949-a7f3-3b543e9fa97f";
+    RyugaMaster = "4d934410-bc63-4d3c-b0e7-b756ff37021d";
+    Liushu = "da8f5788-b464-465d-a45e-2543b5eb36e1";
+    Reiiine = "ddad4ba1-92d9-4578-a994-1623e1cb3262";
+    Littledreamystar = "1d3388ed-ea23-439a-96ef-33d49fe1c31f";
+  };
   modpack = builtins.fetchTarball {
     url = "https://github.com/LordOfTheLags/modpack/archive/refs/tags/v1.0.tar.gz";
     sha256 = "0rh9b0ajp0bd0j4pvlds9psl9wsxb8zaslasra3x5k48pr6gjgpi";
@@ -48,7 +58,7 @@ in
 
         operators = {
           MadamOfTheLags = {
-            uuid = userList.MadamOfTheLags;
+            uuid = onlineUserList.MadamOfTheLags;
             level = 3;
             bypassesPlayerLimit = true;
           };
@@ -59,13 +69,13 @@ in
           motd = "Yes, it's a minecraft server!";
           difficulty = "normal";
           simulation-distance = 15;
-          max-players = builtins.length (builtins.attrNames userList);
+          max-players = builtins.length (builtins.attrNames onlineUserList);
           white-list = true;
-          online-mode = false;
+          online-mode = true;
           allow-cheats = true;
         };
 
-        whitelist = userList;
+        whitelist = onlineUserList;
 
         symlinks = {
           "mods" = "${modpack}/mods";
