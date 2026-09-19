@@ -73,6 +73,10 @@ in
           white-list = true;
           online-mode = true;
           allow-cheats = true;
+          # Vanilla default (16) blocks all non-op players from breaking/placing
+          # near world spawn; only MadamOfTheLags is opped, so everyone else was
+          # locked out there. Disabled for a private friends server.
+          spawn-protection = 0;
         };
 
         whitelist = onlineUserList;
