@@ -12,7 +12,7 @@
     vscode
     # School Apps
     obsidian
-    libreoffice-still
+    libreoffice
     cura-appimage
     openconnect
   ];
