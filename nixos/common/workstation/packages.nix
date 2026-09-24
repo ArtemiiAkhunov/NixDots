@@ -49,8 +49,6 @@ in
       glaxnimate
       makemkv
       crosspipe
-      nautilus
-      adwaita-icon-theme
       sushi
       imv
       thunderbird
@@ -58,18 +56,6 @@ in
       darktable
       tigervnc
       postman
-
-      # Coding utilities
-
-      nss
-      vscode
-
-      # School Apps
-
-      obsidian
-      libreoffice-still
-      cura-appimage
-      openconnect
 
       # Audio Effects
       carla

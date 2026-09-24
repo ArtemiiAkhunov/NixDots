@@ -1,7 +1,7 @@
 {
   imports = [
     ./automount.nix
-    ./battmon.nix
+    #./battmon.nix
     ./bluetooth.nix
     ./communication.nix
     ./cups.nix
@@ -15,8 +15,9 @@
     ./networkmanager.nix
     ./obs.nix
     ./packages.nix
-    ./powersave.nix
+    #./powersave.nix
     #./razer.nix
+    ./school.nix
     ./sound.nix
     ./steam.nix
     ./virtualization.nix
