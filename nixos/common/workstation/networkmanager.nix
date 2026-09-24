@@ -7,4 +7,9 @@
       pkgs.networkmanager-openconnect
     ];
   };
+
+  environment.systemPackages = with pkgs; [
+    networkmanager-l2tp
+    networkmanagerapplet
+  ];
 }

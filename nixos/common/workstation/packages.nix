@@ -1,13 +1,10 @@
 {
-  inputs,
   pkgs,
-  lib,
   ...
 }:
 let
   microphoneStatus = (import ./scripts/microphoneStatus.nix { inherit pkgs; });
   monitorConnect = (import ./scripts/monitorConnect.nix { inherit pkgs; });
-  triggerActivate = (import ./scripts/triggerActivate.nix { inherit pkgs; });
   retroarchWithCores = (
     pkgs.retroarch.withCores (
       cores: with cores; [
@@ -21,7 +18,6 @@ let
     microphoneStatus
     monitorConnect
     retroarchWithCores
-    triggerActivate
   ];
 in
 {
@@ -34,13 +30,7 @@ in
 
       audacity
       blender
-      firefox
-      kitty
-      kitty-themes
-      obs-studio
-      mpv
       teamspeak6-client
-      evince
       (bottles.override {
         removeWarningPopup = true;
       })
@@ -49,27 +39,11 @@ in
       glaxnimate
       makemkv
       crosspipe
-      nautilus
-      adwaita-icon-theme
       sushi
-      imv
-      thunderbird
       yubioath-flutter
       darktable
       tigervnc
       postman
-
-      # Coding utilities
-
-      nss
-      vscode
-
-      # School Apps
-
-      obsidian
-      libreoffice-still
-      cura-appimage
-      openconnect
 
       # Audio Effects
       carla
@@ -90,41 +64,11 @@ in
       # CLI stuff
 
       cava
-      bluez
-      bluez-tools
       openseeface
       sherlock
       gvfs
       yt-dlp
       qemu
-
-      # Window Manager Requirements
-
-      brightnessctl
-      libnotify
-      lxsession
-      xdg-user-dirs
-      xwayland
-      waybar
-      wttrbar
-      swaynotificationcenter
-      wl-clipboard
-      hyprlock
-      wofi
-      pipewire
-      pavucontrol
-      copyq
-      grim
-      grimblast
-      slurp
-      eww
-      swappy
-      papirus-nord
-
-      # Networking
-
-      networkmanager-l2tp
-      networkmanagerapplet
 
       # GPU utilities
 
