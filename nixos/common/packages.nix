@@ -30,6 +30,7 @@
     speedtest-cli
     typst
     borgbackup
+    bat
 
     # Networking
     cacert
