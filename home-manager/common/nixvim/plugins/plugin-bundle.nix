@@ -15,5 +15,6 @@
     ./lsp-format.nix
     ./floaterm.nix
     ./web-devicons.nix
+    ./render-markdown.nix
   ];
 }
