@@ -90,38 +90,6 @@
           proxyWebsockets = true;
         };
       };
-      "pihole.lordofthelags.net" = {
-        enableACME = true;
-        forceSSL = true;
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:2345";
-          proxyWebsockets = true;
-        };
-      };
-      "start.lordofthelags.net" = {
-        enableACME = true;
-        forceSSL = true;
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:5667";
-          proxyWebsockets = true;
-        };
-      };
-      "jellyseer.lordofthelags.net" = {
-        enableACME = true;
-        forceSSL = true;
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:5055";
-          proxyWebsockets = true;
-        };
-      };
-      "surprise.lordofthelags.net" = {
-        enableACME = true;
-        forceSSL = true;
-        locations."/" = {
-          proxyPass = "http://127.0.0.1:8081";
-          proxyWebsockets = true;
-        };
-      };
     };
   };
 }
