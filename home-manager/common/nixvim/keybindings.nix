@@ -46,6 +46,10 @@
               "<leader>gs" = ":Gitsigns stage_hunk<CR>";
               "<leader>gr" = ":Gitsigns reset_hunk<CR>";
               "<leader>gb" = ":Gitsigns blame_line<CR>";
+
+              # Markdown preview
+
+              "<leader>mp" = ":RenderMarkdown toggle<CR>";
             };
         visual = lib.mapAttrsToList (key: action: {
           mode = "v";
