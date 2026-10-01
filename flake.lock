@@ -249,11 +249,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1790712822,
-        "narHash": "sha256-KKrQUanqRvyHdPrgiaqXZNT6Mg3KeT9cbQ07Xt7TCMc=",
+        "lastModified": 1790882006,
+        "narHash": "sha256-JEl8Cors9h0GHnQl6Qy8ehLij6vDTVq0liDYb9HXsc0=",
         "owner": "lordofthelags",
         "repo": "website",
-        "rev": "5fce652681190e45ecf8d9d9b244bdef6ca7288f",
+        "rev": "0e97f602263e5f7fdbcf6e5621efde5a29ba90ec",
         "type": "github"
       },
       "original": {
