@@ -118,6 +118,7 @@ in
       hl.window_rule({ match = { class = "floating" }, float = true })
       hl.window_rule({ match = { float = true }, float = true })
       hl.window_rule({ match = { workspace = "special:magic" }, opacity = 1 })
+      hl.window_rule({ match = { workspace = "special:gosling" }, fullscreen = true })
       -- Wofi Visual
       hl.window_rule({ match = { class = "wofi" }, no_anim = true })
 
@@ -154,6 +155,7 @@ in
       end
       -- Special Workspaces
       hl.bind(mainMod .. " + M", hl.dsp.workspace.toggle_special("magic"))
+      hl.bind(mainMod .. " + SHIFT + G", hl.dsp.workspace.toggle_special("gosling"))
       hl.bind(mainMod .. " + SHIFT + S", hl.dsp.workspace.toggle_special("schedule"))
       -- Mouse Moving
       hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -184,6 +186,7 @@ in
       hl.workspace_rule({ workspace = "special:magic", gaps_in = ${px 40}, gaps_out = ${px 60} })
       hl.workspace_rule({ workspace = "special:schedule", on_created_empty = openSchedule })
       hl.workspace_rule({ workspace = "special:magic", on_created_empty = "spotify" })
+      hl.workspace_rule({ workspace = "special:gosling", on_created_empty = "imv /home/voidwalker/.funny/gosling.jpg" })
     '';
   };
 }
