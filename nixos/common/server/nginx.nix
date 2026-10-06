@@ -89,7 +89,7 @@
           proxyPass = "http://127.0.0.1:4200";
           proxyWebsockets = true;
         };
-        locations."~ ^/(nix-cache-info$|[a-z0-9]{32}\\.narinfo$|nar/)".proxyPass = "http://127.0.0.1:5000";
+        locations."~ ^/(nix-cache-info$|[a-z0-9]+\\.narinfo$|nar/)".proxyPass = "http://127.0.0.1:5000";
       };
     };
   };
