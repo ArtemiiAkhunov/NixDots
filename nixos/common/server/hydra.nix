@@ -6,7 +6,6 @@
     port = 4200;
     notificationSender = "hydra@localhost";
     useSubstitutes = true;
-    buildMachinesFiles = [ ];
     minimumDiskFree = 5;
     extraConfig = ''
       binary_cache_secret_key_file=${config.age.secrets.hydra_secret.path}
@@ -23,29 +22,12 @@
   # aarch64-linux in nix.settings.extra-platforms.
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
 
-  nix.buildMachines = [
-    {
-      hostName = "localhost";
-      system = "x86_64-linux";
-      supportedFeatures = [
-        "kvm"
-        "nixos-test"
-        "big-parallel"
-        "benchmark"
-      ];
-      maxJobs = 2;
-    }
-    {
-      # Emulated, so no kvm/nixos-test.
-      hostName = "localhost";
-      system = "aarch64-linux";
-      supportedFeatures = [
-        "big-parallel"
-        "benchmark"
-      ];
-      maxJobs = 1;
-    }
-  ];
+  services.hydra-builder = {
+    enable = true;
+    queueRunnerAddr = "http://[::1]:${toString config.services.hydra.queueRunner.grpc.port}";
+    settings.maxJobs = 2;
+  };
+  systemd.services.hydra-builder.after = [ "hydra-queue-runner.service" ];
 
   nix.settings.max-jobs = 2;
 }
