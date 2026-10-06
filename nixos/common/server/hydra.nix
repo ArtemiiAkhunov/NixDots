@@ -12,6 +12,13 @@
     '';
   };
 
+  # Serves the binary cache instead of hydra-server; nginx routes cache paths here.
+  services.harmonia.cache = {
+    enable = true;
+    signKeyPaths = [ config.age.secrets.hydra_secret.path ];
+    settings.bind = "127.0.0.1:5000";
+  };
+
   nix.settings.allowed-uris = [
     "github:"
     "git+https://github.com/"
