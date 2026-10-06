@@ -45,11 +45,6 @@
     #   SERVER INPUTS
     # ==================
 
-    lix-hydra = {
-      url = "git+https://git.lix.systems/lix-project/hydra";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
