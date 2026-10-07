@@ -244,6 +244,40 @@
         "type": "github"
       }
     },
+    "lix-hydra": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1779792944,
+        "narHash": "sha256-3ARtIzdd0sTZN9rsbVt7qXODJgVvbk+BolqblPkXExs=",
+        "ref": "lix-2.95",
+        "rev": "d9c008c9e3bb22733377b9cdac4e489819fde9ef",
+        "revCount": 4364,
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/hydra"
+      },
+      "original": {
+        "ref": "lix-2.95",
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/hydra"
+      }
+    },
+    "lix-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1778243067,
+        "narHash": "sha256-rEhhsqccghnnJHjsqCCBzdD7PyF/ibDe8zadnajBmjI=",
+        "ref": "refs/tags/2.95.3",
+        "rev": "753944a1720496c0e0c49c3142adfb9634da269d",
+        "revCount": 19084,
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/lix"
+      },
+      "original": {
+        "ref": "refs/tags/2.95.3",
+        "type": "git",
+        "url": "https://git.lix.systems/lix-project/lix"
+      }
+    },
     "nix-minecraft": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -454,6 +488,8 @@
         "home-manager": "home-manager",
         "laggy-world": "laggy-world",
         "lanzaboote": "lanzaboote",
+        "lix-hydra": "lix-hydra",
+        "lix-src": "lix-src",
         "nix-minecraft": "nix-minecraft",
         "nixos-raspberrypi": "nixos-raspberrypi",
         "nixpkgs": "nixpkgs_5",
