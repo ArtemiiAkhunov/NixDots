@@ -1,7 +1,44 @@
-{ config, pkgs, ... }:
 {
-  services.hydra = {
+  config,
+  inputs,
+  pkgs,
+  ...
+}:
+let
+  inherit (pkgs.lixPackageSets.stable) lix nix-eval-jobs;
+  # Lix's Hydra fork, built against the system Lix: upstream Hydra's queue runner
+  # rejects Lix's daemon protocol.
+  lixHydra = pkgs.callPackage "${inputs.lix-hydra}/package.nix" {
+    inherit (pkgs.lib) fileset;
+    inherit nix-eval-jobs;
+    rawSrc = inputs.lix-hydra;
+    stdenv = pkgs.clangStdenv;
+    # Only feeds lix-hydra's perl-packages.nix. OIDC-Lite 0.10's tests reject a valid
+    # RS256 token under current OpenSSL (fails closed), so skip them.
+    pkgs = pkgs // {
+      perlPackages = pkgs.perlPackages // {
+        buildPerlModule =
+          args:
+          pkgs.perlPackages.buildPerlModule (
+            args // pkgs.lib.optionalAttrs (args.pname == "OIDC-Lite") { doCheck = false; }
+          );
+      };
+    };
+    # nixpkgs' Lix lacks perl bindings, so build them from the matching Lix source.
+    nix = lix // {
+      perl-bindings = pkgs.callPackage "${inputs.lix-src}/perl" {
+        inherit (pkgs.lib) fileset;
+        nix = lix;
+      };
+    };
+  };
+in
+{
+  imports = [ "${inputs.lix-hydra}/nixos-modules/hydra.nix" ];
+
+  services.hydra-dev = {
     enable = true;
+    package = lixHydra;
     hydraURL = "https://hydra.lordofthelags.net";
     port = 4200;
     notificationSender = "hydra@localhost";
@@ -28,13 +65,6 @@
   # Lets localhost execute aarch64 binaries (for eldraine), and registers
   # aarch64-linux in nix.settings.extra-platforms.
   boot.binfmt.emulatedSystems = [ "aarch64-linux" ];
-
-  services.hydra-builder = {
-    enable = true;
-    queueRunnerAddr = "http://[::1]:${toString config.services.hydra.queueRunner.grpc.port}";
-    settings.maxJobs = 2;
-  };
-  systemd.services.hydra-builder.after = [ "hydra-queue-runner.service" ];
 
   nix.settings.max-jobs = 2;
 }

@@ -45,6 +45,18 @@
     #   SERVER INPUTS
     # ==================
 
+    # Source only: built against our own Lix in nixos/common/server/hydra.nix.
+    lix-hydra = {
+      url = "git+https://git.lix.systems/lix-project/hydra?ref=lix-2.95";
+      flake = false;
+    };
+    # Only for Lix's perl bindings (lix-hydra needs them); keep the tag in sync with
+    # nixpkgs' lixPackageSets.stable.lix.
+    lix-src = {
+      url = "git+https://git.lix.systems/lix-project/lix?ref=refs/tags/2.95.3";
+      flake = false;
+    };
+
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
 
     nixos-raspberrypi.url = "github:nvmd/nixos-raspberrypi/main";
