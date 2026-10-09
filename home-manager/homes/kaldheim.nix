@@ -22,12 +22,12 @@
 
   # Specific Configuration for a machine
 
-  # 1600x900 eDP panel driven at scale 1 (~107 DPI). The shared modules are
-  # authored for a much larger screen, so pull the whole interface in.
+  # 2880x1920 panel at Hyprland scale 2 is 1440x960 logical. The shared
+  # modules are authored for a much larger screen, so pull the interface in.
   ui.scale = 0.7;
 
-  # Gentler than ui.scale: this scales page content as well as chrome.
-  ui.browserScale = 0.9;
+  # Firefox follows the display's 2x scale on its own.
+  ui.browserScale = null;
 
   programs.zsh.shellAliases = {
     "rebuild" = "nh os switch ~/Dotfiles --hostname kaldheim";
@@ -35,4 +35,13 @@
     "ff" = "fastfetch";
     "ssh" = "kitten ssh";
   };
+
+  wayland.windowManager.hyprland.extraConfig = ''
+    hl.monitor({
+      output = "eDP-1",
+      mode = "2880x1920@120.00",
+      position = "auto",
+      scale = 2.0,
+    })
+  '';
 }
