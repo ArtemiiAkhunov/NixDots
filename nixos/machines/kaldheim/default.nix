@@ -3,7 +3,7 @@
     ./configuration.nix
     ./hardware-configuration.nix
     ../../common
-    ../../common/intel-gpu.nix
+    ../../common/amd-gpu.nix
     ../../common/geoclue.nix
     ../../common/workstation/automount.nix
     ../../common/workstation/battmon.nix
@@ -18,7 +18,6 @@
     ../../common/workstation/school.nix
     ../../common/workstation/steam.nix
     ../../common/workstation/networkmanager.nix
-    ../../common/workstation/powersave.nix
     ../../common/workstation/sound.nix
     ../../common/workstation/xdg.nix
   ];
