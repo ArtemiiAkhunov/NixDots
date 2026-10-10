@@ -56,6 +56,14 @@ in
     settings.bind = "127.0.0.1:5000";
   };
 
+  # The lix-hydra module sets these via extra-trusted-users, which the Lix daemon
+  # ignores; untrusted, the queue runner's builds die with "unexpected end-of-file".
+  nix.settings.trusted-users = [
+    "hydra"
+    "hydra-queue-runner"
+    "hydra-www"
+  ];
+
   nix.settings.allowed-uris = [
     "github:"
     "git+https://github.com/"
