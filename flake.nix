@@ -41,6 +41,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # ==================
     #   SERVER INPUTS
     # ==================
@@ -187,6 +192,7 @@
               }
             )
             ./nixos/machines/kaldheim
+            inputs.nixos-hardware.nixosModules.framework-amd-ai-300-series
             inputs.agenix.nixosModules.default
           ];
         };
