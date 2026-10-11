@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 let
   px = config.ui.px;
+  lpx = n: px (n * config.ui.lockScale);
   pos = x: y: "${toString (px x)}, ${toString (px y)}";
 in
 {
@@ -22,8 +23,8 @@ in
       };
 
       input-field = {
-        size = pos 250 60;
-        outline_thickness = px 2;
+        size = "${toString (lpx 250)}, ${toString (lpx 60)}";
+        outline_thickness = lpx 2;
         dots_size = 0.2; # Scale of input-field height, 0.2 - 0.8
         dots_spacing = 0.2; # Scale of dots' absolute size, 0.0 - 1.0
         dots_center = true;
@@ -34,7 +35,7 @@ in
         font_family = "Inconsolata";
         placeholder_text = ''<i><span foreground="##cdd6f4">Input Password...</span></i>'';
         hide_input = false;
-        position = pos 0 (-120);
+        position = "0, ${toString (lpx (-120))}";
         halign = "center";
         valign = "center";
       };
@@ -42,8 +43,8 @@ in
       image = {
         path = "$HOME/.local/share/fastfetch/logos/nixos.png";
         position = pos 0 175;
-        size = px 170;
-        rounding = px 60;
+        size = lpx 170;
+        rounding = lpx 60;
         "border_color" = "rgb(180, 190, 254)";
         halign = "center";
         valign = "center";
@@ -53,7 +54,7 @@ in
         {
           text = ''cmd[update:1000] echo "$(date +"%-I:%M%p")"'';
           color = "rgb(180, 190, 254)";
-          font_size = px 120;
+          font_size = lpx 120;
           font_family = "Inconsolata";
           position = pos 0 (-300);
           halign = "center";
@@ -62,7 +63,7 @@ in
         {
           text = "Hi there $USER!";
           color = "rgb(180, 190, 254)";
-          font_size = px 25;
+          font_size = lpx 25;
           font_family = "Inconsolata";
           position = pos 0 (-40);
           halign = "center";

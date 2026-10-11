@@ -37,6 +37,17 @@ in
       '';
     };
 
+    lockScale = lib.mkOption {
+      type = lib.types.float;
+      default = 1.0;
+      example = 1.5;
+      description = ''
+        Extra factor on top of {option}`ui.scale` for the hyprlock clock,
+        greeting, logo and password field, for hosts where the lock screen
+        reads too small.
+      '';
+    };
+
     firefoxPackage = lib.mkOption {
       type = lib.types.package;
       internal = true;
