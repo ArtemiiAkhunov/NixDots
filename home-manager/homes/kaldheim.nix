@@ -26,6 +26,9 @@
   # modules are authored for a much larger screen, so pull the interface in.
   ui.scale = 0.7;
 
+  # Lock screen text and logo end up too small at 0.7.
+  ui.lockScale = 1.5;
+
   # Firefox follows the display's 2x scale on its own.
   ui.browserScale = null;
 
