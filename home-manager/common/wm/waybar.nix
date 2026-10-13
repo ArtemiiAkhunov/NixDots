@@ -198,8 +198,6 @@ in
 
       #custom-nc {
         margin-right: 0;
-        /* The FontAwesome bell's ink overhangs its advance on the right, so
-           even padding leaves it ~2px off-centre; shift it back. */
         padding-left: ${cssPx 8};
         padding-right: ${cssPx 12};
       }
@@ -208,8 +206,6 @@ in
         font-size: ${cssPx 16};
       }
 
-      /* hyprland/window tags the bar `.empty` when the workspace has no windows;
-         otherwise the empty pill stays visible. */
       window#waybar.empty #window {
         background-color: transparent;
         padding: 0;
