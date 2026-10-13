@@ -17,6 +17,7 @@ in
           "custom/clock"
           "tray"
           "custom/weather"
+          "hyprland/window"
         ];
 
         modules-center = [ "hyprland/workspaces" ];
@@ -34,6 +35,11 @@ in
         "tray" = {
           icon-size = px 24;
           spacing = px 10;
+        };
+
+        "hyprland/window" = {
+          format = "{class}";
+          max-length = 20;
         };
 
         "hyprland/workspaces" = {
@@ -153,7 +159,7 @@ in
         background: transparent;
       }
 
-      #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock {
+      #clock,#workspaces,#tray,#network,#wireplumber,#battery,#backlight,#language,#custom-weather,#custom-microphone,#custom-nc,#custom-clock,#window {
         color: #1e1e2e;
         background-color: #f5e0dc;
         border-radius: ${cssPx 10};
@@ -191,11 +197,19 @@ in
       }
 
       #custom-nc {
-        margin-right: ${cssPx 10};  
+        margin-right: 0;
+        padding-left: ${cssPx 8};
+        padding-right: ${cssPx 12};
       }
 
       #tray {
         font-size: ${cssPx 16};
+      }
+
+      window#waybar.empty #window {
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
       }
 
       #workspaces button {
