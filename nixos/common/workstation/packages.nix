@@ -59,6 +59,7 @@ in
       # Gaming
 
       heroic
+      pwsp
       prismlauncher
 
       # CLI stuff
