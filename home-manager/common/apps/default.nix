@@ -7,5 +7,6 @@
     ./mpris.nix
     ./lf.nix
     ./spicetify.nix
+    ./pwsp.nix
   ];
 }
