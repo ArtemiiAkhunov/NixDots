@@ -15,8 +15,9 @@
   nix-update-script,
 }:
 let
-  # eframe dlopens these at runtime
+  # eframe dlopens these at runtime; rfd dlopens libdbus for the file-chooser portal
   guiLibs = [
+    dbus
     libGL
     libxkbcommon
     wayland
