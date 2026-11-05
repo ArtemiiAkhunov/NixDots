@@ -89,6 +89,7 @@ in
         };
 
         "battery" = {
+          bat = "BAT1";
           states = {
             warning = 30;
             critical = 15;
