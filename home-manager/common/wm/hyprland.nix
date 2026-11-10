@@ -184,9 +184,16 @@ in
       end)
 
       hl.workspace_rule({ workspace = "special:magic", gaps_in = ${px 40}, gaps_out = ${px 60} })
-      hl.workspace_rule({ workspace = "special:schedule", on_created_empty = openSchedule })
-      hl.workspace_rule({ workspace = "special:magic", on_created_empty = "spotify" })
-      hl.workspace_rule({ workspace = "special:gosling", on_created_empty = "imv /home/voidwalker/.funny/gosling.jpg" })
+
+      local onCreatedEmpty = {
+        ["special:schedule"] = openSchedule,
+        ["special:magic"] = "spotify",
+        ["special:gosling"] = "imv /home/voidwalker/.funny/gosling.jpg",
+      }
+      hl.on("workspace.created", function(ws)
+        local cmd = onCreatedEmpty[ws.name]
+        if cmd and ws.is_empty then hl.exec_cmd(cmd) end
+      end)
     '';
   };
 }
