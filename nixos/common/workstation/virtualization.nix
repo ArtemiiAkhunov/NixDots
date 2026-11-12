@@ -1,5 +1,24 @@
 { pkgs, ... }:
+let
+  retroarchWithCores = (
+    pkgs.retroarch.withCores (
+      cores: with cores; [
+        mgba
+        melonds
+        ppsspp
+      ]
+    )
+  );
+in 
 {
+  environment.systemPackages = with pkgs; [
+    (bottles.override {
+      removeWarningPopup = true;
+    })
+  ] ++ [
+    retroarchWithCores
+  ];
+
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;

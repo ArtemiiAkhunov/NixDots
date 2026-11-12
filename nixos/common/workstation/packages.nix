@@ -5,19 +5,9 @@
 let
   microphoneStatus = (import ./scripts/microphoneStatus.nix { inherit pkgs; });
   monitorConnect = (import ./scripts/monitorConnect.nix { inherit pkgs; });
-  retroarchWithCores = (
-    pkgs.retroarch.withCores (
-      cores: with cores; [
-        mgba
-        melonds
-        ppsspp
-      ]
-    )
-  );
   customPackages = [
     microphoneStatus
     monitorConnect
-    retroarchWithCores
   ];
 in
 {
@@ -31,9 +21,6 @@ in
       audacity
       blender
       teamspeak6-client
-      (bottles.override {
-        removeWarningPopup = true;
-      })
       alsa-scarlett-gui
       qbittorrent
       glaxnimate
