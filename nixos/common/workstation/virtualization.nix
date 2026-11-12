@@ -9,15 +9,18 @@ let
       ]
     )
   );
-in 
+in
 {
-  environment.systemPackages = with pkgs; [
-    (bottles.override {
-      removeWarningPopup = true;
-    })
-  ] ++ [
-    retroarchWithCores
-  ];
+  environment.systemPackages =
+    with pkgs;
+    [
+      (bottles.override {
+        removeWarningPopup = true;
+      })
+    ]
+    ++ [
+      retroarchWithCores
+    ];
 
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
