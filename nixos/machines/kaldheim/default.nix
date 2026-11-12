@@ -19,6 +19,7 @@
     ../../common/workstation/steam.nix
     ../../common/workstation/networkmanager.nix
     ../../common/workstation/sound.nix
+    ../../common/workstation/virtualization.nix
     ../../common/workstation/xdg.nix
   ];
 }
