@@ -13,6 +13,8 @@ let
     inherit nix-eval-jobs;
     rawSrc = inputs.lix-hydra;
     stdenv = pkgs.clangStdenv;
+    # Test-only dependency; nixpkgs dropped postgresql_14 (EOL).
+    postgresql_14 = pkgs.postgresql;
     # Only feeds lix-hydra's perl-packages.nix. OIDC-Lite 0.10's tests reject a valid
     # RS256 token under current OpenSSL (fails closed), so skip them.
     pkgs = pkgs // {
