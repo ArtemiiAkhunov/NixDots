@@ -9,6 +9,9 @@
     cockatrice
     protonup-qt
     mangohud
+    prismlauncher
+    heroic
+    pwsp
   ];
 
   programs.gamemode.enable = true;

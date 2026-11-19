@@ -16,7 +16,7 @@
     ../../common/workstation/kanata.nix
     ../../common/workstation/nautilus.nix
     ../../common/workstation/school.nix
-    ../../common/workstation/steam.nix
+    ../../common/workstation/gaming.nix
     ../../common/workstation/networkmanager.nix
     ../../common/workstation/sound.nix
     ../../common/workstation/virtualization.nix
