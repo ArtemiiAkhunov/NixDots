@@ -19,9 +19,19 @@ let
     Reiiine = "ddad4ba1-92d9-4578-a994-1623e1cb3262";
     Littledreamystar = "1d3388ed-ea23-439a-96ef-33d49fe1c31f";
   };
+  pookieList = {
+    MadamOfTheLags = "f9f91bbf-5755-4de6-8828-0c54ab2bbb53";
+    Stelo_Ligita = "c6828938-78bf-4eef-acf9-9caad2d2e07b";
+  };
   modpack = builtins.fetchTarball {
     url = "https://github.com/LordOfTheLags/modpack/archive/refs/tags/v1.1.tar.gz";
     sha256 = "0ffpzw9gyxvxp74p9l1g3ls0r2fzkhm6k1sjcg4p47ylxyrfrj8r";
+  };
+  # Prominence II: Hasturian Era v4.1.8 server pack (CurseForge file 9563792)
+  pookieModpack = pkgs.fetchzip {
+    url = "https://mediafilez.forgecdn.net/files/9563/792/Prominence_II_Hasturian_Era_4.1.8_server_pack.zip";
+    hash = "sha256-e2v+79SylIPWAZjjhhc4rqmD7QskY5zf80mepW0ztyc=";
+    stripRoot = false;
   };
 in
 {
@@ -53,7 +63,7 @@ in
       };
 
       moddedDumDumServer = {
-        enable = true;
+        enable = false;
         package = pkgs.neoforgeServers.neoforge-1_21_1.override { jre_headless = pkgs.jdk21_headless; };
 
         operators = {
@@ -88,6 +98,43 @@ in
 
         files = {
           "config" = "${modpack}/config";
+        };
+
+        jvmOpts = "-Xms8G -Xmx8G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:G1HeapRegionSize=16M";
+      };
+
+      pookieland = {
+        enable = true;
+        package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.19.3"; };
+
+        operators = {
+          MadamOfTheLags = {
+            uuid = pookieList.MadamOfTheLags;
+            level = 3;
+            bypassesPlayerLimit = true;
+          };
+        };
+
+        serverProperties = {
+          gamemode = "survival";
+          motd = "Pookieland";
+          difficulty = "normal";
+          max-players = builtins.length (builtins.attrNames pookieList);
+          white-list = true;
+          online-mode = true;
+          spawn-protection = 0;
+        };
+
+        whitelist = pookieList;
+
+        # Datapacks ship under config/paxi/datapacks and are loaded by Paxi.
+        files = {
+          # Copied, not symlinked: Simply Swords writes into the eldritch_end
+          # jar at startup, which fails on a read-only store path.
+          # ponytail: re-copies ~1.2G of mods each start; fine for a restart-rarely server.
+          "mods" = "${pookieModpack}/mods";
+          "config" = "${pookieModpack}/config";
+          "defaultconfigs" = "${pookieModpack}/defaultconfigs";
         };
 
         jvmOpts = "-Xms8G -Xmx8G -XX:+UseG1GC -XX:MaxGCPauseMillis=50 -XX:+ParallelRefProcEnabled -XX:G1HeapRegionSize=16M";
