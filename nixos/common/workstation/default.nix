@@ -8,6 +8,7 @@
     ./displaymanager.nix
     ./firewall.nix
     ./flatpak.nix
+    ./gaming.nix
     ./hyprland.nix
     ./kanata.nix
     ./kdeconnect.nix
@@ -19,7 +20,6 @@
     #./razer.nix
     ./school.nix
     ./sound.nix
-    ./steam.nix
     ./virtualization.nix
     ./xdg.nix
     ./yubikey.nix

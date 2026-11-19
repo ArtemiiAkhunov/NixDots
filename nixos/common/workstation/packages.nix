@@ -42,12 +42,6 @@ in
       zam-plugins
       dragonfly-reverb
 
-      # Gaming
-
-      heroic
-      pwsp
-      prismlauncher
-
       # CLI stuff
 
       cava
