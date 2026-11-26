@@ -22,6 +22,9 @@
     "sd_mod"
   ];
   boot.kernelPackages = pkgs.linuxPackages_latest; # Linux Kernel Version
+  # Static-screen flicker: nixos-hardware's 0x10 only disables PSR; 0x400 also disables Panel Replay.
+  # mkAfter so it lands after nixos-hardware's value — the kernel uses the last duplicate param.
+  boot.kernelParams = lib.mkAfter [ "amdgpu.dcdebugmask=0x410" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
